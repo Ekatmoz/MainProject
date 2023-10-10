@@ -98,15 +98,14 @@ const ProductCard = ({ product }) => {
       <Flex justify='space-between'>
         <Box fontSize='2xl' color={useColorModeValue('gray.800', 'white')}>
           <Box as='span' color={'gray.600'} fontSize='lg'>
-            Ft
           </Box>
-          {Number(product.price).toFixed(2)}
+          {Number(product.price).toFixed(2)} Ft
         </Box>
         <Tooltip label='Add to cart' bg='white' placement={'top'} color={'gray.800'} fontSize={'1.2em'}>
           <Button 
             variant='ghost' 
             display={'flex'} 
-            disabled={product.stock <= 0} 
+            isDisabled={product.stock <= 0} 
             onClick={() => addItem(product._id)}>
             <Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
           </Button>

@@ -4,14 +4,14 @@ import { FaArrowRight } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { Link as ReactLink, useNavigate } from 'react-router-dom';
 
-function CartOrderSummary() {
+const CartOrderSummary = () => {
   const [buttonLoading, setButtonLoading] = useState();
   const standardShipping = Number(990).toFixed(2);
   const cartItems = useSelector((state) => state.cart);
   const { subtotal } = cartItems;
   const navigate = useNavigate();
 
-  const  checkoutHandler = () => {
+  const checkoutHandler = () => {
     setButtonLoading(true);
     navigate('/checkout');
   }

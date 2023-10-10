@@ -2,7 +2,7 @@ import { CloseButton, Flex, Select, useColorModeValue as mode, Stack, Image, Box
 import { useDispatch } from 'react-redux';
 import { addCartItem, removeCartItem } from '../redux/actions/cartActions';
 
-function CartItem({ cartItem }) {
+const CartItem = ({ cartItem }) => {
   const { name, image, price, stock, qty, id } = cartItem;
   const dispatch = useDispatch();
 
