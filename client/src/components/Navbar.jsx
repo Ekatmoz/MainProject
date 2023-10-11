@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { Link as ReactLink } from 'react-router-dom';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon} from '@chakra-ui/icons';
+import { useState } from 'react';
 
 const links = [
     {linkName: 'Products', path: '/products'},
@@ -36,6 +37,7 @@ const NavLink = ({path, children}) => (
 const Navbar = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
   const { colorMode, toggleColorMode } = useColorMode();
+  const [isHovering, setIsHovering] = useState(false);
 
   return (
     <Box bg={useColorModeValue(`gray.100`, `gray.900`)} px={4}>
@@ -48,9 +50,11 @@ const Navbar = () => {
           />
 
         <HStack>
-          <Link as={ ReactLink } to='/'>
+          <Link as={ ReactLink } to='/' style={{textDecoration: 'none'}}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}>
             <Flex alignItems='center'>
-              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1695725793/logo_for_website_yb620k.png' />
+              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1695725793/logo_for_website_yb620k.png' color={isHovering ? 'cyan.400' : 'grey.600'}/>
               <Text fontWeight='extrabold'>Shop by Sushi Bar</Text>
             </Flex>
           </Link>
