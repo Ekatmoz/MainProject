@@ -43,7 +43,7 @@ const HomeScreen = () => (
       </Box>
       <Flex flex="1" overflow="hidden">
         <Image
-          src="https://img.freepik.com/free-photo/bowl-noodles-with-chili-pepper-sesame-seeds_23-2148382888.jpg?w=740&t=st=1696971222~exp=1696971822~hmac=c2fafc60e4848ef92b12b7380616e8a524d10d446e58c4af101856471de7281c"
+          src="https://img.freepik.com/free-photo/high-angle-delicious-ramen-bowl_23-2148678758.jpg?w=740&t=st=1697018943~exp=1697019543~hmac=8f5d358695499e8c8344b31d6b1db4b183dc06ecf23c131312fbd78e1197e0b1"
           alt="Lovely Image"
           fallback={<Skeleton />}
           maxH="450px"
