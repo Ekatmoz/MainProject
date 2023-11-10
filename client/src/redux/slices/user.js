@@ -5,6 +5,7 @@ export const initialState = {
   error: null,
   userInfo: JSON.parse(localStorage.getItem('userInfo')) ?? null,
   updateSuccess: false,
+  orders: [],
 };
 
 export const userSlice = createSlice({

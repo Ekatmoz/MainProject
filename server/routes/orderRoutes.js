@@ -29,5 +29,13 @@ const createOrder = asyncHandler(async (req, res) => {
   }
 });
 
+const getOrders = async (req, res) => {
+  const orders = await Order.find({});
+  res.json(orders);
+};
+
 orderRoutes.route('/').post(protectRoute, createOrder);
+//orderRoutes.route('/:id').delete(protectRoute, admin, deleteOrder);
+//orderRoutes.route('/:id').put(protectRoute, admin, setDelivered);
+//orderRoutes.route('/').get(protectRoute, admin, getOrders);
 export default orderRoutes;
