@@ -9,7 +9,6 @@ import {
   Link,
   Divider,
   useToast,
-  useDisclosure,
 } from '@chakra-ui/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link as ReactLink } from 'react-router-dom';
@@ -17,14 +16,12 @@ import { PhoneIcon, EmailIcon, ChatIcon } from '@chakra-ui/icons';
 import { createOrder, resetOrder } from '../redux/actions/orderActions';
 import { useEffect, useState, useCallback } from 'react';
 import CheckoutItem from './CheckoutItem';
+import PayPalButton from './PayPalButton';
+
 import { resetCart } from '../redux/actions/cartActions';
 import { useNavigate } from 'react-router-dom';
-import PayPalButton from './PayPalButton';
-import PaymentErrorModal from './PaymentErrorModal'
 
 const CheckoutOrderSummary = () => {
-  const { onClose: onErrorClose, onOpen: onErrorOpen, isOpen: isErrorOpen } = useDisclosure();
-  const { onClose: onSuccessClose, onOpen: onSuccessOpen, isOpen: isSuccessOpen } = useDisclosure();
   const colorMode = mode('gray.600', 'gray.400');
   const cartItems = useSelector((state) => state.cart);
   const { cart, subtotal, expressShipping } = cartItems;
@@ -38,7 +35,7 @@ const CheckoutOrderSummary = () => {
   const toast = useToast();
 
   const shipping = useCallback(
-    () => (expressShipping === 'true' ? 1990 : subtotal <= 20000 ? 990 : 0),
+    () => (expressShipping === 'true' ? 14.99 : subtotal <= 1000 ? 4.99 : 0),
     [expressShipping, subtotal]
   );
 
@@ -56,7 +53,7 @@ const CheckoutOrderSummary = () => {
   }, [error, shippingAddress, total, expressShipping, shipping, dispatch]);
 
   const onPaymentSuccess = async (data) => {
-    onSuccessOpen()
+
     dispatch(
       createOrder({
         orderItems: cart,
@@ -70,16 +67,14 @@ const CheckoutOrderSummary = () => {
     );
     dispatch(resetOrder());
     dispatch(resetCart());
-    //navigate('/order-success');
+    navigate('/order-success');
   };
 
   const onPaymentError = (error) => {
-    onErrorOpen()
     toast({
       description:
         'Something went wrong during the payment process. Please try again or make sure that your PayPal account balance is enough for this purchase.',
       status: 'error',
-
       duration: '600000',
       isClosable: true,
     });
@@ -98,7 +93,7 @@ const CheckoutOrderSummary = () => {
             Subtotal
           </Text>
           <Text fontWeight='medium' color={colorMode}>
-            {subtotal} Ft
+            {subtotal}
           </Text>
         </Flex>
         <Flex justify='space-between'>
@@ -111,7 +106,7 @@ const CheckoutOrderSummary = () => {
                 Free
               </Badge>
             ) : (
-              `${shipping()} Ft`
+              `$${shipping()}`
             )}
           </Text>
         </Flex>
@@ -121,7 +116,7 @@ const CheckoutOrderSummary = () => {
             Total
           </Text>
           <Text fontSize='xl' fontWeight='extrabold'>
-            {Number(total())} Ft
+            ${Number(total())}
           </Text>
         </Flex>
       </Stack>
@@ -155,8 +150,6 @@ const CheckoutOrderSummary = () => {
           Continue Shopping
         </Link>
       </Flex>
-      <PaymentErrorModal onClose={onErrorClose} onOpen={onErrorOpen} isOpen={isErrorOpen}/>
-      <PaymentErrorModal onClose={onSuccessClose} onOpen={onSuccessOpen} isOpen={isSuccessOpen}/>
     </Stack>
   );
 };
