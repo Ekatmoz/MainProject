@@ -120,33 +120,33 @@ export const deleteOrder = (id) => async (dispatch, getState) => {
   }
 };
 
-// export const setDelivered = (id) => async (dispatch, getState) => {
-//   dispatch(setLoading(true));
-//   const {
-//     user: { userInfo },
-//   } = getState();
+export const setDelivered = (id) => async (dispatch, getState) => {
+  dispatch(setLoading(true));
+  const {
+    user: { userInfo },
+  } = getState();
 
-//   try {
-//     const config = {
-//       headers: {
-//         Authorization: `Bearer ${userInfo.token}`,
-//         'Content-Type': 'application/json',
-//       },
-//     };
-//     await axios.put(`api/orders/${id}`, {}, config);
-//     dispatch(setDeliveredFlag());
-//   } catch (error) {
-//     dispatch(
-//       setError(
-//         error.response && error.response.data.message
-//           ? error.response.data.message
-//           : error.message
-//           ? error.message
-//           : 'Order could not be updated.'
-//       )
-//     );
-//   }
-// };
+  try {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${userInfo.token}`,
+        'Content-Type': 'application/json',
+      },
+    };
+    await axios.put(`api/orders/${id}`, {}, config);
+    dispatch(setDeliveredFlag());
+  } catch (error) {
+    dispatch(
+      setError(
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+          ? error.message
+          : 'Order could not be updated.'
+      )
+    );
+  }
+};
 
 export const resetErrorAndRemoval = () => async (dispatch) => {
   dispatch(resetError());
