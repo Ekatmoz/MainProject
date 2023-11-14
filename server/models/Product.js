@@ -35,11 +35,12 @@ const productSchema = new mongoose.Schema({
   rating: {
     type: Number,
     required: true,
-    default: 0
+    default: 0,
   },
   numberOfReviews: {
     type: Number,
     required: true,
+    default: 0,
   },
   price: {
     type: String,
