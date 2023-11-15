@@ -5,7 +5,6 @@ import asyncHandler from 'express-async-handler';
 import jwt from 'jsonwebtoken';
 import { protectRoute, admin  } from '../middleware/authMiddleware.js';
 
-
 const userRoutes = express.Router();
 
 //TODO: redefine expiresIn
@@ -28,7 +27,6 @@ const loginUser = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(401).send('Invalid Email or Password');
-    throw new Error('User not found.');
   }
 }); 
 
@@ -58,7 +56,6 @@ const registerUser = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(400).send('We could not register you.');
-    throw new Error('Something went wrong. Please check your data and try again.');
   }
 });
 
