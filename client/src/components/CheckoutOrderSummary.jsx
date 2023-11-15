@@ -35,7 +35,7 @@ const CheckoutOrderSummary = () => {
   const toast = useToast();
 
   const shipping = useCallback(
-    () => (expressShipping === 'true' ? 14.99 : subtotal <= 1000 ? 4.99 : 0),
+    () => (expressShipping === 'true' ? 1990 : subtotal <= 1000 ? 990 : 0),
     [expressShipping, subtotal]
   );
 
@@ -106,7 +106,7 @@ const CheckoutOrderSummary = () => {
                 Free
               </Badge>
             ) : (
-              `$${shipping()}`
+              `HUF ${shipping()}`
             )}
           </Text>
         </Flex>
@@ -116,7 +116,7 @@ const CheckoutOrderSummary = () => {
             Total
           </Text>
           <Text fontSize='xl' fontWeight='extrabold'>
-            ${Number(total())}
+            HUF {Number(total())}
           </Text>
         </Flex>
       </Stack>

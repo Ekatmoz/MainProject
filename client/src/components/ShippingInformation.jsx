@@ -64,7 +64,7 @@ const ShippingInformation = () => {
                 <Stack pr='10' spacing={{ base: '8', md: '10' }} flex='1.5'>
                   <Box>
                     <Radio value='true'>
-                      <Text fontWeight='bold'>Express 14.99</Text>
+                      <Text fontWeight='bold'>Express 1999Ft</Text>
                       <Text>Dispatched in 24 hours.</Text>
                     </Radio>
                   </Box>
@@ -73,7 +73,7 @@ const ShippingInformation = () => {
                 <Radio value='false'>
                   <Tooltip label='Free shipping for orders of 20000Ft or more!'>
                     <Box>
-                      <Text fontWeight='bold'>Standard $4.99</Text>
+                      <Text fontWeight='bold'>Standard 990Ft</Text>
                       <Text>Dispatched in 2 - 3 days</Text>
                     </Box>
                   </Tooltip>
