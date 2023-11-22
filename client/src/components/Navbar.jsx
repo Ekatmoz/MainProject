@@ -30,11 +30,11 @@ import { FiShoppingCart } from 'react-icons/fi';
 
 const ShoppingCartIcon = () => {
   const cartInfo = useSelector((state) => state.cart);
-  const { cart } = cartInfo;
+  const { cartItems } = cartInfo;
   return (
     <Flex>
       <Text as='sub' fontSize='xs'>
-        {cart.length}
+        {cartItems.length}
       </Text>
       <Icon ml='-1.5' as={FiShoppingCart} h='4' w='7' alignSelf='center' />
       Cart
@@ -88,7 +88,7 @@ const Navbar = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}>
             <Flex alignItems='center'>
-              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1695725793/logo_for_website_yb620k.png' color={isHovering ? 'cyan.400' : 'grey.600'}/>
+              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1695725793/logo_for_website_yb620k.png' color={isHovering ? 'cyan.400' : 'grey.600'} height='100px'/>
               <Text fontWeight='extrabold'>Shop by Sushi Bar</Text>
             </Flex>
           </Link>

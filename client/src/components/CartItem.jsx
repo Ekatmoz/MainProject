@@ -1,45 +1,42 @@
-import { CloseButton, Flex, Select, useColorModeValue as mode, Stack, Image, Box, Text } from '@chakra-ui/react';
+import { CloseButton, Flex, Image, Select, Spacer, Text, VStack, useColorModeValue as mode } from '@chakra-ui/react';
 import { useDispatch } from 'react-redux';
 import { addCartItem, removeCartItem } from '../redux/actions/cartActions';
 
 const CartItem = ({ cartItem }) => {
-  const { name, image, price, stock, qty, id } = cartItem;
-  const dispatch = useDispatch();
+	const { name, image, price, stock, qty, id, brand } = cartItem;
+	const dispatch = useDispatch();
 
-  return (
-    <Flex direction={{ base: 'column', md: 'row' }} justify='space-between' align='center'>
-      <Stack direction='row' spacing='5' width='full'>
-        <Image rounded='lg' w='120px' h='120px' fit='cover' src={image} alt={name} draggable='false' loading='lazy' />
-        <Box pt='4'>
-          <Stack spacing='0.5'>
-            <Text fontWeight='medium'>{name}</Text>
-          </Stack>
-        </Box>
-      </Stack>
-      <Flex
-        w='full'
-        mt={{ base: '4', md: '0' }}
-        align={{ base: 'center', md: 'baseline' }}
-        justify='space-between'
-        display='flex'>
-        <Select
-          maxW='64px'
-          focusBorderColor={mode('orange.500', 'orange.200')}
-          value={qty}
-          onChange={(e) => {
-            dispatch(addCartItem(id, e.target.value));
-          }}>
-          {[...Array(stock).keys()].map((x) => (
-            <option key={x + 1} value={x + 1}>
-              {x + 1}
-            </option>
-          ))}
-        </Select>
-        <Text fontWeight='bold'>{price}Ft</Text>
-        <CloseButton onClick={() => dispatch(removeCartItem(id))}/>
-      </Flex>
-    </Flex>
-  )
-}
+	return (
+		<Flex minWidth='300px' borderWidth='1px' rounded='lg' align='center'>
+			<Image rounded='lg' w='120px' h='120px' fit='cover' src={image} fallbackSrc='https://via.placeholder.com/150' />
+			<VStack p='2' w='100%' spacing='4' align='stretch'>
+				<Flex alignItems='center' justify='space-between'>
+					<Text fontWeight='medium'>
+						{brand} {name}
+					</Text>
+					<Spacer />
+					<CloseButton onClick={() => dispatch(removeCartItem(id))} />
+				</Flex>
+				<Spacer />
+				<Flex alignItems='center' justify='space-between'>
+					<Select
+						maxW='68px'
+						focusBorderColor={mode('cyan.500', 'cyan.200')}
+						value={qty}
+						onChange={(e) => {
+							dispatch(addCartItem(id, e.target.value));
+						}}>
+						{[...Array(stock).keys()].map((item) => (
+							<option key={item + 1} value={item + 1}>
+								{item + 1}
+							</option>
+						))}
+					</Select>
+					<Text fontWeight='bold'>${price}</Text>
+				</Flex>
+			</VStack>
+		</Flex>
+	);
+};
 
 export default CartItem;

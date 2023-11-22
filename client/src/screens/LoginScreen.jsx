@@ -8,7 +8,6 @@ import {
   Stack,
   Text,
   useBreakpointValue,
-  useColorModeValue,
   Alert,
   AlertIcon,
   AlertTitle,

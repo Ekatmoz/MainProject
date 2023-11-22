@@ -2,24 +2,29 @@ import dotenv from 'dotenv';
 dotenv.config();
 import connectToDatabase from './database.js';
 import express from 'express';
+import cors from 'cors'; 
 import path from 'path';
 
 //Our Routes
 import productRoutes from './routes/productRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
+import stripeRoute from './routes/stripeRoute.js';
 
 connectToDatabase();
 const app = express();
 
 app.use(express.json());
+app.use(cors());
+
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/orders', orderRoutes)
+app.use('/api/checkout', stripeRoute);
+app.use('/api/orders', orderRoutes);
 
 app.get('/api/config/paypal', (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
-)
+) // paypal don't need
 
 const port = process.env.PORT || 4000;
 

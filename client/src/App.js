@@ -11,8 +11,9 @@ import RegistrationScreen from './screens/RegistrationScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import CheckoutScreen from './screens/CheckoutScreen';
 import YourOrdersScreen from './screens/YourOrdersScreen';
-import OrderSuccessScreen from './screens/OrderSuccessScreen';
 import AdminConsoleScreen from './screens/AdminConsoleScreen';
+import CancelScreen from './screens/CancelScreen';
+import SuccessScreen from './screens/SuccessScreen';
 
 function App() {
   return (
@@ -30,8 +31,9 @@ function App() {
               <Route path='/registration' element={<RegistrationScreen />}></Route>
               <Route path='/profile' element={<ProfileScreen />}></Route>
               <Route path='/checkout' element={<CheckoutScreen/>}></Route>
-              <Route path='/your-orders' element={<YourOrdersScreen/>}></Route>
-              <Route path='/order-success' element={<OrderSuccessScreen/>}></Route>
+              <Route path='/cancel' element={<CancelScreen/>}></Route>
+              <Route path='/order-history' element={<YourOrdersScreen/>}></Route>
+              <Route path='/success' element={<SuccessScreen/>}></Route>
               <Route path='/admin-console' element={<AdminConsoleScreen/>}></Route>
             </Routes>
           </main>

@@ -55,7 +55,7 @@ const registerUser = asyncHandler(async (req, res) => {
       createdAt: user.createdAt,
     });
   } else {
-    res.status(400).send('We could not register you.');
+    res.status(400).send('Invalid user data.');
   }
 });
 

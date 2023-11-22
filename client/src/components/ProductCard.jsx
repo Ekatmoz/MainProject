@@ -1,118 +1,130 @@
-import {
-  Flex,
-  Circle,
-  Box,
-  Image,
-  Badge,
-  useColorModeValue,
-  Icon,
-  Button,
-  Tooltip,
-  Stack,
-  Link,
-  HStack,
-  Text,
-  useToast
-} from '@chakra-ui/react';
-import { FiShoppingCart } from 'react-icons/fi';
+import { Box, Image, Text, Badge, Flex, IconButton, Skeleton, useToast, Tooltip } from '@chakra-ui/react';
+import { BiExpand } from 'react-icons/bi';
+import React, { useState } from 'react';
+import { addToFavorites, removeFromFavorites } from '../redux/actions/productActions';
+import { useSelector, useDispatch } from 'react-redux';
+import { MdOutlineFavorite, MdOutlineFavoriteBorder } from 'react-icons/md';
 import { Link as ReactLink } from 'react-router-dom';
-import { StarIcon } from '@chakra-ui/icons';
-import { useState } from 'react';
-import { addCartItem} from '../redux/actions/cartActions'
-import { useDispatch, useSelector } from 'react-redux';
- 
-const Rating = ({ rating, numberOfReviews }) => {
-  const { iconSize, setIconSize } = useState('14px');
-  return (
-    <Flex>
-      <HStack spacing='2px'>
-        <StarIcon size={iconSize} w='14px' color='orange.500' />
-        <StarIcon size={iconSize} w='14px' color={rating >= 2 ? 'orange.500' : 'gray.200'} />
-        <StarIcon size={iconSize} w='14px' color={rating >= 3 ? 'orange.500' : 'gray.200'} />
-        <StarIcon size={iconSize} w='14px' color={rating >= 4 ? 'orange.500' : 'gray.200'} />
-        <StarIcon size={iconSize} w='14px' color={rating >= 5 ? 'orange.500' : 'gray.200'} />
-      </HStack>
-      <Text fontSize='md' fontWeight='bold' ml='4px'>
-        {`${numberOfReviews} ${numberOfReviews === 1 ? 'Review' : 'Reviews'}`}
-      </Text>
-    </Flex>
-  );
+import { addCartItem } from '../redux/actions/cartActions';
+import { useEffect } from 'react';
+import { TbShoppingCartPlus } from 'react-icons/tb';
+
+const ProductCard = ({ product, loading }) => {
+	const dispatch = useDispatch();
+	const { favorites } = useSelector((state) => state.product);
+	const [isShown, setIsShown] = useState(false);
+	const { cartItems } = useSelector((state) => state.cart);
+	const toast = useToast();
+	const [cartPlusDisabled, setCartPlusDisabled] = useState(false);
+
+	useEffect(() => {
+		const item = cartItems.find((cartItem) => cartItem.id === product._id);
+		if (item && item.qty === product.stock) {
+			setCartPlusDisabled(true);
+		}
+	}, [product, cartItems]);
+
+	const addItem = (id) => {
+		if (cartItems.some((cartItem) => cartItem.id === id)) {
+			const item = cartItems.find((cartItem) => cartItem.id === id);
+			dispatch(addCartItem(id, item.qty + 1));
+		} else {
+			dispatch(addCartItem(id, 1));
+		}
+		toast({
+			description: 'Item has been added.',
+			status: 'success',
+			isClosable: true,
+		});
+	};
+
+	return (
+		<Skeleton isLoaded={!loading}>
+			<Box
+				_hover={{ transform: 'scale(1.1)', transitionDuration: '0.5s' }}
+				borderWidth='1px'
+				overflow='hidden'
+				p='4'
+				shadow='md'>
+				<Image
+					onMouseEnter={() => setIsShown(true)}
+					onMouseLeave={() => setIsShown(false)}
+					src={product.images[0]} //src={product.images[isShown && product.images.length === 2 ? 1 : 0]}
+					fallbackSrc='https://via.placeholder.com/150'
+					alt={product.name}
+					height='200px'
+				/>
+				{product.stock < 5 ? (
+					<Badge colorScheme='yellow'>only {product.stock} left</Badge>
+				) : product.stock < 1 ? (
+					<Badge colorScheme='red'>Sold out</Badge>
+				) : (
+					<Badge colorScheme='green'>In Stock</Badge>
+				)}
+				{product.productIsNew && (
+					<Badge ml='2' colorScheme='purple'>
+						new
+					</Badge>
+				)}
+				<Text noOfLines={1} fontSize='xl' fontWeight='semibold' mt='2'>
+					{product.brand} {` `} {product.name}
+				</Text>
+				<Text noOfLines={1} fontSize='md' color='gray.600'>
+					{product.description}
+				</Text>
+				<Flex justify='space-between' alignItems='center' mt='2'>
+					<Badge colorScheme='red'>{product.category}</Badge>
+					<Text fontSize='xl' fontWeight='semibold'>
+						{product.price}Ft
+					</Text>
+				</Flex>
+				<Flex justify='space-between' mt='2'>
+					{favorites.includes(product._id) ? (
+						<IconButton
+							icon={<MdOutlineFavorite size='20px' />}
+							colorScheme='cyan'
+							size='sm'
+							onClick={() => dispatch(removeFromFavorites(product._id))}
+						/>
+					) : (
+						<IconButton
+							icon={<MdOutlineFavoriteBorder size='20px' />}
+							colorScheme='red'
+							size='sm'
+							onClick={() => dispatch(addToFavorites(product._id))}
+						/>
+					)}
+
+					<IconButton
+						icon={<BiExpand size='20' />}
+						as={ReactLink}
+						to={`/product/${product._id}`}
+						colorScheme='yellow'
+						size='sm'
+					/>
+
+					<Tooltip
+						isDisabled={!cartPlusDisabled}
+						hasArrow
+						label={
+							!cartPlusDisabled
+								? 'You reached the maximum quantity jof the product. '
+								: product.stock <= 0
+								? 'Out of stock'
+								: ''
+						}>
+						<IconButton
+							isDisabled={product.stock <= 0 || cartPlusDisabled}
+							onClick={() => addItem(product._id)}
+							icon={<TbShoppingCartPlus size='20' />}
+							colorScheme='green'
+							size='sm'
+						/>
+					</Tooltip>
+				</Flex>
+			</Box>
+		</Skeleton>
+	);
 };
-
-const ProductCard = ({ product }) => {
-
-  const dispatch = useDispatch();
-  const toast = useToast();
-  const cartInfo = useSelector((state) => state.cart);
-  const { cart } = cartInfo;
-
-  const addItem = (id) => {
-    if (cart.some((cartItem) => cartItem.id === id)) {
-      toast({
-        description: 'This item is already in your cart. Go to your cart to change the amount.',
-        status: 'error',
-        isClosable: true,
-      });
-    } else {
-      dispatch(addCartItem(id, 1));
-      toast({ description: 'Item has been added.', status: 'success', isClosable: true });
-    }
-  };
-  return (
-    <Stack
-      p='2'
-      spacing='3px'
-      bg={useColorModeValue('white', 'gray.800')}
-      minW='240px'
-      h='450px'
-      borderWidth='1px'
-      rounded='lg'
-      shadow='lg'
-      position='relative'>
-        {product.productIsNew && <Circle size='10px' position='absolut' top={2} right={2} bg='green.300'/>}
-        {product.stock <= 0 && <Circle size='10px' position='absolut' top={2} right={2} bg='red.300'/>}
-        <Image p={4} src={product.image} alt={product.name} roundedTop='lg' />
-
-        <Box flex='1' maxH='5' alignItems='baseline'>
-          {product.stock <= 0 && (
-            <Badge rounded='full' px='2' fontSize='0.8em' colorScheme='red'>
-              Sold out
-            </Badge>
-          )}
-          {product.productIsNew && (
-            <Badge rounded='full' px='2' fontSize='0.8em' colorScheme='green'>
-              New
-            </Badge>
-          )}
-        </Box>
-        <Flex mt='1' justifyContent='space-between' alignContent='center'>
-          <Link as={ReactLink} to={`/product/${product._id}`} pt='2' cursor='pointer'>
-            <Box fontSize='2xl' fontWeight='semibold' lineHeight='tight'>
-            {product.name}
-            </Box>
-          </Link>
-      </Flex>
-      <Flex justifyContent='space-between' alignContent='center' py='2'>
-        <Rating rating={product.rating} numberOfReviews={product.numberOfReviews} />
-      </Flex>
-      <Flex justify='space-between'>
-        <Box fontSize='2xl' color={useColorModeValue('gray.800', 'white')}>
-          <Box as='span' color={'gray.600'} fontSize='lg'>
-          </Box>
-          {Number(product.price).toFixed(2)} Ft
-        </Box>
-        <Tooltip label='Add to cart' bg='white' placement={'top'} color={'gray.800'} fontSize={'1.2em'}>
-          <Button 
-            variant='ghost' 
-            display={'flex'} 
-            isDisabled={product.stock <= 0} 
-            onClick={() => addItem(product._id)}>
-            <Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
-          </Button>
-        </Tooltip>
-      </Flex>
-    </Stack>
-  )
-}
 
 export default ProductCard;

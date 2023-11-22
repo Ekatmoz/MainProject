@@ -32,15 +32,7 @@ const orderSchema = new mongoose.Schema(
       postalCode: { type: String, required: true },
       country: { type: String, required: true },
     },
-    paymentMethod: {
-      type: String,
-      default: false,
-    },
-    paymentDetails: {
-      orderId: { type: String },
-      payerId: { type: String },
-    },
-    shippingPrice: {
+    shippingPrice: { 
       type: Number,
       default: 0.0,
     },
@@ -48,7 +40,19 @@ const orderSchema = new mongoose.Schema(
       type: Number,
       default: 0.0,
     },
-    paidAt: {
+		subtotal: { 
+      type: Number, 
+      default: 0.0 
+    },
+    paymentMethod: { //not in a new code
+      type: String,
+      default: false,
+    },
+    paymentDetails: { //not in anew code
+      orderId: { type: String },
+      payerId: { type: String },
+    },
+    paidAt: {  //not in a new code
       type: Date,
     },
     isDelivered: {

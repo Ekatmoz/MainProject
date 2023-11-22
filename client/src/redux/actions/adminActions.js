@@ -9,7 +9,7 @@ import {
   setDeliveredFlag,
   getOrders,
 } from '../slices/admin';
-import { setProducts, setProductUpdateFlag, setReviewRemovalFlag } from '../slices/products';
+import { setProducts, setProductUpdateFlag, setReviewRemovalFlag } from '../slices/product';
 
 export const getAllUsers = () => async (dispatch, getState) => {
   const {
