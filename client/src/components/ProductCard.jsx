@@ -49,7 +49,7 @@ const ProductCard = ({ product, loading }) => {
 				<Image
 					onMouseEnter={() => setIsShown(true)}
 					onMouseLeave={() => setIsShown(false)}
-					src={product.images[0]} //src={product.images[isShown && product.images.length === 2 ? 1 : 0]}
+					src={product.images[isShown && product.images.length === 2 ? 1 : 0]}
 					fallbackSrc='https://via.placeholder.com/150'
 					alt={product.name}
 					height='200px'
@@ -82,8 +82,9 @@ const ProductCard = ({ product, loading }) => {
 					{favorites.includes(product._id) ? (
 						<IconButton
 							icon={<MdOutlineFavorite size='20px' />}
-							colorScheme='cyan'
+							colorScheme='red'
 							size='sm'
+							border='none'
 							onClick={() => dispatch(removeFromFavorites(product._id))}
 						/>
 					) : (

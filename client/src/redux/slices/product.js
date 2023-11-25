@@ -12,7 +12,7 @@ export const initialState = {
 	reviewRemoval: false,
 	productUpdate: false,
 };
-
+ 
 export const productsSlice = createSlice({
 	name: 'products',
 	initialState,
@@ -75,8 +75,8 @@ export const {
 	setError,
 	setProducts,
 	setPagination,
-	setFavoritesToggle,
 	setFavorites,
+	setFavoritesToggle,
 	setProduct,
 	productReviewed,
 	setProductUpdateFlag,
