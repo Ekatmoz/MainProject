@@ -8,7 +8,7 @@ import {
   Link,
   Skeleton,
   Stack,
-  useColorModeValue,
+  useColorModeValue as mode,
 } from '@chakra-ui/react'
 import { FaArrowRight } from 'react-icons/fa';
 import {Link as ReactLink} from 'react-router-dom';
@@ -19,14 +19,14 @@ const HomeScreen = () => (
       <Box
         width={{ lg: 'sm' }}
         transform={{ base: 'translateY(-50%)', lg: 'none' }}
-        bg={{ base: useColorModeValue('red.50', 'gray.700'), lg: 'transparent' }}
+        bg={{ base: mode('red.50', 'gray.700'), lg: 'transparent' }}
         mx={{ base: '6', md: '8', lg: '0' }}
         px={{ base: '6', md: '8', lg: '0' }}
         py={{ base: '6', md: '8', lg: '12' }}
       >
         <Stack spacing={{ base: '8', lg: '10' }}>
           <Stack spacing={{ base: '2', lg: '4' }}>
-            <Heading size="xl" color={useColorModeValue('red.500', 'red.300')}>
+            <Heading size="xl" color={mode('red.500', 'red.300')}>
               Asian market
             </Heading>
             <Heading size="xl" fontWeight="normal">
@@ -34,10 +34,10 @@ const HomeScreen = () => (
             </Heading>
           </Stack>
           <HStack spacing="3">
-            <Link as={ReactLink} to='/products' color={useColorModeValue('red.500', 'red.300')} fontWeight="bold" fontSize="lg">
+            <Link as={ReactLink} to='/products' color={mode('red.500', 'red.300')} fontWeight="bold" fontSize="lg">
               Products
             </Link>
-            <Icon color={useColorModeValue('red.500', 'red.300')} as={FaArrowRight} />
+            <Icon color={mode('red.500', 'red.300')} as={FaArrowRight} />
           </HStack>
         </Stack>
       </Box>

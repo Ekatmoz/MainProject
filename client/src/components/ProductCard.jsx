@@ -39,7 +39,7 @@ const ProductCard = ({ product, loading }) => {
 	};
 
 	return (
-		<Skeleton isLoaded={!loading}>
+		<Skeleton isLoaded={!loading} >
 			<Box
 				_hover={{ transform: 'scale(1.1)', transitionDuration: '0.5s' }}
 				borderWidth='1px'

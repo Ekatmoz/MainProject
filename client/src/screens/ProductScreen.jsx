@@ -123,10 +123,10 @@ const ProductScreen = () => {
 								</Heading>
 								<Stack spacing='5'>
 									<Box>
-										<Text fontSize='xl'>${product.price}</Text>
+										<Text fontSize='xl'>{product.price}Ft</Text>
 										<Flex>
 											<HStack spacing='2px'>
-												<Star color='cyan.500' />
+												<Star color='yellow.500' />
 												<Star rating={product.rating} star={2} />
 												<Star rating={product.rating} star={3} />
 												<Star rating={product.rating} star={4} />
@@ -155,7 +155,7 @@ const ProductScreen = () => {
 									<Button
 										variant='outline'
 										isDisabled={product.stock === 0}
-										colorScheme='cyan'
+										colorScheme='orange'
 										onClick={() => addItem()}>
 										Add to cart
 									</Button>
@@ -204,7 +204,7 @@ const ProductScreen = () => {
 										isDisabled={hasUserReviewed()}
 										my='20px'
 										w='140px'
-										colorScheme='cyan'
+										colorScheme='orange'
 										onClick={() => setReviewBoxOpen(!reviewBoxOpen)}>
 										Write a review
 									</Button>
@@ -246,7 +246,7 @@ const ProductScreen = () => {
 											isLoading={buttonLoading}
 											loadingText='Saving'
 											w='140px'
-											colorScheme='cyan'
+											colorScheme='green'
 											onClick={() => onSubmit()}>
 											Publish review
 										</Button>
@@ -262,7 +262,7 @@ const ProductScreen = () => {
 								{product.reviews.map((review) => (
 									<Box key={review._id}>
 										<Flex spcaing='2px' alignItems='center'>
-											<Star color='cyan.500' />
+											<Star color='yellow.500' />
 											<Star rating={product.rating} star={2} />
 											<Star rating={product.rating} star={3} />
 											<Star rating={product.rating} star={4} />

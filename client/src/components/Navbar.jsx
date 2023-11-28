@@ -4,7 +4,6 @@ import {
 	Box,
 	Flex,
 	HStack,
-	Icon,
 	Stack,
 	Text,
 	useColorModeValue as mode,
@@ -24,7 +23,6 @@ import {
 	useToast,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import { BsPhoneFlip } from 'react-icons/bs';
 import { Link as ReactLink } from 'react-router-dom';
 import { MdOutlineFavorite, MdOutlineFavoriteBorder } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
