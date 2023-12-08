@@ -59,7 +59,7 @@ export const cartSlice = createSlice({
 			localStorage.removeItem('shipping');
 			localStorage.removeItem('subTotal');
 			state.cartItems = [];
-			state.shipping = Number(4.99);
+			state.shipping = Number(990);
 			state.subtotal = 0;
 			state.loading = false;
 			state.error = null;

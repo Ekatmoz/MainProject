@@ -53,7 +53,7 @@ const CartScreen = () => {
 						spacing={{ base: '8', md: '16' }}>
 						<Stack spacing={{ base: '8', md: '10' }} flex='2'>
 							<Heading fontSize='2xl' fontWeight='extrabold'>
-								Shopping Cart
+								Shopping Cart {getHeadingContent()}
 							</Heading>
 
 							<Stack spacing='6'>
@@ -67,7 +67,7 @@ const CartScreen = () => {
 
 							<HStack mt='6' fontWeight='semibold'>
 								<p>or</p>
-								<Link as={ReactLink} to='/products' color={mode('cyan.500', 'cyan.200')}>
+								<Link as={ReactLink} to='/products' color={mode('red.500', 'red.200')}>
 									Continue Shopping
 								</Link>
 							</HStack>

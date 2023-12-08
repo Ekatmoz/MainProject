@@ -14,13 +14,15 @@ import YourOrdersScreen from './screens/YourOrdersScreen';
 import AdminConsoleScreen from './screens/AdminConsoleScreen';
 import CancelScreen from './screens/CancelScreen';
 import SuccessScreen from './screens/SuccessScreen';
+import EmailVerificationScreen from './screens/EmailVerificationScreen';
+import PasswordResetScreen from './screens/PasswordResetScreen';
 
 function App() {
   return (
     <div>
       <ChakraProvider>
         <Router>
-          <Navbar/>
+          <Navbar />
           <main>
             <Routes>
               <Route path='/' element={<HomeScreen/>}></Route>
@@ -29,6 +31,8 @@ function App() {
               <Route path='/cart' element={<CartScreen/>}></Route>
               <Route path='/login' element={<LoginScreen/>}></Route>
               <Route path='/registration' element={<RegistrationScreen />}></Route>
+              <Route path='/email-verify/:token' element={<EmailVerificationScreen />} />
+              <Route path='/password-reset/:token' element={<PasswordResetScreen />} />
               <Route path='/profile' element={<ProfileScreen />}></Route>
               <Route path='/checkout' element={<CheckoutScreen/>}></Route>
               <Route path='/cancel' element={<CancelScreen/>}></Route>

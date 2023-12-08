@@ -5,50 +5,63 @@ import {
 	AlertTitle,
 	Box,
 	Button,
+	Center,
 	Container,
 	FormControl,
 	Heading,
 	Stack,
 	Text,
-	HStack,
+	VStack,  
 	useBreakpointValue,
 	useToast,
 } from '@chakra-ui/react';
 import { Formik } from 'formik';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link as ReactLink, useNavigate, useParams } from 'react-router-dom';
+import { Link as ReactLink, useParams } from 'react-router-dom';
 import * as Yup from 'yup';
 import PasswordField from '../components/PasswordField';
-import { register, resetPassword, resetState } from '../redux/actions/userActions';
-import TextField from '../components/TextField';
+import { resetPassword, resetState } from '../redux/actions/userActions';
 
-const RegistrationScreen = () => {
-	const navigate = useNavigate();
+const PasswordResetScreen = () => {
+	const { token } = useParams();
 	const dispatch = useDispatch();
-	const redirect = '/products';
 	const toast = useToast();
-	const { loading, error, userInfo } = useSelector((state) => state.user);
+
+	const { loading, error, serverStatus, serverMsg } = useSelector((state) => state.user);
+
 	const headingBR = useBreakpointValue({ base: 'xs', md: 'sm' });
 	const boxBR = useBreakpointValue({ base: 'transparent', md: 'bg-surface' });
 
 	useEffect(() => {
-		if (userInfo) {
-			navigate(redirect);
+		if (serverStatus && serverMsg) {
 			toast({
-				description: userInfo.firstLogin ? 'Account created. Welcome aboard.' : `Welcome back ${userInfo.name}`,
+				description: `${serverMsg}`,
 				status: 'success',
 				isClosable: true,
 			});
+			dispatch(resetState());
 		}
-	}, [userInfo, redirect, error, navigate, toast]);
+	}, [error, toast, serverMsg, serverStatus, dispatch]);
 
-	return (
+	return serverStatus ? (//put here some pictures
+		<Center minH='90vh'>
+			<VStack>
+				<Text my='10' fontSize='xl'>
+					Password reset successful!
+				</Text>
+				<Button as={ReactLink} to='/login' variant='outline' colorScheme='green' w='300px'>
+					Log in
+				</Button>
+				<Button as={ReactLink} to='/products' variant='outline' colorScheme='green' w='300px'>
+					Products
+				</Button>
+			</VStack>
+		</Center>
+	) : (
 		<Formik
-			initialValues={{ email: '', password: '', name: '' }}
+			initialValues={{ password: '' }}
 			validationSchema={Yup.object({
-				name: Yup.string().required('A name is required.'),
-				email: Yup.string().email('Invalid email').required('This email address is required.'),
 				password: Yup.string()
 					.min(1, 'Password is too short - must contain at least 1 character.')
 					.required('Password is required.'),
@@ -58,20 +71,14 @@ const RegistrationScreen = () => {
 					.oneOf([Yup.ref('password'), null], 'Passwords must match'),
 			})}
 			onSubmit={(values) => {
-				dispatch(register(values.name, values.email, values.password));
+				dispatch(resetPassword(values.password, token));
 			}}>
 			{(formik) => (
 				<Container maxW='lg' py={{ base: '12', md: '24' }} px={{ base: '0', md: '8' }} minH='4xl'>
 					<Stack spacing='8'>
 						<Stack spacing='6'>
 							<Stack spacing={{ base: '2', md: '3' }} textAlign='center'>
-								<Heading size={headingBR}>Create an account.</Heading>
-								<HStack spacing='1' justify='center'>
-									<Text color='muted'>Already a user?</Text>
-									<Button as={ReactLink} to='/login' variant='link' colorScheme='cyan'>
-										Sign in
-									</Button>
-								</HStack>
+								<Heading size={headingBR}>Reset your password.</Heading>
 							</Stack>
 						</Stack>
 						<Box
@@ -94,9 +101,7 @@ const RegistrationScreen = () => {
 								)}
 								<Stack spacing='5'>
 									<FormControl>
-										<TextField type='text' name='name' placeholder='Your first and last name.' label='Full name' />
-										<TextField type='text' name='email' placeholder='you@example.com' label='Email' />
-										<PasswordField type='password' name='password' placeholder='Your password' label='Password' />
+										<PasswordField type='password' name='password' placeholder='Your password' label='New Password' />
 										<PasswordField
 											type='password'
 											name='confirmPassword'
@@ -106,8 +111,8 @@ const RegistrationScreen = () => {
 									</FormControl>
 								</Stack>
 								<Stack spacing='6'>
-									<Button colorScheme='cyan' size='lg' fontSize='md' isLoading={loading} type='submit'>
-										Sign up
+									<Button colorScheme='green' size='lg' fontSize='md' isLoading={loading} type='submit'>
+										Set new Password
 									</Button>
 								</Stack>
 							</Stack>
@@ -119,4 +124,4 @@ const RegistrationScreen = () => {
 	);
 };
 
-export default RegistrationScreen;
+export default PasswordResetScreen;

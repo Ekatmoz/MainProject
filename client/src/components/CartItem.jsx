@@ -21,7 +21,7 @@ const CartItem = ({ cartItem }) => {
 				<Flex alignItems='center' justify='space-between'>
 					<Select
 						maxW='68px'
-						focusBorderColor={mode('cyan.500', 'cyan.200')}
+						focusBorderColor={mode('gray.300', 'gray.100')}
 						value={qty}
 						onChange={(e) => {
 							dispatch(addCartItem(id, e.target.value));
@@ -32,7 +32,7 @@ const CartItem = ({ cartItem }) => {
 							</option>
 						))}
 					</Select>
-					<Text fontWeight='bold'>${price}</Text>
+					<Text fontWeight='bold'>{price}Ft</Text>
 				</Flex>
 			</VStack>
 		</Flex>

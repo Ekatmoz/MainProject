@@ -11,7 +11,7 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 			minWidth='300px'
 			spacing='8'
 			borderWidth='1px'
-			borderColor={mode('cyan.500', 'cyan.100')}
+			borderColor={mode('gray.300', 'gray.100')}
 			rounded='lg'
 			padding='8'
 			w='full'>
@@ -21,26 +21,26 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 					<Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
 						Subtotal
 					</Text>
-					<Text fontWeight='medium'>${subtotal}</Text>
+					<Text fontWeight='medium'>{subtotal}Ft</Text>
 				</Flex>
 				<Flex justify='space-between'>
 					<Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
 						Shipping
 					</Text>
-					<Text fontWeight='medium'>${shipping}</Text>
+					<Text fontWeight='medium'>{shipping}Ft</Text>
 				</Flex>
 				<Flex justify='space-between'>
 					<Text fontSize='xl' fontWeight='extrabold'>
 						Total
 					</Text>
-					<Text fontWeight='medium'>${Number(subtotal) + Number(shipping)}</Text>
+					<Text fontWeight='medium'>{Number(subtotal) + Number(shipping)}Ft</Text>
 				</Flex>
 			</Stack>
 			<Button
 				hidden={checkoutSreen}
 				as={ReactLink}
 				to='/checkout'
-				colorScheme='cyan'
+				colorScheme='blue'
 				size='lg'
 				rightIcon={<FaArrowRight />}>
 				Checkout

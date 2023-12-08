@@ -17,7 +17,7 @@ const stripePayment = async (req, res) => {
 
 	let lineItems = [];
 
-	if (data.shipping == 14.99) {
+	if (data.shipping == 1990) {
 		lineItems.push({
 			price: process.env.EXPRESS_SHIPPING_ID,
 			quantity: 1,

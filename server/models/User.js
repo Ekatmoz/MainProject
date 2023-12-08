@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 
-
 const userSchema = new mongoose.Schema(
   {
   name: {
@@ -15,14 +14,23 @@ const userSchema = new mongoose.Schema(
   },
   password: {
     type: String,
-    required: true,
+  },
+  active: {
+    type: Boolean,
+    default: false,
   },
   isAdmin: {
     type: Boolean,
-    type: String,
     default: false,
   },
-}, {timestamps: true}
+  firstLogin: { 
+    type: Boolean, 
+    default: true },
+
+	googleImage: { type: String, default: undefined },
+	googleId: { type: String, default: undefined },
+}, 
+  {timestamps: true}
 );
 
 userSchema.methods.matchPasswords = async function (enteredPassword) {

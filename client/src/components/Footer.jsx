@@ -7,7 +7,7 @@ import {
   Input,
   Stack,
   Text,
-  useColorModeValue,
+  useColorModeValue as mode,
   Box,
   Flex,
   Image
@@ -15,7 +15,7 @@ import {
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => (
-  <Box w='100%' bg={useColorModeValue('gray.100', 'gray.900')}>
+  <Box w='100%' bg={mode('gray.100', 'gray.900')}>
     <Container as='footer' role='contentinfo' maxW='7xl'>
       <Stack
         spacing='8'
