@@ -8,44 +8,49 @@ import Footer from './components/Footer';
 import HomeScreen from './screens/HomeScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegistrationScreen from './screens/RegistrationScreen';
-import ProfileScreen from './screens/ProfileScreen';
-import CheckoutScreen from './screens/CheckoutScreen';
-import YourOrdersScreen from './screens/YourOrdersScreen';
-import AdminConsoleScreen from './screens/AdminConsoleScreen';
-import CancelScreen from './screens/CancelScreen';
-import SuccessScreen from './screens/SuccessScreen';
 import EmailVerificationScreen from './screens/EmailVerificationScreen';
 import PasswordResetScreen from './screens/PasswordResetScreen';
+import axios from 'axios';
+import { VStack, Spinner } from '@chakra-ui/react';
+import { useState, useEffect } from 'react';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 function App() {
-  return (
-    <div>
-      <ChakraProvider>
-        <Router>
-          <Navbar />
-          <main>
-            <Routes>
-              <Route path='/' element={<HomeScreen/>}></Route>
-              <Route path='/products' element={<ProductsScreen/>}></Route>
-              <Route path='/product/:id' element={<ProductScreen/>}></Route>
-              <Route path='/cart' element={<CartScreen/>}></Route>
-              <Route path='/login' element={<LoginScreen/>}></Route>
-              <Route path='/registration' element={<RegistrationScreen />}></Route>
-              <Route path='/email-verify/:token' element={<EmailVerificationScreen />} />
-              <Route path='/password-reset/:token' element={<PasswordResetScreen />} />
-              <Route path='/profile' element={<ProfileScreen />}></Route>
-              <Route path='/checkout' element={<CheckoutScreen/>}></Route>
-              <Route path='/cancel' element={<CancelScreen/>}></Route>
-              <Route path='/order-history' element={<YourOrdersScreen/>}></Route>
-              <Route path='/success' element={<SuccessScreen/>}></Route>
-              <Route path='/admin-console' element={<AdminConsoleScreen/>}></Route>
-            </Routes>
-          </main>
-          <Footer />
-        </Router>
-      </ChakraProvider>
-    </div>
-  );
+  const [googleClient, setGoogleClient] = useState(null);
+	useEffect(() => {
+		const googleKey = async () => {
+			const { data: googleId } = await axios.get('/api/config/google');
+			setGoogleClient(googleId);
+		};
+		googleKey();
+	}, [googleClient]);
+
+  return !googleClient ? (
+		<VStack pt='37vh'>
+			<Spinner mt='20' thickness='2px' speed='0.65s' emptyColor='gray.200' color='cyan.500' size='xl' />
+		</VStack>
+	) : (
+		<GoogleOAuthProvider clientId={googleClient}>
+			<ChakraProvider>
+				<Router>
+					<Navbar />
+					<main>
+						<Routes>
+							<Route path='/products' element={<ProductsScreen />} />
+							<Route path='/' element={<HomeScreen />} />
+							<Route path='/product/:id' element={<ProductScreen />} />
+							<Route path='/cart' element={<CartScreen />} />
+							<Route path='/login' element={<LoginScreen />} />
+							<Route path='/registration' element={<RegistrationScreen />} />
+							<Route path='/email-verify/:token' element={<EmailVerificationScreen />} />
+							<Route path='/password-reset/:token' element={<PasswordResetScreen />} />
+						</Routes>
+					</main>
+					<Footer />
+				</Router>
+			</ChakraProvider>
+		</GoogleOAuthProvider>
+	);
 }
 
 export default App;

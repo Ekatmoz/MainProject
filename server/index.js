@@ -22,9 +22,9 @@ app.use('/api/users', userRoutes);
 app.use('/api/checkout', stripeRoute);
 app.use('/api/orders', orderRoutes);
 
-app.get('/api/config/paypal', (req, res) =>
-  res.send(process.env.PAYPAL_CLIENT_ID)
-) // paypal don't need
+app.get('/api/config/GOOGLE', (req, res) =>
+  res.send(process.env.GOOGLE_CLIENT_ID)
+);
 
 const port = process.env.PORT || 4000;
 

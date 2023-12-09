@@ -35,7 +35,7 @@ import { TbShoppingCart } from 'react-icons/tb';
 import { logout } from '../redux/actions/userActions';
 import { MdOutlineAdminPanelSettings } from 'react-icons/md';
 import { FcGoogle } from 'react-icons/fc';
-//import { googleLogout } from '@react-oauth/google';
+import { googleLogout } from '@react-oauth/google';
 
 const Links = [
 	{ name: 'Products', route: '/products' },
@@ -60,7 +60,7 @@ const Navbar = () => {
 	}, [favoritesToggled, dispatch, userInfo]);
 
 	const logoutHandler = () => {
-		//googleLogout();
+		googleLogout();
 		dispatch(logout());
 		toast({
 			description: 'You have been logged out.',
