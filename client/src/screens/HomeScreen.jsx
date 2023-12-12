@@ -43,7 +43,7 @@ const HomeScreen = () => (
       </Box>
       <Flex flex="1" overflow="hidden">
         <Image
-          src="https://img.freepik.com/free-photo/high-angle-delicious-ramen-bowl_23-2148678758.jpg?w=740&t=st=1697018943~exp=1697019543~hmac=8f5d358695499e8c8344b31d6b1db4b183dc06ecf23c131312fbd78e1197e0b1"
+          src="https://img.freepik.com/free-photo/bowl-noodles-with-chili-pepper-sesame-seeds_23-2148382888.jpg?w=740&t=st=1702383433~exp=1702384033~hmac=1ea8b546ea6f5e9e669eda59ee9d5b3a15754bbd2e4d3da36609092990e49f91"
           alt="Lovely Image"
           fallback={<Skeleton />}
           maxH="450px"
@@ -53,7 +53,7 @@ const HomeScreen = () => (
         />
         <Image
           display={{ base: 'none', sm: 'initial' }}
-          src="https://img.freepik.com/free-photo/close-up-noodles-bowl-with-vegetables_23-2148382873.jpg?w=740&t=st=1696971283~exp=1696971883~hmac=3548a8f72d6c12c74daec9fc603ec8bed2f9e49dc93c7a149d87e6a42948d27d"
+          src="https://img.freepik.com/free-photo/meat-with-chili-sauce-black-table_141793-1726.jpg?w=826&t=st=1702383551~exp=1702384151~hmac=3e349643ec4bbf87bc21d79244fdffad7025da098502346f5533437a37459239"
           alt="Lovely Image"
           fallback={<Skeleton />}
           maxH="450px"

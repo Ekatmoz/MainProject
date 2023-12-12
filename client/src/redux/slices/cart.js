@@ -10,7 +10,7 @@ export const initialState = {
 	loading: false,
 	error: null,
 	cartItems: JSON.parse(localStorage.getItem('cartItems')) ?? [],
-	shipping: JSON.parse(localStorage.getItem('shipping')) ?? Number(990),
+	shipping: JSON.parse(localStorage.getItem('shipping')) ?? Number(4.99),
 	subtotal: localStorage.getItem('cartItems') ? calculateSubtotal(JSON.parse(localStorage.getItem('cartItems'))) : 0,
 };
 
@@ -59,7 +59,7 @@ export const cartSlice = createSlice({
 			localStorage.removeItem('shipping');
 			localStorage.removeItem('subTotal');
 			state.cartItems = [];
-			state.shipping = Number(990);
+			state.shipping = Number(4.99);
 			state.subtotal = 0;
 			state.loading = false;
 			state.error = null;

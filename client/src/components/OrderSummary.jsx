@@ -11,7 +11,7 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 			minWidth='300px'
 			spacing='8'
 			borderWidth='1px'
-			borderColor={mode('gray.300', 'gray.100')}
+			borderColor={mode('cyan.500', 'cyan.100')}
 			rounded='lg'
 			padding='8'
 			w='full'>
@@ -21,7 +21,7 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 					<Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
 						Subtotal
 					</Text>
-					<Text fontWeight='medium'>{subtotal}Ft</Text>
+					<Text fontWeight='medium'>${subtotal}</Text>
 				</Flex>
 				<Flex justify='space-between'>
 					<Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
@@ -40,7 +40,7 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 				hidden={checkoutSreen}
 				as={ReactLink}
 				to='/checkout'
-				colorScheme='blue'
+				colorScheme='cyan'
 				size='lg'
 				rightIcon={<FaArrowRight />}>
 				Checkout

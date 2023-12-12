@@ -6,6 +6,7 @@ import {
 	Heading,
 	Radio,
 	RadioGroup,
+	Spacer,
 	Stack,
 	Text,
 	VStack,
@@ -65,14 +66,14 @@ const ShippingInformation = () => {
 							</Heading>
 							<RadioGroup
 								onChange={(e) => {
-									dispatch(setShipping(e === 'express' ? Number(1990).toFixed(2) : Number(990).toFixed(2)));
+									dispatch(setShipping(e === 'express' ? Number(14.99).toFixed(2) : Number(4.99).toFixed(2)));
 								}}
-								defaultValue={shipping === 999 ? 'withoutExpress' : 'express'}>
+								defaultValue={shipping === 4.99 ? 'withoutExpress' : 'express'}>
 								<Stack direction={{ base: 'column', lg: 'row' }} align={{ lg: 'flex-start' }}>
 									<Stack pr='10' spacing={{ base: '8', md: '10' }} flex='1.5'>
 										<Box>
 											<Radio value='express'>
-												<Text fontWeight='bold'>Express 1990</Text>
+												<Text fontWeight='bold'>Express 14.99</Text>
 												<Text>Dispatched in 24 hours</Text>
 											</Radio>
 										</Box>
@@ -80,7 +81,7 @@ const ShippingInformation = () => {
 									</Stack>
 									<Radio value='withoutExpress'>
 										<Box>
-											<Text fontWeight='bold'>Standard 990</Text>
+											<Text fontWeight='bold'>Standard 4.99</Text>
 											<Text>Dispatched in 2 - 3 days</Text>
 										</Box>
 									</Radio>

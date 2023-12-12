@@ -13,7 +13,7 @@ const stripeRoute = express.Router();
 
 const stripePayment = async (req, res) => {
 	const data = req.body;
-  console.log(req.body)
+  console.log(req.body) //delete after
 
 	let lineItems = [];
 
