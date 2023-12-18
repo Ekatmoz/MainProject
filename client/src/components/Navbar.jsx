@@ -96,7 +96,7 @@ const Navbar = () => {
 					</Flex>
 					<HStack spacing='8' alignItems='center'>
 						<Box alignItems='center' display='flex' as={ReactLink} to='/'>
-              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1702546186/asia_piac_copy_blnxun.png' height='80px'/> 
+              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1702903637/ybehbegdeisxmbolmcwa.png' height='150px'/> 
 							<Text as='b'>Shop by Sushi Bar</Text>
 						</Box>
 

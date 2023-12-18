@@ -30,13 +30,13 @@ function App() {
 		googleKey();
 	}, [googleClient]);
 
-  return !googleClient ? (
+  return ( <ChakraProvider> {
+	!googleClient ? (
 		<VStack pt='37vh'>
 			<Spinner mt='20' thickness='2px' speed='0.65s' emptyColor='gray.200' color='cyan.500' size='xl' />
 		</VStack>
 	) : (
 		<GoogleOAuthProvider clientId={googleClient}>
-			<ChakraProvider>
 				<Router>
 					<Navbar />
 					<main>
@@ -58,8 +58,9 @@ function App() {
 					</main>
 					<Footer />
 				</Router>
-			</ChakraProvider>
 		</GoogleOAuthProvider>
+		)}	
+		</ChakraProvider>
 	);
 }
 
