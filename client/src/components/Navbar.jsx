@@ -96,8 +96,8 @@ const Navbar = () => {
 					</Flex>
 					<HStack spacing='8' alignItems='center'>
 						<Box alignItems='center' display='flex' as={ReactLink} to='/'>
-              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1702903637/ybehbegdeisxmbolmcwa.png' height='150px'/> 
-							<Text as='b'>Shop by Sushi Bar</Text>
+              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1702934186/fvehi8njzmint2hkvupt.png' height='80px'/> 
+							<Text as='b'>Arany Sárkány</Text>
 						</Box>
 
 						<HStack as='nav' spacing='4' display={{ base: 'none', md: 'flex' }}>
