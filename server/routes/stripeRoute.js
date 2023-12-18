@@ -13,7 +13,6 @@ const stripeRoute = express.Router();
 
 const stripePayment = async (req, res) => {
 	const data = req.body;
-  console.log(req.body) //delete after
 
 	let lineItems = [];
 
@@ -51,7 +50,7 @@ const stripePayment = async (req, res) => {
 		shippingAddress: data.shippingAddress,
 		shippingPrice: data.shipping,
 		subtotal: data.subtotal,
-		totalPrice: Number(data.subtotal + data.shipping).toFixed(2),
+		totalPrice: Number(data.subtotal + data.shipping),
 	});
 
 	const newOrder = await order.save();

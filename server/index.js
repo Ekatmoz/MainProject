@@ -13,7 +13,6 @@ import stripeRoute from './routes/stripeRoute.js';
 
 connectToDatabase();
 const app = express();
-
 app.use(express.json());
 app.use(cors());
 

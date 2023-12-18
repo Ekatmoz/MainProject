@@ -21,7 +21,7 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 					<Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
 						Subtotal
 					</Text>
-					<Text fontWeight='medium'>${subtotal}</Text>
+					<Text fontWeight='medium'>{subtotal}Ft</Text>
 				</Flex>
 				<Flex justify='space-between'>
 					<Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
