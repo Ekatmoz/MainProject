@@ -24,9 +24,9 @@ const Footer = () => (
         py={{ base: '12', md: '16' }}>
         <Stack spacing={{ base: '6', md: '8' }} align='start'>
           <Flex alignItems='center'>
-          <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1695725793/logo_for_website_yb620k.png' color='grey.400' height='100px'/>
+          <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1703022330/bdvypfvraoemkf8uvnjd.png' color='grey.400' height='100px'/>
             <Text fontSize='2xl' fontWeight='extrabold'>
-            Shop by Sushi Bar
+              Azsiai Piac
             </Text>
           </Flex>
           <Text color='muted'>Explore Asia On Your Plate.</Text>

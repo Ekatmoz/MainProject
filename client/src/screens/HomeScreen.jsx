@@ -43,7 +43,7 @@ const HomeScreen = () => (
       </Box>
       <Flex flex="1" overflow="hidden">
         <Image
-          src="https://img.freepik.com/free-photo/bowl-noodles-with-chili-pepper-sesame-seeds_23-2148382888.jpg?w=740&t=st=1702383433~exp=1702384033~hmac=1ea8b546ea6f5e9e669eda59ee9d5b3a15754bbd2e4d3da36609092990e49f91"
+          src="https://res.cloudinary.com/dtj7rhgwl/image/upload/v1703075427/cmanqhinda8u2ax2zdsl.jpg"
           alt="Lovely Image"
           fallback={<Skeleton />}
           maxH="450px"
@@ -53,7 +53,7 @@ const HomeScreen = () => (
         />
         <Image
           display={{ base: 'none', sm: 'initial' }}
-          src="https://img.freepik.com/free-photo/meat-with-chili-sauce-black-table_141793-1726.jpg?w=826&t=st=1702383551~exp=1702384151~hmac=3e349643ec4bbf87bc21d79244fdffad7025da098502346f5533437a37459239"
+          src="https://images.unsplash.com/photo-1569246294372-ed319c674f14?q=80&w=2800&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Lovely Image"
           fallback={<Skeleton />}
           maxH="450px"

@@ -39,7 +39,6 @@ import { googleLogout } from '@react-oauth/google';
 
 const Links = [
 	{ name: 'Products', route: '/products' },
-	{ name: 'Hot Deals', route: '/hot-deals' },
 	{ name: 'Contact', route: '/contact' },
 	{ name: 'Services', route: '/services' },
 ];
@@ -96,8 +95,8 @@ const Navbar = () => {
 					</Flex>
 					<HStack spacing='8' alignItems='center'>
 						<Box alignItems='center' display='flex' as={ReactLink} to='/'>
-              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1702934186/fvehi8njzmint2hkvupt.png' height='80px'/> 
-							<Text as='b'>Arany Sárkány</Text>
+              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1703022330/bdvypfvraoemkf8uvnjd.png' height='80px'/> 
+							<Text as='b'>Azsiai Piac</Text>
 						</Box>
 
 						<HStack as='nav' spacing='4' display={{ base: 'none', md: 'flex' }}>

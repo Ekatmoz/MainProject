@@ -1,5 +1,4 @@
-import { Box, Image, Text, Badge, Flex, IconButton, Skeleton, useToast, Tooltip } from '@chakra-ui/react';
-import { BiExpand } from 'react-icons/bi';
+import { Box, Image, Text, Badge, Flex, IconButton, Skeleton, useToast, Tooltip, Button } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { addToFavorites, removeFromFavorites } from '../redux/actions/productActions';
 import { useSelector, useDispatch } from 'react-redux';
@@ -45,7 +44,13 @@ const ProductCard = ({ product, loading }) => {
 				borderWidth='1px'
 				overflow='hidden'
 				p='4'
-				shadow='md'>
+				shadow='md'
+				>
+					{product.productIsNew && (
+					<Badge ml='2' colorScheme='purple'>
+						new
+					</Badge>
+				)}
 				<Image
 					onMouseEnter={() => setIsShown(true)}
 					onMouseLeave={() => setIsShown(false)}
@@ -61,11 +66,7 @@ const ProductCard = ({ product, loading }) => {
 				) : (
 					<Badge colorScheme='green'>In Stock</Badge>
 				)}
-				{product.productIsNew && (
-					<Badge ml='2' colorScheme='purple'>
-						new
-					</Badge>
-				)}
+			
 				<Text noOfLines={1} fontSize='xl' fontWeight='semibold' mt='2'>
 					{product.brand} {` `} {product.name}
 				</Text>
@@ -73,8 +74,9 @@ const ProductCard = ({ product, loading }) => {
 					{product.description}
 				</Text>
 				<Flex justify='space-between' alignItems='center' mt='2'>
-					<Badge colorScheme='red'>{product.category}</Badge>
-					<Text fontSize='xl' fontWeight='semibold'>
+				<Button as={ReactLink} to={`/product/${product._id}`} >Reszletek</Button>
+					{/* <Badge colorScheme='red'>{product.category}</Badge> */}
+					<Text fontSize='l' fontWeight='semibold'>
 						{product.price}Ft
 					</Text>
 				</Flex>
@@ -95,14 +97,13 @@ const ProductCard = ({ product, loading }) => {
 							onClick={() => dispatch(addToFavorites(product._id))}
 						/>
 					)}
-
-					<IconButton
-						icon={<BiExpand size='20' />}
+					{/* <IconButton
+						//icon={<BiExpand size='20' />}
 						as={ReactLink}
 						to={`/product/${product._id}`}
 						colorScheme='yellow'
 						size='sm'
-					/>
+					/> */}
 
 					<Tooltip
 						isDisabled={!cartPlusDisabled}

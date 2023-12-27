@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from '../components/ProductCard';
 import { getProducts } from '../redux/actions/productActions';
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
+import CategoryButtons from '../components/CategoryButtons';
 
 const ProductsScreen = () => {
 	const dispatch = useDispatch();
 	const { loading, error, products, pagination, favoritesToggled } = useSelector((state) => state.product);
+
 
 	useEffect(() => {
 		dispatch(getProducts(1));
@@ -19,6 +21,7 @@ const ProductsScreen = () => {
 	
 	return (
 		<>
+		  <CategoryButtons/>
 			{products.length >= 1 && (
 				<Box>
 					<Wrap spacing='30px' justify='center' minHeight='80vh' mx={{ base: '12', md: '20', lg: '32' }}>
@@ -40,20 +43,21 @@ const ProductsScreen = () => {
 					</Wrap>
 					{!favoritesToggled && (
 						<Wrap spacing='10px' justify='center' p='5'>
-							<Button colorScheme='teal' onClick={() => paginationButtonClick(1)}>
+							<Button colorScheme='green' size='xs' onClick={() => paginationButtonClick(1)}>
 								<ArrowLeftIcon />
 							</Button>
 							{Array.from(Array(pagination.totalPages), (e, i) => {
 								return (
 									<Button
-										colorScheme={pagination.currentPage === i + 1 ? 'teal' : 'gray'}
+										colorScheme={pagination.currentPage === i + 1 ? 'green' : 'gray'}
+										size='xs'
 										key={i}
 										onClick={() => paginationButtonClick(i + 1)}>
 										{i + 1}
 									</Button>
 								);
 							})}
-							<Button colorScheme='teal' onClick={() => paginationButtonClick(pagination.totalPages)}>
+							<Button colorScheme='green' size='xs' onClick={() => paginationButtonClick(pagination.totalPages)}>
 								<ArrowRightIcon />
 							</Button>
 						</Wrap>
