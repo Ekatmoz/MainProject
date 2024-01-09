@@ -5,31 +5,65 @@ import {
 	setPagination,
 	setFavorites,
 	setFavoritesToggle,
+	setCategory,
 	setProduct,
 	productReviewed,
 	resetError,
 } from '../slices/product';
 import axios from 'axios';
 
-export const getProducts = (page, favouriteToggle) => async (dispatch) => {
-	dispatch(setLoading());
-	try {
-		const { data } = await axios.get(`/api/products/${page}/${10}`); //10 products per page
-		const { products, pagination } = data;
-		dispatch(setProducts(products));
-		dispatch(setPagination(pagination));
-	} catch (error) {
-		dispatch(
-			setError(
-				error.response && error.response.data.message
-					? error.response.data.message
-					: error.message
-					? error.message
-					: 'An expected error has occured. Please try again later.'
-			)
-		);
-	}
+export const getProducts = (page, category = null) => async (dispatch) => {
+  dispatch(setLoading());
+
+  try {
+    let url = `/api/products/${page}/${10}`; // 10 products per page
+
+    // Add category parameter if specified
+    if (category) {
+      url += `?category=${category}`;
+    }
+
+    const { data } = await axios.get(url);
+    const { products, pagination } = data;
+
+    dispatch(setProducts(products));
+    dispatch(setPagination(pagination));
+
+    // Set the category in the Redux state if specified
+    if (category) {
+      dispatch(setCategory(category));
+    }
+  } catch (error) {
+    dispatch(
+      setError(
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+          ? error.message
+          : 'An expected error has occurred. Please try again later.'
+      )
+    );
+  }
 };
+// export const getProducts = (page) => async (dispatch) => {
+// 	dispatch(setLoading());
+// 	try {
+// 		const { data } = await axios.get(`/api/products/${page}/${10}`); //10 products per page
+// 		const { products, pagination } = data;
+// 		dispatch(setProducts(products));
+// 		dispatch(setPagination(pagination));
+// 	} catch (error) {
+// 		dispatch(
+// 			setError(
+// 				error.response && error.response.data.message
+// 					? error.response.data.message
+// 					: error.message
+// 					? error.message
+// 					: 'An expected error has occured. Please try again later.'
+// 			)
+// 		);
+// 	}
+// };
 
 export const addToFavorites = (id) => async (dispatch, getState) => {
 	const {

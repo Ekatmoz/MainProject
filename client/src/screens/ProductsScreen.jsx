@@ -8,20 +8,23 @@ import CategoryButtons from '../components/CategoryButtons';
 
 const ProductsScreen = () => {
 	const dispatch = useDispatch();
-	const { loading, error, products, pagination, favoritesToggled } = useSelector((state) => state.product);
-
+	const { loading, error, products, pagination, favoritesToggled, category } = useSelector((state) => state.product);
 
 	useEffect(() => {
 		dispatch(getProducts(1));
 	}, [dispatch]);
 
 	const paginationButtonClick = (page) => {
-		dispatch(getProducts(page));
+		dispatch(getProducts(page, category));
 	};
+
+	const filterByCategory = (selectedCategory) => {
+    dispatch(getProducts(1, selectedCategory)); // Fetch products with the selected category and reset to the first page
+  };
 	
 	return (
 		<>
-		  <CategoryButtons/>
+		  <CategoryButtons filterByCategory = {filterByCategory}/>
 			{products.length >= 1 && (
 				<Box>
 					<Wrap spacing='30px' justify='center' minHeight='80vh' mx={{ base: '12', md: '20', lg: '32' }}>
