@@ -38,9 +38,9 @@ import { FcGoogle } from 'react-icons/fc';
 import { googleLogout } from '@react-oauth/google';
 
 const Links = [
-	{ name: 'Products', route: '/products' },
+	{ name: 'Termékek', route: '/products' },
 	{ name: 'Contact', route: '/contact' },
-	{ name: 'Services', route: '/services' },
+	{ name: 'Receptek', route: '/recepies' },
 ];
 
 const Navbar = () => {
@@ -96,7 +96,7 @@ const Navbar = () => {
 					<HStack spacing='8' alignItems='center'>
 						<Box alignItems='center' display='flex' as={ReactLink} to='/'>
               <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1704804231/sarkanylogo_mi7t8l.png' height='100px'/> 
-							<Text as='b'>Azsiai Piac</Text>
+							<Text as='b'>Ázsiai Piac</Text>
 						</Box>
 
 						<HStack as='nav' spacing='4' display={{ base: 'none', md: 'flex' }}>

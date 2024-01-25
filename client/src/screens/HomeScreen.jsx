@@ -8,12 +8,26 @@ import {
   Link,
   Skeleton,
   Stack,
+  SimpleGrid,
+  Card,
+  CardBody,
+  Text,
   useColorModeValue as mode,
+  chakra, 
+  Container,
 } from '@chakra-ui/react'
 import { FaArrowRight } from 'react-icons/fa';
+import { FaTruck } from 'react-icons/fa';
+import { FaHandHolding } from 'react-icons/fa';
+import { FaTags } from 'react-icons/fa';
+import { FaEnvira } from 'react-icons/fa';
 import {Link as ReactLink} from 'react-router-dom';
+import Carousel from '../components/ProductCarousel';
+import Recepies from '../components/Recepies';
 
-const HomeScreen = () => (
+const HomeScreen = () => {
+
+  return (
   <Box maxW="8xl" mx="auto" px={{ base: '0', lg: '12' }} py={{ base: '0', lg: '12' }} minH='6xl'>
     <Stack direction={{ base: 'column-reverse', lg: 'row' }} spacing={{ base: '0', lg: '20' }}>
       <Box
@@ -27,15 +41,15 @@ const HomeScreen = () => (
         <Stack spacing={{ base: '8', lg: '10' }}>
           <Stack spacing={{ base: '2', lg: '4' }}>
             <Heading size="xl" color={mode('red.500', 'red.300')}>
-              Asian market
+              Arany Sárkány 
             </Heading>
-            <Heading size="xl" fontWeight="normal">
-              Get an asian taste
+            <Heading size="lg" fontWeight="normal">
+              Kóstolja meg az ázsiai ízeket
             </Heading>
           </Stack>
           <HStack spacing="3">
             <Link as={ReactLink} to='/products' color={mode('red.500', 'red.300')} fontWeight="bold" fontSize="lg">
-              Products
+              Termékek
             </Link>
             <Icon color={mode('red.500', 'red.300')} as={FaArrowRight} />
           </HStack>
@@ -61,7 +75,45 @@ const HomeScreen = () => (
         />
       </Flex>
     </Stack>
+    <Box p={4} width='100vw'  bg={{ base: mode('red.50', 'gray.700'), lg: 'transparent' }}>
+    <chakra.h1 textAlign='center' fontSize='4xl' py={10} fontWeight='bold'>
+        Why to choose us?
+      </chakra.h1>
+    <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
+  <Card>
+    <CardBody display="flex">
+      <Icon color={mode('red.500', 'red.300')} w={8} h={8} as={FaTags} mr={5}/>
+      <Text fontSize="m">Best prices</Text>
+      
+    </CardBody>
+  </Card>
+  <Card>
+    <CardBody display="flex">
+      <Icon color={mode('red.500', 'red.300')} w={8} h={8} as={FaTruck} mr={5}/>
+      <Text>Fast delivery</Text>
+    </CardBody>
+  </Card>
+  <Card>
+    <CardBody display="flex">
+      <Icon color={mode('red.500', 'red.300')} w={8} h={8} as={FaHandHolding} mr={5}/>
+      <Text>Safe payment</Text>
+    </CardBody>
+  </Card>
+  <Card>
+    <CardBody display="flex">
+      <Icon color={mode('red.500', 'red.300')} w={8} h={8} as={FaEnvira} mr={5}/>
+      <Text>Always fresh</Text>
+    </CardBody>
+  </Card>
+    </SimpleGrid>
+    </Box>
+    <Container maxW={'7xl'} p="10">
+      <Heading as="h1">New products</Heading>
+    </Container>
+    <Carousel/>
+   
+    <Recepies/>
   </Box>
-)
+)}
 
 export default HomeScreen;

@@ -64,15 +64,15 @@ const ProductCard = ({ product, loading }) => {
 				) : product.stock < 1 ? (
 					<Badge colorScheme='red'>Sold out</Badge>
 				) : (
-					<Badge colorScheme='green'>In Stock</Badge>
+					<Badge colorScheme='green'fontSize="10">In Stock</Badge>
 				)}
 			
 				<Text noOfLines={1} fontSize='xl' fontWeight='semibold' mt='2'>
-					{product.brand} {` `} {product.name}
+			    {product.name}
 				</Text>
-				<Text noOfLines={1} fontSize='md' color='gray.600'>
+				{/* <Text noOfLines={1} fontSize='md' color='gray.600'>
 					{product.description}
-				</Text>
+				</Text> */}
 				<Flex justify='space-between' alignItems='center' mt='2'>
 				<Button as={ReactLink} to={`/product/${product._id}`} >Reszletek</Button>
 					{/* <Badge colorScheme='red'>{product.category}</Badge> */}
