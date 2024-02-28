@@ -15,23 +15,23 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 			rounded='lg'
 			padding='8'
 			w='full'>
-			<Heading size='md'>Order Summary</Heading>
+			<Heading size='md'>A rendelés tartalma</Heading>
 			<Stack spacing='6'>
 				<Flex justify='space-between'>
 					<Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
-						Subtotal
+					  Részösszeg:
 					</Text>
 					<Text fontWeight='medium'>{subtotal}Ft</Text>
 				</Flex>
 				<Flex justify='space-between'>
 					<Text fontWeight='medium' color={mode('gray.600', 'gray.400')}>
-						Shipping
+					  Szállítás:
 					</Text>
 					<Text fontWeight='medium'>{shipping}Ft</Text>
 				</Flex>
 				<Flex justify='space-between'>
 					<Text fontSize='xl' fontWeight='extrabold'>
-						Total
+					  Összeg:
 					</Text>
 					<Text fontWeight='medium'>{Number(subtotal) + Number(shipping)}Ft</Text>
 				</Flex>
@@ -43,7 +43,7 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 				colorScheme='cyan'
 				size='lg'
 				rightIcon={<FaArrowRight />}>
-				Checkout
+				Tovább a pénztárhoz
 			</Button>
 		</Stack>
 	);

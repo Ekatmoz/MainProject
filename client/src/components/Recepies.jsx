@@ -86,7 +86,7 @@ const Recepies = () => {
           marginTop="2"
           color={useColorModeValue('gray.700', 'gray.200')}
           fontSize="lg">
-            Pad thai made from scratch isn't exactly a quick meal—there are a LOT of ingredients to prep. But how do restaurants get your freshly-made pad thai done in 5 minutes? Good news: they're not doing anything you can't do at home. But the most important thing they do is to have the sauce made in bulk, in advance.
+            Az alapból készült pad thai nem éppen egy gyors étkezés – SOK hozzávalót kell elkészíteni. De hogyan készítik el az éttermek a frissen készült pad thai-t 5 perc alatt? Jó hír: nem csinálnak olyat, amit otthon ne tudna megcsinálni. De a legfontosabb, hogy a szószt ömlesztve, előre elkészítsék.
         </Text>
       </Box>
     </Box>

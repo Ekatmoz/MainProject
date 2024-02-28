@@ -61,7 +61,7 @@ const ShippingInformation = () => {
 						</FormControl>
 						<Box w='100%' pr='5'>
 							<Heading fontSize='2xl' fontWeight='extrabold' mb='10'>
-								Shipping Method
+							SZÁLLÍTÁSI MÓD
 							</Heading>
 							<RadioGroup
 								onChange={(e) => {

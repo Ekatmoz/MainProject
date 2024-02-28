@@ -8,16 +8,19 @@ const CategoryButtons = ({filterByCategory}) => {
         All
       </Button>
       <Button colorScheme='red' size='md' variant='outline' onClick={() => filterByCategory("Sauce")}>
-        Sause
+        Szószok
       </Button>
       <Button colorScheme='red' size='md' variant='outline' onClick={() => filterByCategory("Sweets")}>
-        Sweet
+        Édességek, snackek
       </Button>
       <Button colorScheme='red' size='md' variant='outline' onClick={() => filterByCategory("Noodles")}>
-        Pasta
+        Tészták, rizsek
       </Button>
       <Button colorScheme='red' size='md' variant='outline'onClick={() => filterByCategory("Frozen")}>
         Frozen
+      </Button>
+      <Button colorScheme='red' size='md' variant='outline' onClick={() => filterByCategory("Drinks")}>
+        Italok
       </Button>
     </Stack>
     </Flex>

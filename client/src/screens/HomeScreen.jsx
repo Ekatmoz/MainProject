@@ -75,43 +75,43 @@ const HomeScreen = () => {
         />
       </Flex>
     </Stack>
+    <Container maxW={'7xl'} p="10">
+      <Heading as="h1">New products</Heading>
+    </Container>
+    <Carousel/>
     <Box p={4} width='100vw'  bg={{ base: mode('red.50', 'gray.700'), lg: 'transparent' }}>
     <chakra.h1 textAlign='center' fontSize='4xl' py={10} fontWeight='bold'>
-        Why to choose us?
+        Miért érdemes minket választani?
       </chakra.h1>
     <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10}>
   <Card>
     <CardBody display="flex">
       <Icon color={mode('red.500', 'red.300')} w={8} h={8} as={FaTags} mr={5}/>
-      <Text fontSize="m">Best prices</Text>
+      <Text fontSize="m">Félelem az árak</Text>
       
     </CardBody>
   </Card>
   <Card>
     <CardBody display="flex">
       <Icon color={mode('red.500', 'red.300')} w={8} h={8} as={FaTruck} mr={5}/>
-      <Text>Fast delivery</Text>
+      <Text>Gyors szállítás</Text>
     </CardBody>
   </Card>
   <Card>
     <CardBody display="flex">
       <Icon color={mode('red.500', 'red.300')} w={8} h={8} as={FaHandHolding} mr={5}/>
-      <Text>Safe payment</Text>
+      <Text>Biztonságos fizetés</Text>
     </CardBody>
   </Card>
   <Card>
     <CardBody display="flex">
       <Icon color={mode('red.500', 'red.300')} w={8} h={8} as={FaEnvira} mr={5}/>
-      <Text>Always fresh</Text>
+      <Text>Mindig friss</Text>
     </CardBody>
   </Card>
     </SimpleGrid>
     </Box>
-    <Container maxW={'7xl'} p="10">
-      <Heading as="h1">New products</Heading>
-    </Container>
-    <Carousel/>
-   
+
     <Recepies/>
   </Box>
 )}

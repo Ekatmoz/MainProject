@@ -47,8 +47,8 @@ const ProductCard = ({ product, loading }) => {
 				shadow='md'
 				>
 					{product.productIsNew && (
-					<Badge ml='2' colorScheme='purple'>
-						new
+					<Badge ml='2' colorScheme='purple' fontSize="2l">
+						új
 					</Badge>
 				)}
 				<Image
@@ -60,11 +60,11 @@ const ProductCard = ({ product, loading }) => {
 					height='200px'
 				/>
 				{product.stock < 5 ? (
-					<Badge colorScheme='yellow'>only {product.stock} left</Badge>
+					<Badge colorScheme='yellow'>csak {product.stock} db</Badge>
 				) : product.stock < 1 ? (
-					<Badge colorScheme='red'>Sold out</Badge>
+					<Badge colorScheme='red'>Előrendelhető</Badge>
 				) : (
-					<Badge colorScheme='green'fontSize="10">In Stock</Badge>
+					<Badge colorScheme='green'fontSize="2xs">Raktáron</Badge>
 				)}
 			
 				<Text noOfLines={1} fontSize='xl' fontWeight='semibold' mt='2'>
