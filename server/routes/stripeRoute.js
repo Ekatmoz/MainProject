@@ -23,7 +23,7 @@ const stripePayment = async (req, res) => {
 		});
 	} else {
 		lineItems.push({
-			price: process.env.STANDARD_SHIPPING_ID,
+			price: process.env.PICKUP_SHIPPING_ID,
 			quantity: 1,
 		});
 	}
@@ -55,7 +55,7 @@ const stripePayment = async (req, res) => {
 
 	const newOrder = await order.save();
 
-	data.cartItems.forEach(async (cartItem) => {
+	data.cartItems.forEach(async (cartItem) => { //to loop for each so we follow the stock
 		let product = await Product.findById(cartItem.id);
 		product.stock = product.stock - cartItem.qty;
 		product.save();

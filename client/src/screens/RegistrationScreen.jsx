@@ -126,7 +126,7 @@ const RegistrationScreen = () => {
 										Sign up
 									</Button>
 									<Button colorScheme='cyan' size='lg' fontSize='md' isLoading={loading} onClick={() => handleGoogleLogin()}>
-										<FcGoogle size={30}/>
+										<FcGoogle iconSize='lg'/>
 										Sign up with Google
 									</Button>
 								</Stack>

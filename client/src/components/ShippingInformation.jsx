@@ -6,6 +6,7 @@ import {
 	Heading,
 	Radio,
 	RadioGroup,
+	Spacer,
 	Stack,
 	Text,
 	VStack,
@@ -32,12 +33,14 @@ const ShippingInformation = () => {
 	return (
 		<Formik
 			initialValues={{
+				receiver: shippingAddress ? shippingAddress.receiver : '',
 				address: shippingAddress ? shippingAddress.address : '',
 				postalCode: shippingAddress ? shippingAddress.postalCode : '',
 				city: shippingAddress ? shippingAddress.city : '',
 				country: shippingAddress ? shippingAddress.country : '',
 			}}
 			validationSchema={Yup.object({
+				receiver: Yup.string().required('We need an name.').min(2, 'This address is too short.'),
 				address: Yup.string().required('We need an address.').min(2, 'This address is too short.'),
 				postalCode: Yup.string().required('We need a postal code.').min(2, 'This postal code is too short.'),
 				city: Yup.string().required('We need a city.').min(2, 'This city is too short.'),
@@ -48,39 +51,40 @@ const ShippingInformation = () => {
 				<>
 					<VStack as='form'>
 						<FormControl>
-							<TextField name='address' placeholder='Street Address' label='Street Address' />
+						  <TextField name='receiver' placeholder='Street Address' label='Neve' />
+							<TextField name='address' placeholder='Street Address' label='Utca, házszám' />
 							<Flex>
 								<Box flex='1' mr='10'>
-									<TextField name='postalCode' placeholder='Postal Code' label='Postal Code' type='number' />
+									<TextField name='postalCode' placeholder='Postal Code' label='Irányítószám' type='number' />
 								</Box>
 								<Box flex='2'>
-									<TextField name='city' placeholder='City' label='City' />
+									<TextField name='city' placeholder='City' label='Város' />
 								</Box>
 							</Flex>
 							<TextField name='country' placeholder='Country' label='Country' />
 						</FormControl>
 						<Box w='100%' pr='5'>
 							<Heading fontSize='2xl' fontWeight='extrabold' mb='10'>
-							SZÁLLÍTÁSI MÓD
+							  Szállítási módot
 							</Heading>
 							<RadioGroup
 								onChange={(e) => {
-									dispatch(setShipping(e === 'express' ? Number(1990).toFixed(2) : Number(0).toFixed(2)));
+									dispatch(setShipping(e === 'courier' ? Number(1900.00).toFixed(2) : Number(0.00).toFixed(2)));
 								}}
-								defaultValue={shipping === 4.99 ? 'withoutExpress' : 'express'}>
+								defaultValue={shipping === 0.00 ? 'pickup' : 'courier'}>
 								<Stack direction={{ base: 'column', lg: 'row' }} align={{ lg: 'flex-start' }}>
 									<Stack pr='10' spacing={{ base: '8', md: '10' }} flex='1.5'>
 										<Box>
-											<Radio value='express'>
-												<Text fontWeight='bold'>Express 1990</Text>
-												<Text>Dispatched in 24 hours</Text>
+											<Radio value='courier'>
+												<Text fontWeight='bold'>Futárszolgálat - GLS</Text>
+												{/* <Text>Dispatched in 24 hours</Text> */}
 											</Radio>
 										</Box>
-										<Stack spacing='6'>Express</Stack>
+										{/* <Stack spacing='6'>Express</Stack> */}
 									</Stack>
-									<Radio value='withoutExpress'>
+									<Radio value='pickup'>
 										<Box>
-											<Text fontWeight='bold'>Pick-up 0</Text>
+											<Text fontWeight='bold'>Személyes átvétel</Text>
 											<Text>Dispatched in 2 - 3 days</Text>
 										</Box>
 									</Radio>
@@ -90,7 +94,7 @@ const ShippingInformation = () => {
 					</VStack>
 					<Flex alignItems='center' gap='2' direction={{ base: 'column', lg: 'row' }}>
 						<Button variant='outline' colorScheme='cyan' w='100%' as={ReactLink} to='/cart'>
-							Back to cart
+						  Vissza a kosárba
 						</Button>
 						<Button
 							variant='outline'
@@ -99,7 +103,7 @@ const ShippingInformation = () => {
 							as={ReactLink}
 							to='/payment'
 							onClick={formik.handleSubmit}>
-							Continue to Payment
+							Tovább
 						</Button>
 					</Flex>
 				</>

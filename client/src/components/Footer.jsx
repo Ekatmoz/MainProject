@@ -44,12 +44,14 @@ const Footer = () => (
             </Stack>
             <Stack spacing='4' minW='36' flex='1'>
               <Text fontSize='sm' fontWeight='semibold' color='subtle'>
-                Legal
+                Információk
               </Text>
               <Stack spacing='3' shouldWrapChildren>
-                <Button variant='link'>Privacy</Button>
-                <Button variant='link'>Terms</Button>
-                <Button variant='link'>License</Button>
+                <Button variant='link'>Rólunk</Button>
+                <Button variant='link'>Kapcsolat</Button>
+                <Button variant='link'>Vásárlási információk</Button>
+                <Button variant='link'>Adatkezelési tájékoztató</Button>
+                <Button variant='link'>ÁSZF</Button>
               </Stack>
             </Stack>
           </Stack>

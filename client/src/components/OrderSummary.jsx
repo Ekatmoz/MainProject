@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, Stack, Text, useColorModeValue as mode } from '@chakra-ui/react';
+import { Button, Flex, Heading, Stack, Text, useColorModeValue as mode, Checkbox } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { Link as ReactLink } from 'react-router-dom';
@@ -45,6 +45,10 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 				rightIcon={<FaArrowRight />}>
 				Tovább a pénztárhoz
 			</Button>
+			{checkoutSreen && (
+        <Checkbox>Elolvastam és elfogadom az Általános Szerződési Feltételeket</Checkbox>
+			)}
+			
 		</Stack>
 	);
 };
