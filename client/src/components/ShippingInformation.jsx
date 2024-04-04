@@ -6,12 +6,12 @@ import {
 	Heading,
 	Radio,
 	RadioGroup,
-	Spacer,
 	Stack,
 	Text,
 	VStack,
+	Checkbox
 } from '@chakra-ui/react';
-import { Formik } from 'formik';
+import { Formik, Field } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 import { setShipping } from '../redux/actions/cartActions';
@@ -38,6 +38,7 @@ const ShippingInformation = () => {
 				postalCode: shippingAddress ? shippingAddress.postalCode : '',
 				city: shippingAddress ? shippingAddress.city : '',
 				country: shippingAddress ? shippingAddress.country : '',
+				termsAndConditions: false,
 			}}
 			validationSchema={Yup.object({
 				receiver: Yup.string().required('We need an name.').min(2, 'This address is too short.'),
@@ -45,6 +46,7 @@ const ShippingInformation = () => {
 				postalCode: Yup.string().required('We need a postal code.').min(2, 'This postal code is too short.'),
 				city: Yup.string().required('We need a city.').min(2, 'This city is too short.'),
 				country: Yup.string().required('We need a country.').min(2, 'This country is too short.'),
+				termsAndConditions: Yup.boolean().oneOf([true], 'Az Általános Szerződési Feltételek elfogadása kötelező'),
 			})}
 			onSubmit={onSubmit}>
 			{(formik) => (
@@ -91,8 +93,17 @@ const ShippingInformation = () => {
 								</Stack>
 							</RadioGroup>
 						</Box>
+						<Box w='100%' pr='5' mt='5'>
+						<label>
+                <Field type="checkbox" name="termsAndConditions" style={{ marginRight: '5px', fontWeight: 'bold', color: formik.touched.termsAndConditions && formik.errors.termsAndConditions ? 'red' : 'inherit' }}/>
+								  Elolvastam és elfogadom az Általános Szerződési Feltételeket
+              </label>
+							{formik.touched.termsAndConditions && formik.errors.termsAndConditions ? (
+                <div style={{ color: 'red', fontSize: '10px' }}>{formik.errors.termsAndConditions}</div>
+              ) : null}
+						</Box>
 					</VStack>
-					<Flex alignItems='center' gap='2' direction={{ base: 'column', lg: 'row' }}>
+					<Flex alignItems='center' gap='2' mt='5' direction={{ base: 'column', lg: 'row' }}>
 						<Button variant='outline' colorScheme='cyan' w='100%' as={ReactLink} to='/cart'>
 						  Vissza a kosárba
 						</Button>
