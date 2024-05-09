@@ -4,7 +4,6 @@ import {
   Container,
   Divider,
   IconButton,
-  Input,
   Stack,
   Text,
   useColorModeValue as mode,
@@ -13,6 +12,7 @@ import {
   Image
 } from '@chakra-ui/react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { Link as ReactLink } from 'react-router-dom';
 
 const Footer = () => (
   <Box w='100%' bg={mode('gray.100', 'gray.900')}>
@@ -31,31 +31,31 @@ const Footer = () => (
           </Flex>
           <Text color='muted'>Explore Asia On Your Plate.</Text>
         </Stack>
-        <Stack direction={{ base: 'column-reverse', md: 'column', lg: 'row' }} spacing={{ base: '12', md: '8' }}>
-          <Stack direction='row' spacing='8'>
-            <Stack spacing='4' minW='36' flex='1'>
+        <Stack direction={{ base: 'column-reverse', md: 'column', lg: 'row' }} spacing={{ base: '12', md: '8' }} w='60%'>
+          <Stack direction='row' spacing='20'>
+            <Stack spacing='4' minW='36' flex='2'>
               <Text fontSize='sm' fontWeight='semibold' color='subtle'>
-                Product
+                Kapcsolat
               </Text>
               <Stack spacing='3' shouldWrapChildren>
-                <Button variant='link'>How it works</Button>
-                <Button variant='link'>Pricing</Button>
+                <Button variant='link'>8600 Siófok, Széchenyi utca 18 </Button>
+                <Button variant='link'>+ 36 70 791 6990</Button>
+                <Button variant='link'>info@aranysarkany.com</Button>
               </Stack>
             </Stack>
-            <Stack spacing='4' minW='36' flex='1'>
+            <Stack spacing='4' minW='36' flex='2'>
               <Text fontSize='sm' fontWeight='semibold' color='subtle'>
                 Információk
               </Text>
               <Stack spacing='3' shouldWrapChildren>
                 <Button variant='link'>Rólunk</Button>
-                <Button variant='link'>Kapcsolat</Button>
                 <Button variant='link'>Vásárlási információk</Button>
                 <Button variant='link'>Adatkezelési tájékoztató</Button>
-                <Button variant='link'>ÁSZF</Button>
+                <Button variant='link' as={ReactLink} to='/terms&conditions'>ÁSZF</Button>
               </Stack>
             </Stack>
           </Stack>
-          <Stack spacing='4'>
+          {/* <Stack spacing='4'>
             <Text fontSize='sm' fontWeight='semibold' color='subtle'>
               Stay up to date
             </Text>
@@ -65,7 +65,7 @@ const Footer = () => (
                 Subscribe
               </Button>
             </Stack>
-          </Stack>
+          </Stack> */}
         </Stack>
       </Stack>
       <Divider />

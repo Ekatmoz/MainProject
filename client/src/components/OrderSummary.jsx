@@ -11,7 +11,7 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 			minWidth='300px'
 			spacing='8'
 			borderWidth='1px'
-			borderColor={mode('cyan.500', 'cyan.100')}
+			borderColor={mode('blue.500', 'blue.100')}
 			rounded='lg'
 			padding='8'
 			w='full'>
@@ -40,7 +40,7 @@ const OrderSummary = ({ checkoutSreen = false }) => {
 				hidden={checkoutSreen}
 				as={ReactLink}
 				to='/checkout'
-				colorScheme='cyan'
+				colorScheme='blue'
 				size='lg'
 				rightIcon={<FaArrowRight />}>
 				Tovább a pénztárhoz

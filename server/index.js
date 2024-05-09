@@ -9,7 +9,8 @@ import path from 'path';
 import productRoutes from './routes/productRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
-import stripeRoute from './routes/stripeRoute.js';
+import barionRoute from './routes/barionRoutes.js';
+
 
 connectToDatabase();
 const app = express();
@@ -18,7 +19,7 @@ app.use(cors());
 
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/checkout', stripeRoute);
+app.use('/api/checkout', barionRoute);
 app.use('/api/orders', orderRoutes);
 
 

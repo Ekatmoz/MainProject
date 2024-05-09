@@ -99,17 +99,22 @@ const ShippingInformation = () => {
 								  Elolvastam és elfogadom az Általános Szerződési Feltételeket
               </label>
 							{formik.touched.termsAndConditions && formik.errors.termsAndConditions ? (
-                <div style={{ color: 'red', fontSize: '10px' }}>{formik.errors.termsAndConditions}</div>
+                <div style={{ color: 'red', fontSize: '12px' }}>{formik.errors.termsAndConditions}</div>
               ) : null}
 						</Box>
 					</VStack>
 					<Flex alignItems='center' gap='2' mt='5' direction={{ base: 'column', lg: 'row' }}>
-						<Button variant='outline' colorScheme='cyan' w='100%' as={ReactLink} to='/cart'>
+						<Button 
+						  variant='outline' 
+							colorScheme='blue' 
+							w='100%' 
+							as={ReactLink} 
+							to='/cart'>
 						  Vissza a kosárba
 						</Button>
 						<Button
-							variant='outline'
-							colorScheme='cyan'
+							variant='solid'
+							colorScheme='blue'
 							w='100%'
 							as={ReactLink}
 							to='/payment'
