@@ -9,7 +9,7 @@ import path from 'path';
 import productRoutes from './routes/productRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
-import barionRoute from './routes/barionRoutes.js';
+import stripeRoutes from './routes/stripeRoute.js';
 
 
 connectToDatabase();
@@ -19,7 +19,7 @@ app.use(cors());
 
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/checkout', barionRoute);
+app.use('/api/checkout', stripeRoutes);
 app.use('/api/orders', orderRoutes);
 
 

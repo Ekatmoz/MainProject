@@ -1,5 +1,5 @@
 import express from 'express';
-import Barion from 'barion-node';
+import Barion from 'node-barion';
 import Order from '../models/Order.js';
 import Product from '../models/Product.js';
 import { protectRoute } from '../middleware/authMiddleware.js';
@@ -57,7 +57,7 @@ const barionPayment = async (req, res) => {
           Items: lineItems,
         },
       ],
-      RedirectUrl: 'http://localhost:3000/barion/payment/success',
+      RedirectUrl: 'http://localhost:3000/success',
       CallbackUrl: 'http://localhost:3000/barion/payment/callback',
     };
 
