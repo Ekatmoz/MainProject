@@ -10,12 +10,12 @@ const barion = new Barion({
 });
 
 const barionRoute = express.Router();
-
 const EXPRESS_SHIPPING_PRICE = 1990; // Set the express shipping price
 const PICKUP_SHIPPING_PRICE = 0; // Set the pickup shipping price
 
 const barionPayment = async (req, res) => {
   const data = req.body;
+  console.log(req.body);
 
   let lineItems = [];
 

@@ -8,8 +8,7 @@ import {
 	RadioGroup,
 	Stack,
 	Text,
-	VStack,
-	Checkbox
+	VStack
 } from '@chakra-ui/react';
 import { Formik, Field } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
@@ -34,14 +33,16 @@ const ShippingInformation = () => {
 		<Formik
 			initialValues={{
 				receiver: shippingAddress ? shippingAddress.receiver : '',
+				surname: shippingAddress ? shippingAddress.surname : '',
 				address: shippingAddress ? shippingAddress.address : '',
 				postalCode: shippingAddress ? shippingAddress.postalCode : '',
 				city: shippingAddress ? shippingAddress.city : '',
-				country: shippingAddress ? shippingAddress.country : '',
+				country: 'Magyarország',
 				termsAndConditions: false,
 			}}
 			validationSchema={Yup.object({
-				receiver: Yup.string().required('We need an name.').min(2, 'This address is too short.'),
+				receiver: Yup.string().required('We need a surname.').min(2, 'This surname is too short.'),
+				surname: Yup.string().required('We need a name.').min(2, 'This name is too short.'),
 				address: Yup.string().required('We need an address.').min(2, 'This address is too short.'),
 				postalCode: Yup.string().required('We need a postal code.').min(2, 'This postal code is too short.'),
 				city: Yup.string().required('We need a city.').min(2, 'This city is too short.'),
@@ -53,36 +54,43 @@ const ShippingInformation = () => {
 				<>
 					<VStack as='form'>
 						<FormControl>
-						  <TextField name='receiver' placeholder='Street Address' label='Neve' />
-							<TextField name='address' placeholder='Street Address' label='Utca, házszám' />
 							<Flex>
 								<Box flex='1' mr='10'>
-									<TextField name='postalCode' placeholder='Postal Code' label='Irányítószám' type='number' />
+								  <TextField name='receiver' placeholder='Vezetéknév' label='Vezetéknév' />
 								</Box>
-								<Box flex='2'>
-									<TextField name='city' placeholder='City' label='Város' />
+								<Box flex='1' mr='10'>
+								<TextField name='surname' placeholder='Keresztnév' label='Keresztnév' />
 								</Box>
 							</Flex>
-							<TextField name='country' placeholder='Country' label='Country' />
+							<TextField name='address' placeholder='Utca, házszám' label='Utca, házszám' />
+							<Flex>
+								<Box flex='1' mr='10'>
+									<TextField name='postalCode' placeholder='Irányítószám' label='Irányítószám' type='number' />
+								</Box>
+								<Box flex='2'>
+									<TextField name='city' placeholder='Város' label='Város' />
+								</Box>
+							</Flex>
+							{/* <TextField name='country' placeholder='Country' label='Country' /> */}
+							<Text>{formik.values.country}*</Text>
 						</FormControl>
-						<Box w='100%' pr='5'>
+						<Box w='100%' pr='5' mt='5'>
 							<Heading fontSize='2xl' fontWeight='extrabold' mb='10'>
 							  Szállítási módot
 							</Heading>
 							<RadioGroup
 								onChange={(e) => {
-									dispatch(setShipping(e === 'courier' ? Number(1900.00).toFixed(2) : Number(0.00).toFixed(2)));
+									dispatch(setShipping(e === 'express' ? Number(1990) : Number(0)));
 								}}
-								defaultValue={shipping === 0.00 ? 'pickup' : 'courier'}>
+								defaultValue={shipping === 0 ? 'pickup' : 'express'}>
 								<Stack direction={{ base: 'column', lg: 'row' }} align={{ lg: 'flex-start' }}>
 									<Stack pr='10' spacing={{ base: '8', md: '10' }} flex='1.5'>
 										<Box>
-											<Radio value='courier'>
+											<Radio value='express'>
 												<Text fontWeight='bold'>Futárszolgálat - GLS</Text>
 												{/* <Text>Dispatched in 24 hours</Text> */}
 											</Radio>
 										</Box>
-										{/* <Stack spacing='6'>Express</Stack> */}
 									</Stack>
 									<Radio value='pickup'>
 										<Box>
@@ -92,6 +100,11 @@ const ShippingInformation = () => {
 									</Radio>
 								</Stack>
 							</RadioGroup>
+							<Heading fontSize='2xl' fontWeight='extrabold' mb='10' mt='10'>
+							  Fizetés módot
+								<Text>bankkártyás fizetés</Text>
+								<Text> Utánvétes fizetés</Text>
+							</Heading>
 						</Box>
 						<Box w='100%' pr='5' mt='5'>
 						<label>
@@ -119,7 +132,7 @@ const ShippingInformation = () => {
 							as={ReactLink}
 							to='/payment'
 							onClick={formik.handleSubmit}>
-							Tovább
+							Megrendelés
 						</Button>
 					</Flex>
 				</>
