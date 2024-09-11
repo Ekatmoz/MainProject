@@ -41,7 +41,7 @@ const HomeScreen = () => {
         <Stack spacing={{ base: '8', lg: '10' }}>
           <Stack spacing={{ base: '2', lg: '4' }}>
             <Heading size="xl" color={mode('red.500', 'red.300')}>
-              Arany Sárkány 
+              Ázsiai Piac
             </Heading>
             <Heading size="lg" fontWeight="normal">
               Kóstolja meg az ázsiai ízeket

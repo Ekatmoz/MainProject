@@ -95,10 +95,9 @@ const Navbar = () => {
 					</Flex>
 					<HStack spacing='8' alignItems='center'>
 						<Box alignItems='center' display='flex' as={ReactLink} to='/'>
-              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1706455954/sample_logo_fyqxmc.png' height='100px'/> 
-							<Text as='b'>Ázsiai Piac</Text>
+              <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1724936225/Arany_sarkany_cgmt4z.png' height='60px'/> 
+							<Text as='b' color={mode('red.500', 'red.300')}>Arany Sárkány</Text>
 						</Box>
-
 						<HStack as='nav' spacing='4' display={{ base: 'none', md: 'flex' }}>
 							{Links.map((link) => (
 								<NavLink route={link.route} key={link.route}>

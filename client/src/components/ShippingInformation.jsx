@@ -14,19 +14,27 @@ import { Formik, Field } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
 import * as Yup from 'yup';
 import { setShipping } from '../redux/actions/cartActions';
-import { setAddress, setPayment } from '../redux/actions/orderActions';
+import { setAddress, setPayment, setPaymentMethodAction } from '../redux/actions/orderActions';
 import TextField from './TextField';
-import { Link as ReactLink } from 'react-router-dom';
+import { Link as ReactLink} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const ShippingInformation = () => {
 	const { shipping } = useSelector((state) => state.cart);
 	const { shippingAddress } = useSelector((state) => state.order);
-
 	const dispatch = useDispatch();
+	const navigate = useNavigate(); 
 
 	const onSubmit = async (values) => {
 		dispatch(setAddress(values));
-		dispatch(setPayment());
+		dispatch(setPaymentMethodAction(values.paymentMethod));
+		dispatch(setPayment(values.paymentMethod));
+
+		// if (values.paymentMethod === 'cash') {
+		// 	navigate('/success');
+		// } else if (values.paymentMethod === 'card') {
+		// 	navigate('/payment');
+		// }
 	};
 
 	return (
@@ -39,6 +47,7 @@ const ShippingInformation = () => {
 				city: shippingAddress ? shippingAddress.city : '',
 				country: 'Magyarország',
 				termsAndConditions: false,
+				paymentMethod: '',
 			}}
 			validationSchema={Yup.object({
 				receiver: Yup.string().required('We need a surname.').min(2, 'This surname is too short.'),
@@ -48,6 +57,7 @@ const ShippingInformation = () => {
 				city: Yup.string().required('We need a city.').min(2, 'This city is too short.'),
 				country: Yup.string().required('We need a country.').min(2, 'This country is too short.'),
 				termsAndConditions: Yup.boolean().oneOf([true], 'Az Általános Szerződési Feltételek elfogadása kötelező'),
+				paymentMethod: Yup.string().required('Please select a payment method') // Payment method validation
 			})}
 			onSubmit={onSubmit}>
 			{(formik) => (
@@ -88,23 +98,28 @@ const ShippingInformation = () => {
 										<Box>
 											<Radio value='express'>
 												<Text fontWeight='bold'>Futárszolgálat - GLS</Text>
-												{/* <Text>Dispatched in 24 hours</Text> */}
+												<Text>1990FT</Text>
 											</Radio>
 										</Box>
 									</Stack>
 									<Radio value='pickup'>
 										<Box>
 											<Text fontWeight='bold'>Személyes átvétel</Text>
-											<Text>Dispatched in 2 - 3 days</Text>
+											<Text>Ingyenes</Text>
 										</Box>
 									</Radio>
 								</Stack>
 							</RadioGroup>
 							<Heading fontSize='2xl' fontWeight='extrabold' mb='10' mt='10'>
-							  Fizetés módot
-								<Text>bankkártyás fizetés</Text>
-								<Text> Utánvétes fizetés</Text>
-							</Heading>
+                Fizetés módot
+              </Heading>
+              <RadioGroup
+                name='paymentMethod'
+                value={formik.values.paymentMethod}
+                onChange={(val) => formik.setFieldValue('paymentMethod', val)}>
+                <Radio value='card'>Bankkártyás fizetés</Radio>
+                <Radio value='cash'>Utánvétes fizetés</Radio>
+              </RadioGroup>
 						</Box>
 						<Box w='100%' pr='5' mt='5'>
 						<label>
@@ -129,8 +144,6 @@ const ShippingInformation = () => {
 							variant='solid'
 							colorScheme='blue'
 							w='100%'
-							as={ReactLink}
-							to='/payment'
 							onClick={formik.handleSubmit}>
 							Megrendelés
 						</Button>

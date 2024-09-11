@@ -133,13 +133,13 @@ const ProductScreen = () => {
 												<Star rating={product.rating} star={5} />
 											</HStack>
 											<Text fontSize='md' fontWeight='bold' ml='4px'>
-												{product.numberOfReviews} Reviews
+												{product.numberOfReviews} Értékelés
 											</Text>
 										</Flex>
 									</Box>
 									<Text>{product.subtitle}</Text>
 									<Text>{product.description}</Text>
-									<Text fontWeight='bold'>Quantity</Text>
+									<Text fontWeight='bold'>db</Text>
 									<Flex w='170px' p='5px' border='1px' borderColor='gray.200' alignItems='center'>
 										<Button isDisabled={amount <= 1} onClick={() => changeAmount('minus')}>
 											<MinusIcon />
@@ -157,7 +157,7 @@ const ProductScreen = () => {
 										isDisabled={product.stock === 0}
 										colorScheme='orange'
 										onClick={() => addItem()}>
-										Add to cart
+										Kosárba
 									</Button>
 									<Stack width='270px'>
 										<Flex alignItems='center'>
@@ -203,10 +203,10 @@ const ProductScreen = () => {
 									<Button
 										isDisabled={hasUserReviewed()}
 										my='20px'
-										w='140px'
-										colorScheme='orange'
+										w='180px'
+										colorScheme='green'
 										onClick={() => setReviewBoxOpen(!reviewBoxOpen)}>
-										Write a review
+										Írja meg véleményét
 									</Button>
 								</Tooltip>
 								{reviewBoxOpen && (

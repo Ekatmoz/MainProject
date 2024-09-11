@@ -52,6 +52,7 @@ const stripePayment = async (req, res) => {
 		shippingPrice: data.shipping,
 		subtotal: data.subtotal,
 		totalPrice: Number(data.subtotal + data.shipping),
+		paymentMethod: data.paymentMethod, // Ensure this is being set
 	});
 
 	const newOrder = await order.save();

@@ -42,10 +42,10 @@ const orderSchema = new mongoose.Schema(
 		totalPrice: { type: Number, default: 0.0 },
 		subtotal: { type: Number, default: 0.0 },
 		isDelivered: { type: Boolean, required: true, default: false },
-
-		deliveredAt: {
-			type: Date,
-		},
+		paymentMethod: { type: String, required: true },
+		isPaid: { type: Boolean, required: true, default: false },
+		paidAt: { type: Date },
+		deliveredAt: { type: Date },
 	},
 	{ timestamps: true }
 );

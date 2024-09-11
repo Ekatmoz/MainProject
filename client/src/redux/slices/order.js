@@ -6,6 +6,7 @@ export const initialState = {
   orderInfo: null,
   orderId: null,
 	shippingAddress: JSON.parse(localStorage.getItem('shippingAddress')) ?? null,
+  paymentMethod: '', // Add paymentMethod to the initial state
 };
 
 export const orderSlice = createSlice({
@@ -24,13 +25,16 @@ export const orderSlice = createSlice({
       state.loading = false;
       localStorage.setItem('shippingAddress', JSON.stringify(payload));
     },
+    setPaymentMethod: (state, action) => {
+      state.paymentMethod = action.payload;
+    },
     clearOrder: (state) => {
       state = initialState;
     },
   },
 });
 
-export const { setLoading, setError, setShippingAddress, clearOrder } = orderSlice.actions;
+export const { setLoading, setError, setShippingAddress, setPaymentMethod, clearOrder } = orderSlice.actions;
 export default orderSlice.reducer;
 
 export const orderSelector = (state) => state.order;
