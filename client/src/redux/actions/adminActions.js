@@ -125,6 +125,37 @@ export const setDelivered = (id) => async (dispatch, getState) => {
 	}
 };
 
+// Action to update the payment status of an order
+export const updatePaymentStatus = (orderId, paymentStatus) => async (dispatch, getState) => {
+	setLoading();
+	const {
+		user: { userInfo },
+	} = getState();
+
+	const config = {
+		headers: {
+			Authorization: `Bearer ${userInfo.token}`, 
+			'Content-Type': 'application/json'
+		},
+	};
+
+	try {
+		await axios.put(`/api/orders/${orderId}/payment-status`, { paymentStatus }, config);
+
+		// Refresh the order list after the update
+		const { data } = await axios.get('/api/orders', config);
+		dispatch(getOrders(data));
+	} catch (error) {
+		dispatch(setError(
+			error.response && error.response.data.message
+				? error.response.data.message
+				: error.message
+				? error.message
+				: 'An unexpected error has occurred.'
+		));
+	}
+};
+
 export const resetErrorAndRemoval = () => async (dispatch) => {
 	dispatch(resetError());
 };

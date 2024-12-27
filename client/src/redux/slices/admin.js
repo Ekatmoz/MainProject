@@ -7,6 +7,7 @@ export const initialState = {
   orders: null,
   orderRemoval: false,
   deliveredFlag: false,
+  paymentStatusUpdate: false, // New state for payment status updates
 };
 
 export const adminSlice = createSlice({
@@ -51,10 +52,14 @@ export const adminSlice = createSlice({
       state.deliveredFlag = true;
       state.loading = false;
     },
+    updatePaymentStatusSuccess: (state) => {
+      state.paymentStatusUpdate = true; // Set payment status update flag
+      state.loading = false;
+    },
   },
 });
 
-export const { setLoading, setError, getUsers, userDelete, resetError, setDeliveredFlag, orderDelete, getOrders } =
+export const { setLoading, setError, getUsers, userDelete, resetError, setDeliveredFlag, orderDelete, getOrders, updatePaymentStatusSuccess } =
   adminSlice.actions;
 export default adminSlice.reducer;
 

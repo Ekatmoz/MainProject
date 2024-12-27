@@ -18,12 +18,13 @@ import {
 	Wrap,
 	Text,
 	Flex,
+	Select, // Chakra UI Select component
 	useToast,
 } from '@chakra-ui/react';
 import { CheckCircleIcon, DeleteIcon } from '@chakra-ui/icons';
 import { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllOrders, deleteOrder, resetErrorAndRemoval, setDelivered } from '../redux/actions/adminActions';
+import { getAllOrders, deleteOrder, resetErrorAndRemoval, setDelivered, updatePaymentStatus } from '../redux/actions/adminActions'; // Import updatePaymentStatus action
 import ConfirmRemovalAlert from './ConfirmRemovalAlert';
 import { TbTruckDelivery } from 'react-icons/tb';
 
@@ -65,6 +66,11 @@ const OrdersTab = () => {
 		dispatch(setDelivered(order._id));
 	};
 
+	// Handle Payment Status Change
+	const handlePaymentStatusChange = (order, newStatus) => {
+		dispatch(updatePaymentStatus(order._id, newStatus)); // Dispatch action to update payment status
+	};
+
 	return (
 		<Box>
 			{error && (
@@ -93,7 +99,10 @@ const OrdersTab = () => {
 									<Th>Items Ordered</Th>
 									<Th>Shipping Price</Th>
 									<Th>Total</Th>
+									<Th>Payment Method</Th> {/* Payment Method */}
+									<Th>Payment Status</Th> {/* Payment Status */}
 									<Th>Delivered</Th>
+									<Th>Actions</Th>
 								</Tr>
 							</Thead>
 							<Tbody>
@@ -105,7 +114,7 @@ const OrdersTab = () => {
 											<Td>{order.email}</Td>
 											<Td>
 												<Text>
-													<i>Adress: </i> {order.shippingAddress.address}
+													<i>Address: </i> {order.shippingAddress.address}
 												</Text>
 												<Text>
 													<i>City: </i> {order.shippingAddress.postalCode} {order.shippingAddress.city}
@@ -123,6 +132,18 @@ const OrdersTab = () => {
 											</Td>
 											<Td>{order.shippingPrice}Ft</Td>
 											<Td>{order.totalPrice}Ft</Td>
+											<Td>{order.paymentMethod}</Td> {/* Payment Method */}
+											<Td>
+												{/* Dropdown for Payment Status */}
+												<Select
+													value={order.paymentStatus} // Current status
+													onChange={(e) => handlePaymentStatusChange(order, e.target.value)} // Update on change
+												>
+													<option value="pending">Pending</option>
+													<option value="completed">Completed</option>
+													<option value="failed">Failed</option>
+												</Select>
+											</Td>
 											<Td>{order.isDelivered ? <CheckCircleIcon /> : 'Pending'}</Td>
 											<Td>
 												<Flex direction='column'>
