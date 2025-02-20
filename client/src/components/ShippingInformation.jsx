@@ -90,7 +90,7 @@ const ShippingInformation = () => {
 							</Heading>
 							<RadioGroup
 								onChange={(e) => {
-									dispatch(setShipping(e === 'express' ? Number(1990) : Number(0)));
+									dispatch(setShipping(e === 'express' ? Number(1290) : Number(0)));
 								}}
 								defaultValue={shipping === 0 ? 'pickup' : 'express'}>
 								<Stack direction={{ base: 'column', lg: 'row' }} align={{ lg: 'flex-start' }}>
@@ -98,7 +98,7 @@ const ShippingInformation = () => {
 										<Box>
 											<Radio value='express'>
 												<Text fontWeight='bold'>Futárszolgálat - GLS</Text>
-												<Text>1990FT</Text>
+												<Text>1290FT</Text>
 											</Radio>
 										</Box>
 									</Stack>

@@ -13,12 +13,13 @@ const stripeRoute = express.Router();
 // Endpoint to handle Stripe Checkout Session creation
 const stripePayment = async (req, res) => {
     const data = req.body;
+    console.log(req.body)
 
     let lineItems = [];
 
-    if (data.shipping == 1990) {
+    if (data.shipping == 1290) {
         lineItems.push({
-            price: process.env.EXPRESS_SHIPPING_ID,
+            price: process.env.STANDARD_SHIPPING_ID,
             quantity: 1,
         });
     } else {

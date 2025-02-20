@@ -38,9 +38,9 @@ const Footer = () => (
                 Kapcsolat
               </Text>
               <Stack spacing='3' shouldWrapChildren>
-                <Button variant='link'>8600 Siófok, Széchenyi utca 18 </Button>
+                <Button variant='link'>8600 Siófok, Vitorlás u. 1.-3, 8600 </Button>
                 <Button variant='link'>+ 36 70 791 6990</Button>
-                <Button variant='link'>info@aranysarkany.com</Button>
+                <Button variant='link'>info@sushibarhungary.com</Button>
               </Stack>
             </Stack>
             <Stack spacing='4' minW='36' flex='2'>
