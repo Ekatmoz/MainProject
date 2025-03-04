@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Box, IconButton, Flex, Text, Button, Image, Center } from "@chakra-ui/react";
+import { Box, IconButton, Text, Center } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../redux/actions/productActions";
@@ -28,7 +28,7 @@ const ProductCarousel = () => {
         responsive={responsive}
         infinite
         autoPlay
-        autoPlaySpeed={1500}
+        autoPlaySpeed={3000}
         customLeftArrow={
           <IconButton
             icon={<ChevronLeftIcon boxSize={6} />}
