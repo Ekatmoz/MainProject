@@ -9,4 +9,8 @@ export default defineConfig({
       '/api': 'http://localhost:4000', // Proxy requests starting with /api to your backend
     },
   },
+  build: {
+    outDir: 'dist', // Ensure the build output goes to the 'dist' folder
+    sourcemap: true, // Optional: Generates sourcemaps for better debugging in production
+  },
 })
