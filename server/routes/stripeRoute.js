@@ -13,7 +13,6 @@ const stripeRoute = express.Router();
 // Endpoint to handle Stripe Checkout Session creation
 const stripePayment = async (req, res) => {
     const data = req.body;
-    console.log(req.body)
 
     let lineItems = [];
 

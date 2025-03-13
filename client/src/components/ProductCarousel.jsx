@@ -14,6 +14,37 @@ const responsive = {
   mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
 };
 
+// Custom arrow components to prevent passing `carouselState` to native elements
+const CustomLeftArrow = ({ carouselState, ...props }) => (
+  <IconButton
+    icon={<ChevronLeftIcon boxSize={6} />}
+    aria-label="Left"
+    position="absolute"
+    left={0}
+    top="50%"
+    transform="translateY(-50%)"
+    bg="gray.300"
+    color="white"
+    _hover={{ bg: "gray.400" }}
+    {...props}
+  />
+);
+
+const CustomRightArrow = ({ carouselState, ...props }) => (
+  <IconButton
+    icon={<ChevronRightIcon boxSize={6} />}
+    aria-label="Right"
+    position="absolute"
+    right={0}
+    top="50%"
+    transform="translateY(-50%)"
+    bg="gray.300"
+    color="white"
+    _hover={{ bg: "gray.400" }}
+    {...props}
+  />
+);
+
 const ProductCarousel = () => {
   const dispatch = useDispatch();
   const { loading, error, products } = useSelector((state) => state.product);
@@ -29,32 +60,8 @@ const ProductCarousel = () => {
         infinite
         autoPlay
         autoPlaySpeed={3000}
-        customLeftArrow={
-          <IconButton
-            icon={<ChevronLeftIcon boxSize={6} />}
-            aria-label="Left"
-            position="absolute"
-            left={0}
-            top="50%"
-            transform="translateY(-50%)"
-            bg="gray.300"
-            color="white"
-            _hover={{ bg: "gray.400" }}
-          />
-        }
-        customRightArrow={
-          <IconButton
-            icon={<ChevronRightIcon boxSize={6} />}
-            aria-label="Right"
-            position="absolute"
-            right={0}
-            top="50%"
-            transform="translateY(-50%)"
-            bg="gray.300"
-            color="white"
-            _hover={{ bg: "gray.400" }}
-          />
-        }
+        customLeftArrow={<CustomLeftArrow />}
+        customRightArrow={<CustomRightArrow />}
       >
         {error ? (
           <Text color="red.500">Error loading products: {error}</Text>

@@ -1,4 +1,15 @@
-import { Box, Heading, Text, Stack, VStack, Container, Divider, List, UnorderedList, ListItem } from '@chakra-ui/react';
+import {
+  Box,
+  Heading,
+  Text,
+  Stack,
+  VStack,
+  Container,
+  Divider,
+  OrderedList,
+  UnorderedList,
+  ListItem,
+} from '@chakra-ui/react';
 
 const TermsAndConditions = () => {
   return (
@@ -165,7 +176,178 @@ const TermsAndConditions = () => {
             </Text>
             <UnorderedList>
               <ListItem>Telefon: +36 70 791 6990</ListItem>
+              <ListItem>Internet cím: https://aranysarkany.hu</ListItem>
+              <ListItem>E-mail: info@sushibarhungary.hu</ListItem>
             </UnorderedList>
+            <Text>
+              A fogyasztó{' '}
+              <Text as='span' fontWeight='bold'>
+                szóban vagy írásban közölheti a vállalkozással a panaszát
+              </Text>
+              , amely a vállalkozásnak, illetve a vállalkozás érdekében vagy javára eljáró személynek az áru fogyasztók
+              részére történő forgalmazásával, illetve értékesítésével közvetlen kapcsolatban álló magatartására,
+              tevékenységére vagy mulasztására vonatkozik.
+            </Text>
+            <Text>
+              <Box as='span' fontWeight='bold'>
+                A szóbeli panaszt a vállalkozás köteles azonnal megvizsgálni, és szükség szerint orvosolni.
+              </Box>{' '}
+              Ha a fogyasztó a panasz kezelésével nem ért egyet, vagy a panasz azonnali kivizsgálása nem lehetséges, a
+              vállalkozás a panaszról és az azzal kapcsolatos álláspontjáról haladéktalanul köteles jegyzőkönyvet
+              felvenni, és annak egy másolati példányát személyesen közölt szóbeli panasz esetén helyben a fogyasztónak
+              átadni. Telefonon vagy egyéb elektronikus hírközlési szolgáltatás felhasználásával közölt szóbeli panasz
+              esetén a fogyasztónak legkésőbb 30 napon belül – az írásbeli panaszra adott válaszra vonatkozó
+              előírásoknak megfelelően – az érdemi válasszal egyidejűleg megküldeni. Egyebekben pedig az írásbeli
+              panaszra vonatkozóan az alábbiak szerint köteles eljárni.{' '}
+              <Box as='span' fontWeight='bold'>
+                Az írásbeli panaszt a vállalkozás
+              </Box>{' '}
+              – ha az Európai Unió közvetlenül alkalmazandó jogi aktusa eltérően nem rendelkezik – a beérkezését
+              követően
+              <Box as='span' fontWeight='bold'>
+                harminc napon belül köteles írásban érdemben megválaszolni és intézkedni annak közlése iránt.
+              </Box>{' '}
+              Ennél rövidebb határidőt jogszabály, hosszabb határidőt törvény állapíthat meg. A panaszt elutasító
+              álláspontját a vállalkozás indokolni köteles. A telefonon vagy elektronikus hírközlési szolgáltatás
+              felhasználásával közölt szóbeli panaszt a vállalkozás köteles egyedi azonosítószámmal ellátni.
+            </Text>
+            <Text>A panaszról felvett jegyzőkönyvnek tartalmaznia kell az alábbiakat:</Text>
+            <OrderedList>
+              <ListItem>a fogyasztó neve, lakcíme,</ListItem>
+              <ListItem>a panasz előterjesztésének helye, ideje, módja,</ListItem>
+              <ListItem>
+                a fogyasztó panaszának részletes leírása, a fogyasztó által bemutatott iratok, dokumentumok és egyéb
+                bizonyítékok jegyzéke,
+              </ListItem>
+              <ListItem>
+                a vállalkozás nyilatkozata a fogyasztó panaszával kapcsolatos álláspontjáról, amennyiben a panasz
+                azonnali kivizsgálása lehetséges,
+              </ListItem>
+              <ListItem>
+                a jegyzőkönyvet felvevő személy és – telefonon vagy egyéb elektronikus hírközlési szolgáltatás
+                felhasználásával közölt szóbeli panasz kivételével – a fogyasztó aláírása,
+              </ListItem>
+              <ListItem>a jegyzőkönyv felvételének helye, ideje,</ListItem>
+              <ListItem>
+                telefonon vagy egyéb elektronikus hírközlési szolgáltatás felhasználásával közölt szóbeli panasz esetén
+                a panasz egyedi azonosítószáma.
+              </ListItem>
+            </OrderedList>
+            <Text>
+              A vállalkozás a panaszról felvett jegyzőkönyvet és a válasz másolati példányát öt évig köteles megőrizni,
+              és azt az ellenőrző hatóságoknak kérésükre bemutatni.
+            </Text>
+            <Text>
+              A panasz elutasítása esetén a vállalkozás köteles a fogyasztót írásban tájékoztatni arról, hogy panaszával
+              – annak jellege szerint – mely hatóság vagy békéltető testület eljárását kezdeményezheti. A
+              tájékoztatásnak tartalmaznia kell továbbá az illetékes hatóság, illetve a fogyasztó lakóhelye vagy
+              tartózkodási helye szerinti békéltető testület székhelyét, telefonos és internetes elérhetőségét, valamint
+              levelezési címét. A tájékoztatásnak arra is ki kell terjednie, hogy a vállalkozás a fogyasztói jogvita
+              rendezése érdekében igénybe veszi-e a békéltető testületi eljárást.
+            </Text>
+            <Text>
+              Amennyiben az Eladó és a fogyasztó között esetlegesen fennálló fogyasztói jogvita a tárgyalások során nem
+              rendeződik, az alábbi jogérvényesítési lehetőségek állnak nyitva a fogyasztó számára:
+            </Text>
+            <Text>
+              Panasztétel a{' '}
+              <Box as='span' fontWeight='bold'>
+                fogyasztóvédelmi hatóságoknál.{' '}
+              </Box>{' '}
+              Amennyiben a fogyasztó fogyasztói jogainak megsértését észleli, jogosult panasszal fordulni a lakóhelye
+              szerint illetékes fogyasztóvédelmi hatósághoz. A panasz elbírálását követően a hatóság dönt a
+              fogyasztóvédelmi eljárás lefolytatásáról. A fogyasztóvédelmi elsőfokú hatósági feladatokat a fogyasztó
+              lakóhelye szerint illetékes fővárosi és megyei kormányhivatalok látják el, ezek listája itt található:
+              https://www.kormanyhivatal.hu/{' '}
+              <Text>
+                <Box as='span' fontWeight='bold'>
+                  Bírósági eljárás.{' '}
+                </Box>{' '}
+                Ügyfél jogosult a fogyasztói jogvitából származó követelésének bíróság előtti érvényesítésére polgári
+                eljárás keretében a Polgári Törvénykönyvről szóló 2013. évi V. törvény, valamint a Polgári
+                Perrendtartásról szóló 2016. évi CXXX. törvény rendelkezései szerint.
+              </Text>
+            </Text>
+            <Text>
+              Tájékoztatjuk, hogy Ön velünk szemben fogyasztói panasszal élhet. Amennyiben az Ön fogyasztói panaszát
+              elutasítjuk, úgy Ön jogosult az Ön lakóhelye vagy tartózkodási helye szerint illetékes Békéltető
+              Testülethez is fordulni: a békéltető testület eljárása megindításának feltétele, hogy a fogyasztó az
+              érintett vállalkozással közvetlenül megkísérelje a vitás ügy rendezését. Az eljárásra – a fogyasztó erre
+              irányuló kérelme alapján – az illetékes testület helyett a fogyasztó kérelmében megjelölt békéltető
+              testület illetékes.
+            </Text>
+            <Text>A vállalkozást a békéltető testületi eljárásban együttműködési kötelezettség terheli.</Text>
+            <Text>
+              Ennek keretében fennáll a vállalkozásoknak a békéltető testület felhívására történő{' '}
+              <Box as='span' fontWeight='bold'>
+                válaszirat megküldési kötelezettsége
+              </Box>{' '}
+              , továbbá kötelezettségként kerül rögzítésre a békéltető testület előtti{' '}
+              <Box as='span' fontWeight='bold'>
+                megjelenési kötelezettség
+              </Box>{' '}
+              („meghallgatáson egyezség létrehozatalára feljogosított személy részvételének biztosítása”).
+            </Text>
+            <Text>
+              Amennyiben a vállalkozás székhelye vagy telephelye nem a területileg illetékes békéltető testületet
+              működtető kamara szerinti megyébe van bejegyezve, a vállalkozás együttműködési kötelezettsége a fogyasztó
+              igényének megfelelő írásbeli egyezségkötés lehetőségének felajánlására terjed ki.
+            </Text>
+            <Text>
+              A fenti együttműködési kötelezettség megszegése esetén a fogyasztóvédelmi hatóság rendelkezik hatáskörrel,
+              amely alapján a jogszabályváltozás következtében a vállalkozások jogsértő magatartása esetén{' '}
+              <Box as='span' fontWeight='bold'>
+                kötelező bírságkiszabás
+              </Box>{' '}
+              alkalmazandó, bírságtól való eltekintésre nincs lehetőség. A fogyasztóvédelemről szóló törvény mellett
+              módosításra került a kis- és középvállalkozásokról szóló törvény vonatkozó rendelkezése is, így a kis- és
+              középvállalkozások esetén sem mellőzhető majd a bírság kiszabása.
+            </Text>
+            <Text>
+              A bírság mértéke kis- és középvállalkozások esetén 15 ezer forinttól 500 ezer forintig terjedhet, míg a
+              számviteli törvény hatálya alá tartozó, 100 millió forintot meghaladó éves nettó árbevétellel rendelkező,
+              nem kis- és középvállalkozás esetén 15 ezer forinttól, a vállalkozás éves nettó árbevételének 5%-áig, de
+              legfeljebb 500 millió forintig terjedhet. A kötelező bírság bevezetésével a jogalkotó a békéltető
+              testületekkel való együttműködés nyomatékosítását, illetve a vállalkozásoknak a békéltető testületi
+              eljárásban való aktív részvételének biztosítását célozza.
+            </Text>
+            <Text>
+              A békéltető testület hatáskörébe tartozik a fogyasztói jogvita bírósági eljáráson kívüli rendezése. A
+              békéltető testület feladata, hogy megkísérelje a fogyasztói jogvita rendezése céljából egyezség
+              létrehozását a felek között, ennek eredménytelensége esetén az ügyben döntést hoz a fogyasztói jogok
+              egyszerű, gyors, hatékony és költségkímélő érvényesítésének biztosítása érdekében. A békéltető testület a
+              fogyasztó vagy a vállalkozás kérésére tanácsot ad a fogyasztót megillető jogokkal és a fogyasztót terhelő
+              kötelezettségekkel kapcsolatban.
+            </Text>
+            <Text>
+              A békéltető testület eljárása a fogyasztó kérelmére indul. A kérelmet a békéltető testület elnökéhez kell
+              írásban benyújtani: az írásbeliség követelményének levél, távirat, távgépíró vagy telefax útján, továbbá
+              bármely egyéb olyan eszközzel is eleget lehet tenni, amely a címzett számára lehetővé teszi a neki címzett
+              adatoknak az adat céljának megfelelő ideig történő tartós tárolását, és a tárolt adatok változatlan
+              formában és tartalommal történő megjelenítését.
+            </Text>
+            <Text>A kérelemnek tartalmaznia kell:</Text>
+            <OrderedList>
+              <ListItem>a fogyasztó neve, lakcíme,</ListItem>
+              <ListItem>a panasz előterjesztésének helye, ideje, módja,</ListItem>
+              <ListItem>
+                a fogyasztó panaszának részletes leírása, a fogyasztó által bemutatott iratok, dokumentumok és egyéb
+                bizonyítékok jegyzéke,
+              </ListItem>
+              <ListItem>
+                a vállalkozás nyilatkozata a fogyasztó panaszával kapcsolatos álláspontjáról, amennyiben a panasz
+                azonnali kivizsgálása lehetséges,
+              </ListItem>
+              <ListItem>
+                a jegyzőkönyvet felvevő személy és – telefonon vagy egyéb elektronikus hírközlési szolgáltatás
+                felhasználásával közölt szóbeli panasz kivételével – a fogyasztó aláírása,
+              </ListItem>
+              <ListItem>a jegyzőkönyv felvételének helye, ideje,</ListItem>
+              <ListItem>
+                telefonon vagy egyéb elektronikus hírközlési szolgáltatás felhasználásával közölt szóbeli panasz esetén
+                a panasz egyedi azonosítószáma.
+              </ListItem>
+            </OrderedList>
           </Stack>
         </VStack>
       </Box>
