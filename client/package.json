@@ -18,6 +18,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.8.3",
     "barion-nodejs": "^1.0.4",
+    "braces": "^3.0.3",
     "formik": "^2.4.5",
     "framer-motion": "^10.18.0",
     "jwt-decode": "^4.0.0",
