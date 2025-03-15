@@ -41,7 +41,7 @@ const stripePayment = async (req, res) => {
             line_items: lineItems,
             mode: 'payment',
             success_url: `http://localhost:3000/success?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url: 'http://localhost:3000/cancel',
+            cancel_url: 'https://golden-dragon.onrender.com/cancel',
         });
 
         // Create and save the order in your database

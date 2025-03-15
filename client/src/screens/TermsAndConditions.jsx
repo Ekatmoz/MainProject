@@ -327,27 +327,41 @@ const TermsAndConditions = () => {
               formában és tartalommal történő megjelenítését.
             </Text>
             <Text>A kérelemnek tartalmaznia kell:</Text>
-            <OrderedList>
-              <ListItem>a fogyasztó neve, lakcíme,</ListItem>
-              <ListItem>a panasz előterjesztésének helye, ideje, módja,</ListItem>
+            <UnorderedList styleType='lower-alpha'>
+              <ListItem>a fogyasztó nevét, lakóhelyét vagy tartózkodási helyét,</ListItem>
               <ListItem>
-                a fogyasztó panaszának részletes leírása, a fogyasztó által bemutatott iratok, dokumentumok és egyéb
-                bizonyítékok jegyzéke,
+                a fogyasztói jogvitával érintett vállalkozás nevét, székhelyét vagy érintett telephelyét,
               </ListItem>
               <ListItem>
-                a vállalkozás nyilatkozata a fogyasztó panaszával kapcsolatos álláspontjáról, amennyiben a panasz
-                azonnali kivizsgálása lehetséges,
+                ha a fogyasztó az illetékességet az illetékes békéltető testület helyett kérelmezett testület
+                megjelölését,
               </ListItem>
               <ListItem>
-                a jegyzőkönyvet felvevő személy és – telefonon vagy egyéb elektronikus hírközlési szolgáltatás
-                felhasználásával közölt szóbeli panasz kivételével – a fogyasztó aláírása,
+                a fogyasztó álláspontjának rövid leírását, az azt alátámasztó tényeket és azok bizonyítékait,
               </ListItem>
-              <ListItem>a jegyzőkönyv felvételének helye, ideje,</ListItem>
               <ListItem>
-                telefonon vagy egyéb elektronikus hírközlési szolgáltatás felhasználásával közölt szóbeli panasz esetén
-                a panasz egyedi azonosítószáma.
+                a fogyasztó nyilatkozatát arról, hogy a fogyasztó az érintett vállalkozással közvetlenül megkísérelte a
+                vitás ügy rendezését
               </ListItem>
-            </OrderedList>
+              <ListItem>
+                a fogyasztó nyilatkozatát arra nézve, hogy az ügyben más békéltető testület eljárását nem kezdeményezte,
+                közvetítői eljárás nem indult, keresetlevél beadására, illetve fizetési meghagyás kibocsátása iránti
+                kérelem előterjesztésére nem került sor,
+              </ListItem>
+              <ListItem>a testület döntésére irányuló indítványt,</ListItem>
+              <ListItem>a fogyasztó aláírását.</ListItem>
+            </UnorderedList>
+            <Text>
+              A kérelemhez csatolni kell azt az okiratot, illetve annak másolatát (kivonatát), amelynek tartalmára a
+              fogyasztó bizonyítékként hivatkozik, így különösen a vállalkozás írásbeli nyilatkozatát a panasz
+              elutasításáról, ennek hiányában a fogyasztó rendelkezésére álló egyéb írásos bizonyítékot az előírt
+              egyeztetés megkísérléséről.
+            </Text>
+            <Text>Ha a fogyasztó meghatalmazott útján jár el, a kérelemhez csatolni kell a meghatalmazást.</Text>
+            <Text>A Békéltető Testületekről bővebb információ itt érhető el: http://www.bekeltetes.hu</Text>
+            <Text>A területileg illetékes Békéltető Testületekről bővebb információ itt érhető el:</Text>
+            <Text>https://bekeltetes.hu/index.php?id=testuletek</Text>
+            <Text fontWeight='bold'>Az egyes területileg illetékes Békéltető Testületek elérhetőségei:</Text>
           </Stack>
         </VStack>
       </Box>
