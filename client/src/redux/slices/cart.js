@@ -55,12 +55,15 @@ export const cartSlice = createSlice({
 			localStorage.setItem('shipping', payload);
 		},
 		clearCart: (state) => {
-			localStorage.removeItem('cartItems');
+			// ❌ Don't remove 'cartItems' from localStorage, only remove user-related data
+			state.cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+			// ✅ Still reset other things (shipping, subtotal)
 			localStorage.removeItem('shipping');
 			localStorage.removeItem('subTotal');
-			state.cartItems = [];
+	
 			state.shipping = Number(0);
-			state.subtotal = 0;
+			state.subtotal = calculateSubtotal(state.cartItems);
 			state.loading = false;
 			state.error = null;
 		},

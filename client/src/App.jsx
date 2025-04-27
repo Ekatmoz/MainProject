@@ -21,6 +21,7 @@ import SuccessScreen from './screens/SuccessScreen';
 import AdminConsoleScreen from './screens/AdminConsoleScreen';
 import TermsAndConditions from './screens/TermsAndConditions';
 import Contact from './screens/Contact';
+import ProfileScreen from './screens/ProfileScreen';
 
 function App() {
   const [googleClient, setGoogleClient] = useState(null);
@@ -48,6 +49,7 @@ function App() {
 							<Route path='/product/:id' element={<ProductScreen />} />
 							<Route path='/cart' element={<CartScreen />} />
 							<Route path='/login' element={<LoginScreen />} />
+							<Route path='/profile' element={<ProfileScreen />} />
 							<Route path='/registration' element={<RegistrationScreen />} />
 							<Route path='/email-verify/:token' element={<EmailVerificationScreen />} />
 							<Route path='/password-reset/:token' element={<PasswordResetScreen />} />

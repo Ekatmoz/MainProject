@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import ProductCard from '../components/ProductCard';
 import { getProducts } from '../redux/actions/productActions';
-import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
 import CategoryButtons from '../components/CategoryButtons';
+import { HiChevronLeft, HiChevronRight } from "react-icons/hi"
 
 const ProductsScreen = () => {
 	const dispatch = useDispatch();
@@ -47,7 +47,7 @@ const ProductsScreen = () => {
 					{!favoritesToggled && (
 						<Wrap spacing='10px' justify='center' p='5'>
 							<Button colorScheme='green' size='xs' onClick={() => paginationButtonClick(1)}>
-								<ArrowLeftIcon />
+							<HiChevronLeft />
 							</Button>
 							{Array.from(Array(pagination.totalPages), (e, i) => {
 								return (
@@ -61,7 +61,7 @@ const ProductsScreen = () => {
 								);
 							})}
 							<Button colorScheme='green' size='xs' onClick={() => paginationButtonClick(pagination.totalPages)}>
-								<ArrowRightIcon />
+							<HiChevronRight />
 							</Button>
 						</Wrap>
 					)}

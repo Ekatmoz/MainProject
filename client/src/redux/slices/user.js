@@ -24,6 +24,7 @@ export const userSlice = createSlice({
 			state.loading = false;
 			state.error = null;
 			state.userInfo = null;
+			localStorage.removeItem('tokenExpiry'); // Remove token expiry
 		},
 		setError: (state, { payload }) => {
 			state.error = payload;

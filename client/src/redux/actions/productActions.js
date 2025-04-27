@@ -16,7 +16,7 @@ export const getProducts = (page, category = null) => async (dispatch) => {
   dispatch(setLoading());
 
   try {
-    let url = `/api/products/${page}/${10}`; // 10 products per page
+    let url = `/api/products/${page}/${12}`; // 10 products per page
 
     // Add category parameter if specified
     if (category) {

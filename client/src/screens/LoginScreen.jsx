@@ -38,16 +38,25 @@ const LoginScreen = () => {
 
 	useEffect(() => {
 		if (userInfo) {
-			if (location.state?.from) {
-				navigate(location.state.from);
-			} else {
-				navigate(redirect);
-			}
+			console.log("✅ Login successful, userInfo:", userInfo);
+			console.log("✅ Raw localStorage after login:", localStorage.getItem('userInfo'));
+
 			toast({
 				description: 'Login successful.',
 				status: 'success',
 				isClosable: true,
 			});
+
+			// ✅ Delay navigation slightly to ensure localStorage is updated
+			setTimeout(() => {
+				if (location.state?.from) {
+					navigate(location.state.from);
+				} else {
+					navigate(redirect);
+				}
+				// ✅ Force a page reload to fix token availability issue
+				window.location.reload();
+			}, 500);
 		}
 
 		if (serverMsg) {
@@ -58,7 +67,7 @@ const LoginScreen = () => {
 			});
 		}
 	}, [userInfo, redirect, error, navigate, location.state, toast, showPasswordReset, serverMsg]);
-  
+
 	const handleGoogleLogin = useGoogleLogin({
 		onSuccess: async (response) => {
 			const userInfo = await axios
@@ -71,6 +80,15 @@ const LoginScreen = () => {
 		},
 	});
 
+	const handleSubmit = async (values) => {
+		await dispatch(login(values.email, values.password));
+		
+		// ✅ Ensure localStorage is updated before proceeding
+		setTimeout(() => {
+			console.log("✅ Checking localStorage after login:", localStorage.getItem('userInfo'));
+		}, 200);
+	};
+
 	return (
 		<Formik
 			initialValues={{ email: '', password: '' }}
@@ -80,9 +98,7 @@ const LoginScreen = () => {
 					.min(1, 'Password is too short - must contain at least 1 character.')
 					.required('Password is required.'),
 			})}
-			onSubmit={(values) => {
-				dispatch(login(values.email, values.password));
-			}}>
+			onSubmit={handleSubmit}>
 			{(formik) => (
 				<Container maxW='lg' py={{ base: '12', md: '24' }} px={{ base: '0', md: '8' }} minH='4xl'>
 					<Stack spacing='8'>

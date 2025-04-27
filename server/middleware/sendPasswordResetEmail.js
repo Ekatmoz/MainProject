@@ -6,20 +6,20 @@ export const sendPasswordResetEmail = (token, email, name) => {
         <body>
           <h3>Dear ${name}</h3>
              <p>Please click on the link below to reset your password.</p>
-             <a href="http://localhost:3000/password-reset/${token}">Click here!</a>
+             <a href="http://localhost:5173/password-reset/${token}">Click here!</a>
         </body>
     </html>`;
 
 	const transporter = nodemailer.createTransport({
 		service: 'gmail',
 		auth: {
-			user: 'ekatmoz@gmail.com',
-			pass: 'duud jrpi irye ahnx',
+			user: process.env.EMAIL_USER,
+			pass: process.env.EMAIL_PASS,
 		},
 	});
 
 	const mailOptions = {
-		from: 'ekatmoz@gmail.com',
+		from: process.env.EMAIL_USER,
 		to: email,
 		subject: 'Shop by Sushi Bar: Reset your password request.',
 		html: html,
@@ -30,7 +30,7 @@ export const sendPasswordResetEmail = (token, email, name) => {
 			console.log(error);
 		} else {
 			console.log(`Email send to ${email}`);
-			console.log(info.response);
+			//console.log(info.response);
 		}
 	});
 };

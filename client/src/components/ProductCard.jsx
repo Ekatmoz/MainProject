@@ -74,7 +74,7 @@ const ProductCard = ({ product, loading }) => {
 					{product.description}
 				</Text> */}
 				<Flex justify='space-between' alignItems='center' mt='2'>
-				<Button as={ReactLink} to={`/product/${product._id}`} >Reszletek</Button>
+				<Button as={ReactLink} to={`/product/${product._id}`} >Részletek</Button>
 					{/* <Badge colorScheme='red'>{product.category}</Badge> */}
 					<Text fontSize='l' fontWeight='semibold'>
 						{product.price}Ft

@@ -12,6 +12,7 @@ import {
 	Text,
 	Spinner,
 	Alert,
+	Button,
 } from '@chakra-ui/react';
 
 const EmailVerificationScreen = () => {

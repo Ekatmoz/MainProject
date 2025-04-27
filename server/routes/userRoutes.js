@@ -11,7 +11,7 @@ const userRoutes = express.Router();
 
 //TODO: redefine expiresIn
 const genToken = (id) => {
-	return jwt.sign({ id }, process.env.TOKEN_SECRET, { expiresIn: '1d' });
+	return jwt.sign({ id }, process.env.TOKEN_SECRET, { expiresIn: '24h' });
 };
 
 // login
@@ -46,6 +46,7 @@ const registerUser = asyncHandler(async (req, res) => {
 	const userExists = await User.findOne({ email });
 	if (userExists) {
 		res.status(400).send('We already have an account with that email address.');
+		return;
 	}
 
 	const user = await User.create({
@@ -121,7 +122,7 @@ const passwordReset = asyncHandler(async (req, res) => {
 //google login
 const googleLogin = asyncHandler(async (req, res) => {
 	const { googleId, email, name, googleImage } = req.body;
-	console.log(googleId, email, name, googleImage);
+	//console.log(googleId, email, name, googleImage);
 
 	try {
 		const user = await User.findOne({ googleId: googleId });
@@ -151,6 +152,7 @@ const googleLogin = asyncHandler(async (req, res) => {
 			const newToken = genToken(newUser._id);
 
 			sendVerificationEmail(newToken, newUser.email, newUser.name, newUser._id);
+			
 			res.json({
 				_id: newUser._id,
 				name: newUser.name,

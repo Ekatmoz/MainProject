@@ -44,7 +44,7 @@ const PasswordResetScreen = () => {
 		}
 	}, [error, toast, serverMsg, serverStatus, dispatch]);
 
-	return serverStatus ? (//put here some pictures
+	return serverStatus ? (//put here some pictures/ alert icon
 		<Center minH='90vh'>
 			<VStack>
 				<Text my='10' fontSize='xl'>

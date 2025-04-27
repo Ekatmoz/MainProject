@@ -23,7 +23,7 @@ app.use('/api/checkout', stripeRoutes);
 app.use('/api/orders', orderRoutes);
 
 
-app.get('/api/config/GOOGLE', (req, res) =>
+app.get('/api/config/google', (req, res) =>
   res.send(process.env.GOOGLE_CLIENT_ID)
 );
 
