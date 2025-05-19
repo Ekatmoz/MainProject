@@ -2,6 +2,7 @@ import {
   Box,
   Heading,
   Text,
+  SimpleGrid,
   Stack,
   VStack,
   Container,
@@ -147,13 +148,11 @@ const TermsAndConditions = () => {
           <Heading as='h4' size='md'>
             A szerződés nyelve, a szerződés formája
           </Heading>
-          <Stack>
-            <Text>A jelen ÁSZF hatálya alá tartozó szerződések nyelve a magyar nyelv.</Text>
-            <Text>
-              A jelen ÁSZF hatálya alá tartozó szerződések nem minősülnek írásba foglalt szerződéseknek, azokat az Eladó
-              nem iktatja.
-            </Text>
-          </Stack>
+          <Text>A jelen ÁSZF hatálya alá tartozó szerződések nyelve a magyar nyelv.</Text>
+          <Text>
+            A jelen ÁSZF hatálya alá tartozó szerződések nem minősülnek írásba foglalt szerződéseknek, azokat az Eladó
+            nem iktatja.
+          </Text>
           <Heading as='h4' size='md'>
             Árak
           </Heading>
@@ -358,10 +357,327 @@ const TermsAndConditions = () => {
               egyeztetés megkísérléséről.
             </Text>
             <Text>Ha a fogyasztó meghatalmazott útján jár el, a kérelemhez csatolni kell a meghatalmazást.</Text>
-            <Text>A Békéltető Testületekről bővebb információ itt érhető el: http://www.bekeltetes.hu</Text>
+            <Text>
+              A Békéltető Testületekről bővebb információ itt érhető el:{' '}
+              <a href='http://www.bekeltetes.hu' style={{ color: 'blue' }}>
+                http://www.bekeltetes.hu
+              </a>{' '}
+            </Text>
             <Text>A területileg illetékes Békéltető Testületekről bővebb információ itt érhető el:</Text>
-            <Text>https://bekeltetes.hu/index.php?id=testuletek</Text>
+            <a href='https://bekeltetes.hu/index.php?id=testuletek' style={{ color: 'blue' }}>
+              https://bekeltetes.hu/index.php?id=testuletek
+            </a>
             <Text fontWeight='bold'>Az egyes területileg illetékes Békéltető Testületek elérhetőségei:</Text>
+          </Stack>
+          <SimpleGrid
+            columns={2}
+            columnGap={16}
+            rowGap='4'
+            alignSelf='flex-start'
+            justifySelf='flex-start'
+            fontSize='sm'
+          >
+            <Box>
+              <UnorderedList styleType='none'>
+                <ListItem fontWeight='bold'>Baranya Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 7625 Pécs, Majorossy I. u. 36.</ListItem>
+                <ListItem>Telefonszám: 06-72-507-154</ListItem>
+                <ListItem>Fax: 06-72-507-152</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:abeck@pbkik.hu;mbonyar@pbkik.hu' style={{ color: 'blue' }}>
+                    abeck@pbkik.hu; mbonyar@pbkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Bács-Kiskun Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 6000 Kecskemét, Árpád krt. 4.</ListItem>
+                <ListItem>Telefonszám: 06-76-501-500; 06-76-501-525, 06-76-501-523</ListItem>
+                <ListItem>Fax: 06-76-501-538</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto: bekeltetes@bacsbekeltetes.hu; mariann.matyus@bkmkik.hu' style={{ color: 'blue' }}>
+                    bekeltetes@bacsbekeltetes.hu; mariann.matyus@bkmkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Békés Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 5600 Békéscsaba, Penza ltp. 5.</ListItem>
+                <ListItem>Telefonszám: 06-66-324-976</ListItem>
+                <ListItem>Fax: 06-66-324-976</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto: eva.toth@bmkik.hu' style={{ color: 'blue' }}>
+                    eva.toth@bmkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Borsod-Abaúj-Zemplén Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 3525 Miskolc, Szentpáli u. 1.</ListItem>
+                <ListItem>Telefonszám:06-46-501-091;06-46-501-870</ListItem>
+                <ListItem>Fax: 06-46-501-099</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto: kalna.zsuzsa@bokik.hu' style={{ color: 'blue' }}>
+                    kalna.zsuzsa@bokik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Budapesti Békéltető Testület</ListItem>
+                <ListItem>Cím: 1016 Budapest, Krisztina krt. 99. III. em. 310.</ListItem>
+                <ListItem>Telefonszám: 06-1-488-2131</ListItem>
+                <ListItem>Fax: 06-1-488-2186</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto: bekelteto.testulet@bkik.hu' style={{ color: 'blue' }}>
+                    bekelteto.testulet@bkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Csongrád Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 6721 Szeged, Párizsi krt. 8-12.</ListItem>
+                <ListItem>Telefonszám: 06-62-554-250/118</ListItem>
+                <ListItem>Fax: 06-62-426-149</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto: bekelteto.testulet@csmkik.hu' style={{ color: 'blue' }}>
+                    bekelteto.testulet@csmkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Fejér Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 8000 Székesfehérvár, Hosszúsétatér 4-6.</ListItem>
+                <ListItem>Telefonszám:06-22-510-310</ListItem>
+                <ListItem>Fax: 06-22-510-312</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:fmkik@fmkik.hu' style={{ color: 'blue' }}>
+                    fmkik@fmkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Győr-Moson-Sopron Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 9021 Győr, Szent István út 10/a.</ListItem>
+                <ListItem>Telefonszám: 06-96-520-217</ListItem>
+                <ListItem>Fax: 06-96-520-218</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:bekeltetotestulet@gymskik.hu' style={{ color: 'blue' }}>
+                    bekeltetotestulet@gymskik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Hajdú-Bihar Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 4025 Debrecen, Vörösmarty u. 13-15.</ListItem>
+                <ListItem>Telefonszám: 06-52-500-710</ListItem>
+                <ListItem>Fax: 06-52-500-720</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:korosi.vanda@hbkik.hu' style={{ color: 'blue' }}>
+                    korosi.vanda@hbkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Heves Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 3300 Eger, Faiskola út 15.</ListItem>
+                <ListItem>Telefonszám: 06-36-429-612</ListItem>
+                <ListItem>Fax: 06-36-323-615</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:hkik@hkik.hu' style={{ color: 'blue' }}>
+                    hkik@hkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+            </Box>
+            <Box>
+              <UnorderedList styleType='none'>
+                <ListItem fontWeight='bold'>Baranya Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 7625 Pécs, Majorossy I. u. 36.</ListItem>
+                <ListItem>Telefonszám: 06-72-507-154</ListItem>
+                <ListItem>Fax: 06-72-507-152</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:abeck@pbkik.hu;mbonyar@pbkik.hu' style={{ color: 'blue' }}>
+                    abeck@pbkik.hu; mbonyar@pbkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Komárom-Esztergom Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 2800 Tatabánya, Fő tér 36.</ListItem>
+                <ListItem>Telefonszám: 06-34-513-027</ListItem>
+                <ListItem>Fax: 06-34-316-259</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:abeck@pbkik.hu;mbonyar@pbkik.hu' style={{ color: 'blue' }}>
+                    abeck@pbkik.hu; mbonyar@pbkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Nógrád Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 3100 Salgótarján, Alkotmány út 9/A.</ListItem>
+                <ListItem>Telefonszám: 06-32-520-860</ListItem>
+                <ListItem>Fax: 06-32-520-862</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:nkik@nkik.hu' style={{ color: 'blue' }}>
+                    nkik@nkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Pest Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 1119 Budapest, Etele út 59-61. II. emelet 240.</ListItem>
+                <ListItem>Levelezési cím: 1364 Budapest, Pf.: 81</ListItem>
+                <ListItem>Telefonszám: 06-1-269-0703</ListItem>
+                <ListItem>Fax: 06-1-474-7921</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:pmbekelteto@pmkik.hu' style={{ color: 'blue' }}>
+                    pmbekelteto@pmkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Somogy Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 7400 Kaposvár, Anna u.6.</ListItem>
+                <ListItem>Telefonszám: 06-82-501-026</ListItem>
+                <ListItem>Fax: 06-82-501-046</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:skik@skik.hu' style={{ color: 'blue' }}>
+                    skik@skik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Szabolcs-Szatmár-Bereg Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 4400 Nyíregyháza, Széchenyi u. 2.</ListItem>
+                <ListItem>Telefonszám: 06-42-311-544</ListItem>
+                <ListItem>Fax: 06-42-311-750</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:bekelteto@szabkam.hu' style={{ color: 'blue' }}>
+                    bekelteto@szabkam.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Tolna Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 7100 Szekszárd, Arany J. u. 23-25. III. emelet</ListItem>
+                <ListItem>Telefonszám: 06-74-411-661</ListItem>
+                <ListItem>Fax: 06-74-411-456</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:kamara@tmkik.hu' style={{ color: 'blue' }}>
+                    kamara@tmkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Vas Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 9700 Szombathely, Honvéd tér 2.</ListItem>
+                <ListItem>Telefonszám: 06-94-312-356</ListItem>
+                <ListItem>Fax: 06-94-316-936</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:vmkik@vmkik.hu' style={{ color: 'blue' }}>
+                    vmkik@vmkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Veszprém Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 8200 Veszprém, Radnóti tér 1. földszint 116.</ListItem>
+                <ListItem>Telefonszám: 06-88-429-008</ListItem>
+                <ListItem>Fax: 06-88-412-150</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:bekelteto@veszpremikamara.hu' style={{ color: 'blue' }}>
+                    bekelteto@veszpremikamara.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+              <UnorderedList styleType='none' mt={8}>
+                <ListItem fontWeight='bold'>Zala Megyei Békéltető Testület</ListItem>
+                <ListItem>Cím: 8900 Zalaegerszeg, Petőfi u. 24.</ListItem>
+                <ListItem>Telefonszám: 06-92-550-513</ListItem>
+                <ListItem>Fax: 06-92-550-525</ListItem>
+                <ListItem>
+                  E-mail:
+                  <a href='mailto:zmbekelteto@zmkik.hu' style={{ color: 'blue' }}>
+                    zmbekelteto@zmkik.hu
+                  </a>
+                </ListItem>
+              </UnorderedList>
+            </Box>
+          </SimpleGrid>
+          <Heading as='h4' size='md'>
+            Online vitarendezési platform
+          </Heading>
+          <Stack>
+            <Text>
+              Az Európai Bizottság létrehozott egy honlapot, amelybe a fogyasztók beregisztrálhatnak, így ezen keresztül
+              lehetőségük nyílik arra, hogy online vásárláshoz kapcsolódó jogvitáikat ezen keresztül rendezzék egy
+              kérelem kitöltésével, elkerülve a bírósági eljárást. Így a fogyasztók tudják érvényesíteni jogaikat
+              anélkül, hogy például a távolság meggátolná őket ebben.
+            </Text>
+            <Text>
+              Ha Ön panaszt kíván tenni egy, az interneten vásárolt termékkel vagy szolgáltatással kapcsolatban, és nem
+              akar feltétlenül bírósághoz fordulni, igénybe veheti az online vitarendezés eszközét.
+            </Text>
+            <Text>
+              A portálon Ön és a kereskedő, akivel szemben panasszal élt, közösen kiválaszthatják a panasz kezelésével
+              megbízni kívánt vitarendezési testületet.
+            </Text>
+            <Text>
+              Az online vitarendezési platform itt érhető el:{' '}
+              <a href='https://webgate.ec.europa.eu/odr/main/?event=main.home.show&lng=HU' style={{ color: 'blue' }}>
+                https://webgate.ec.europa.eu/odr/main/?event=main.home.show&lng=HU
+              </a>
+            </Text>
+          </Stack>
+          <Heading as='h4' size='md'>
+            Szerzői jogok
+          </Heading>
+          <Stack>
+            <Text>
+              A szerzői jogról szóló 1999. évi LXXVI. törvény (továbbiakban: Szjt.) 1. § (1) bekezdése értelmében a
+              weboldal szerzői műnek minősül, így annak minden része szerzői jogi védelem alatt áll. Az Szjt. 16. § (1)
+              bekezdése alapján tilos a weboldalon található grafikai és szoftveres megoldások, számítógépi
+              programalkotások engedély nélküli felhasználása, illetve bármely olyan alkalmazás használata, amellyel a
+              weboldal, vagy annak bármely része módosítható. A weboldalról és annak adatbázisából bármilyen anyagot
+              átvenni a jogtulajdonos írásos hozzájárulása esetén is csak a weboldalra való hivatkozással, forrás
+              feltüntetésével lehet. A jogtulajdonos:{' '}
+              <Box as='span' fontWeight='bold'>
+                Sushi-Bar Hungary Kft.
+              </Box>{' '}
+            </Text>
+          </Stack>
+          <Heading as='h4' size='md'>
+            Részleges érvénytelenség, magatartási kódex
+          </Heading>
+          <Stack>
+            <Text>
+              Ha az ÁSZF valamely pontja jogilag hiányos vagy hatálytalan, attól még a szerződés további pontjai
+              érvényben maradnak és a hatálytalan vagy hibás rész helyett a vonatkozó jogszabályok rendelkezései
+              alkalmazandóak.
+            </Text>
+            <Text>
+              Az Eladónak nincs a fogyasztókkal szembeni tisztességtelen kereskedelmi gyakorlat tilalmáról szóló törvény
+              szerinti magatartási kódexe.
+            </Text>
           </Stack>
         </VStack>
       </Box>

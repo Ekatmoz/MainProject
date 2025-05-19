@@ -1,4 +1,4 @@
-import axiosInstance from '../axiosInstance';
+import axios from 'axios';
 import { setError, setShippingAddress, setPaymentMethod, clearOrder } from '../slices/order';
 
 export const setAddress = (data) => (dispatch) => {
@@ -21,7 +21,7 @@ export const setPayment = (paymentMethod) => async (dispatch, getState) => {
 	try {
 		const config = { headers: { Authorization: `Bearer ${userInfo.token}`, 'Content-Type': 'application/json' } };
 
-		const { data } = await axiosInstance.post('api/checkout', newOrder, config);
+		const { data } = await axios.post('api/checkout', newOrder, config);
 		
 		// Redirect based on payment method
 		if (paymentMethod === 'cash') {

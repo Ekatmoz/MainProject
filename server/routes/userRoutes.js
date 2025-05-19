@@ -11,7 +11,7 @@ const userRoutes = express.Router();
 
 //TODO: redefine expiresIn
 const genToken = (id) => {
-	return jwt.sign({ id }, process.env.TOKEN_SECRET, { expiresIn: '24h' });
+	return jwt.sign({ id }, process.env.TOKEN_SECRET, { expiresIn: '2h' });
 };
 
 // login
@@ -196,15 +196,49 @@ const deleteUser = asyncHandler(async(req, res) => {
 	}
 });
 
+const updateUserProfile = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id); // protectRoute middleware provides req.user
+
+  if (user) {
+    user.name = req.body.name || user.name;
+    user.email = req.body.email || user.email;
+
+    // Only update password if provided
+    if (req.body.password && req.body.password.trim() !== '') {
+      user.password = req.body.password;
+    }
+
+    const updatedUser = await user.save();
+
+    res.json({
+      _id: updatedUser._id,
+      name: updatedUser.name,
+      email: updatedUser.email,
+      googleImage: updatedUser.googleImage,
+      googleId: updatedUser.googleId,
+      isAdmin: updatedUser.isAdmin,
+      token: genToken(updatedUser._id),
+      active: updatedUser.active,
+      createdAt: updatedUser.createdAt,
+    });
+  } else {
+    res.status(404).send('User not found');
+  }
+});
+
+
 
 userRoutes.route('/login').post(loginUser);
 userRoutes.route('/register').post(registerUser);
 userRoutes.route('/verify-email').get(protectRoute, verifyEmail);
 userRoutes.route('/password-reset-request').post(passwordResetRequest);
 userRoutes.route('/password-reset').post(protectRoute, passwordReset);
+userRoutes.route('/profile').put(protectRoute, updateUserProfile);
 userRoutes.route('/google-login').post(googleLogin);
 userRoutes.route('/:id').get(protectRoute, getUserOrders);
-userRoutes.route('/').get(protectRoute, admin, getUsers)
-userRoutes.route('/:id').delete(protectRoute, admin, deleteUser)
+userRoutes.route('/').get(protectRoute, admin, getUsers);
+userRoutes.route('/:id').delete(protectRoute, admin, deleteUser);
+
+
 
 export default userRoutes;

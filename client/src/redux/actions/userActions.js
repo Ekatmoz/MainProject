@@ -1,4 +1,3 @@
-import axiosInstance from '../axiosInstance';
 import axios from 'axios';
 import {
   setUserOrders,
@@ -10,6 +9,8 @@ import {
   userLogout,
   verificationEmail,
   stateReset,
+  setUpdateSuccess,
+  resetUpdateSuccess as resetUpdateSuccessAction,
 } from '../slices/user';
 
 import { clearCart } from '../slices/cart';
@@ -36,7 +37,7 @@ export const login = (email, password) => async (dispatch) => {
   }
 };
 
-const isTokenExpired = (token) => {
+export const isTokenExpired = (token) => {
   if (!token) return true;
 
   try {
@@ -134,28 +135,23 @@ export const sendResetEmail = (email) => async (dispatch) => {
 
 export const resetPassword = (password, token) => async (dispatch) => {
   dispatch(setLoading(true));
-
   try {
     const config = { headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } };
 
-    const { data, status } = await axiosInstance.post(`/api/users/password-reset`, { password }, config);
-    //console.log(data, status);
+    const { data, status } = await axios.post(`/api/users/password-reset`, { password }, config);
+    console.log(data, status);
     dispatch(setServerResponseMsg(data, status));
     dispatch(setServerResponseStatus(status));
   } catch (error) {
-    if (error.response && error.response.status === 401 && error.response.data.message === 'Token expired') {
-      dispatch(logout());
-    } else {
-      dispatch(
-        setError(
-          error.response && error.response.data.message
-            ? error.response.data.message
-            : error.message
-            ? error.message
-            : 'An expected error has occured. Please try again later.'
-        )
-      );
-    }
+    dispatch(
+      setError(
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message
+          ? error.message
+          : 'An expected error has occured. Please try again later.'
+      )
+    );
   }
 };
 
@@ -199,7 +195,7 @@ export const getUserOrders = () => async (dispatch, getState) => {
   try {
     const config = { headers: { Authorization: `Bearer ${userInfo.token}`, 'Content-Type': 'application/json' } };
 
-    const { data } = await axiosInstance.get(`/api/users/${userInfo._id}`, config);
+    const { data } = await axios.get(`/api/users/${userInfo._id}`, config);
     dispatch(setUserOrders(data));
   } catch (error) {
     if (error.response && error.response.status === 401 && error.response.data.message === 'Token expired') {
@@ -238,13 +234,14 @@ export const updateProfile = (id, name, email, password) => async (dispatch, get
       },
     };
 
-    const { data } = await axiosInstance.put(`/api/users/profile`, { id, name, email, password }, config);
+    const { data } = await axios.put(`/api/users/profile`, { id, name, email, password }, config);
 
     dispatch(userLogin(data)); // Update user info in Redux
     localStorage.setItem('userInfo', JSON.stringify(data)); // Update localStorage
 
     dispatch(setServerResponseMsg('Profile updated successfully.'));
     dispatch(setServerResponseStatus(200));
+    dispatch(setUpdateSuccess());
   } catch (error) {
     dispatch(
       setError(
@@ -259,7 +256,6 @@ export const updateProfile = (id, name, email, password) => async (dispatch, get
 };
 
 // Reset update success state
-export const resetUpdateSuccess = () => async (dispatch) => {
-  dispatch(stateReset());
+export const clearUpdateSuccessFlag = () => (dispatch) => {
+  dispatch(resetUpdateSuccessAction());
 };
-

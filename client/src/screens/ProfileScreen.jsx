@@ -21,23 +21,35 @@ import { useEffect } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateProfile, resetUpdateSuccess } from '../redux/actions/userActions';
+import { updateProfile, clearUpdateSuccessFlag } from '../redux/actions/userActions';
 import { useLocation } from 'react-router';
 import { Navigate } from 'react-router-dom';
+import { logout, isTokenExpired } from '../redux/actions/userActions';
 
 const ProfileScreen = () => {
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.user);
-  const { userInfo, error, loading, updateSuccess } = user;
   const location = useLocation();
   const toast = useToast();
+
+  const user = useSelector((state) => state.user);
+  const { userInfo, error, loading, updateSuccess } = user;
+  
+  useEffect(() => {
+    if (userInfo && isTokenExpired(userInfo.token)) {
+      dispatch(logout());
+    }
+  }, [dispatch, userInfo]);
 
   useEffect(() => {
     if (updateSuccess) {
       toast({ description: 'Profile saved.', status: 'success', isClosable: true });
-      dispatch(resetUpdateSuccess());
+      dispatch(clearUpdateSuccessFlag());
     }
-  }, [toast, updateSuccess]);
+  }, [toast, updateSuccess, dispatch]);
+  
+  if (!userInfo) {
+    return <Navigate to="/login" replace={true} state={{ from: location }} />;
+  }
 
   return userInfo ? (
     <Formik
