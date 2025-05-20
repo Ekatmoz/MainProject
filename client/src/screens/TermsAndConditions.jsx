@@ -679,6 +679,65 @@ const TermsAndConditions = () => {
               szerinti magatartási kódexe.
             </Text>
           </Stack>
+          <Heading as='h4' size='md'>
+            A digitális adattartalom működése, műszaki védelmi intézkedések
+          </Heading>
+          <Stack>
+            <Text>
+              A weboldalon megjelenő adatokat szolgáltató szerverek elérhetősége évi 99,9% feletti. Rendszeresen mentés
+              készül a teljes adattartalomról, így probléma esetén az eredeti adattartalom visszaállítható. A weboldalon
+              megjelenő adatokat MangoDB adatbázisban tároljuk. Az érzékeny adatok megfelelő erősségű titkosítással
+              vannak tárolva, kódolásukhoz processzorba épített hardveres támogatást használunk.
+            </Text>
+          </Stack>
+          <Heading as='h4' size='md'>
+            A termékek lényeges tulajdonságaira vonatkozó tájékoztatás
+          </Heading>
+          <Stack>
+            <Text>
+              A honlapon a megvásárolható termékek lényeges tulajdonságairól az egyes termékeknél szereplő leírásokban
+              adunk tájékoztatást.
+            </Text>
+          </Stack>
+          <Heading as='h4' size='md'>
+            Az adatbeviteli hibák javítása – Felelősség a megadott adatok valóságáért
+          </Heading>
+          <Stack>
+            <Text>
+              Önnek a megrendelés során a megrendelés véglegesítése előtt folyamatosan lehetősége van az Ön által bevitt
+              adatok módosítására (a böngészőben a vissza gombra kattintva az előző oldal nyílik meg, így akkor is
+              javíthatóak a bevitt adatok, ha Ön már a következő oldalra lépett). Felhívjuk a figyelmét, hogy az Ön
+              felelőssége, hogy az Ön által megadott adatok pontosan kerüljenek bevitelre, hiszen az Ön által megadott
+              adatok alapján kerül számlázásra, illetve szállításra a termék. Ön a megrendelésével tudomásul veszi, hogy
+              az Eladó jogosult az Ön hibás adatbeviteléből, a pontatlanul megadott adatokból eredő minden kárát és
+              költségét Önre hárítani. Az Eladó a pontatlan adatbevitel alapján történő teljesítésért felelősségét
+              kizárja. Felhívjuk a figyelmét arra, hogy a rosszul megadott e-mail cím vagy a postafiókhoz tartozó
+              tárhely telítettsége a visszaigazolás kézbesítésének hiányát eredményezheti és meggátolhatja a szerződés
+              létrejöttét.
+            </Text>
+          </Stack>
+          <Heading as='h4' size='md'>
+            Eljárás hibás ár esetén
+          </Heading>
+          <Stack>
+            <Text>Nyilvánvalóan hibásan feltüntetett árnak minősül:</Text>
+            <UnorderedList>
+              <ListItem>0 Ft-os ár,</ListItem>
+              <ListItem>kedvezménnyel csökkentett, de a kedvezményt tévesen feltüntető ár (pl.: 1500 Ft-os termék esetén a 30 %-os kedvezmény feltüntetése mellett 600 Ft-ért kínált termék).</ListItem>
+            </UnorderedList>
+            <Text>Hibás ár feltüntetése esetén Eladó felajánlja a termék valós áron történő megvásárlásának lehetőségét, mely információ birtokában a Vásárló eldöntheti, hogy megrendeli valós áron a terméket vagy minden hátrányos jogkövetkezmény nélkül lemondja a megrendelést.</Text>
+          </Stack>
+          <Heading as='h4' size='lg'>
+          A Weboldal használata
+          </Heading>
+          <Heading as='h4' size='md'>
+          A vásárlás folyamata
+          </Heading>
+          <Stack>
+            <Text fontWeight='bold'>A Termék kiválasztása</Text>
+            <Text>A Weboldal szereplő termékkategóriákra kattintva választhatja ki a kívánt termékcsaládot, és ezen belül az egyes termékeket. Az egyes termékekre kattintva találja a termék fotóját, cikkszámát, ismertetőjét, árát. Önnek vásárlás esetén a honlapon szereplő árat kell megfizetnie. A termékeket illusztrált fényképpel jelöltük. A fényképeken látható kiegészítők, dekorációs elemek nem részei a terméknek, kivéve ha az a termékleírásban külön kiemelésre kerül. Felhívjuk figyelmét, hogy az esetleges elírásokért, téves adatokért felelősséget nem vállalunk!</Text>
+            <Text fontWeight='bold'>Kosárba helyezés</Text>
+          </Stack>
         </VStack>
       </Box>
     </Stack>
