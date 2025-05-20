@@ -24,7 +24,6 @@ const TermsAndConditions = () => {
             <Text mt={4}>www.aranysarkany.hu</Text>
             <Text>Hatályos ettől a naptól: 2024.03.30. </Text>
           </Container>
-
           <Container maxW='md' centerContent>
             <Heading as='h4' size='md' display='flex' justifyContent='center'>
               A szolgáltató (Eladó, Vállalkozó) adatai:
@@ -164,7 +163,6 @@ const TermsAndConditions = () => {
               „Eljárás hibás ár” pontja alapján jár el.
             </Text>
           </Stack>
-
           <Heading as='h4' size='md'>
             Panaszügyintézés és jogérvényesítési lehetőségek
           </Heading>
@@ -723,21 +721,200 @@ const TermsAndConditions = () => {
             <Text>Nyilvánvalóan hibásan feltüntetett árnak minősül:</Text>
             <UnorderedList>
               <ListItem>0 Ft-os ár,</ListItem>
-              <ListItem>kedvezménnyel csökkentett, de a kedvezményt tévesen feltüntető ár (pl.: 1500 Ft-os termék esetén a 30 %-os kedvezmény feltüntetése mellett 600 Ft-ért kínált termék).</ListItem>
+              <ListItem>
+                kedvezménnyel csökkentett, de a kedvezményt tévesen feltüntető ár (pl.: 1500 Ft-os termék esetén a 30
+                %-os kedvezmény feltüntetése mellett 600 Ft-ért kínált termék).
+              </ListItem>
             </UnorderedList>
-            <Text>Hibás ár feltüntetése esetén Eladó felajánlja a termék valós áron történő megvásárlásának lehetőségét, mely információ birtokában a Vásárló eldöntheti, hogy megrendeli valós áron a terméket vagy minden hátrányos jogkövetkezmény nélkül lemondja a megrendelést.</Text>
+            <Text>
+              Hibás ár feltüntetése esetén Eladó felajánlja a termék valós áron történő megvásárlásának lehetőségét,
+              mely információ birtokában a Vásárló eldöntheti, hogy megrendeli valós áron a terméket vagy minden
+              hátrányos jogkövetkezmény nélkül lemondja a megrendelést.
+            </Text>
           </Stack>
           <Heading as='h4' size='lg'>
-          A Weboldal használata
+            A Weboldal használata
           </Heading>
           <Heading as='h4' size='md'>
-          A vásárlás folyamata
+            A vásárlás folyamata
           </Heading>
           <Stack>
             <Text fontWeight='bold'>A Termék kiválasztása</Text>
-            <Text>A Weboldal szereplő termékkategóriákra kattintva választhatja ki a kívánt termékcsaládot, és ezen belül az egyes termékeket. Az egyes termékekre kattintva találja a termék fotóját, cikkszámát, ismertetőjét, árát. Önnek vásárlás esetén a honlapon szereplő árat kell megfizetnie. A termékeket illusztrált fényképpel jelöltük. A fényképeken látható kiegészítők, dekorációs elemek nem részei a terméknek, kivéve ha az a termékleírásban külön kiemelésre kerül. Felhívjuk figyelmét, hogy az esetleges elírásokért, téves adatokért felelősséget nem vállalunk!</Text>
+            <Text>
+              A Weboldal szereplő termékkategóriákra kattintva választhatja ki a kívánt termékcsaládot, és ezen belül az
+              egyes termékeket. Az egyes termékekre kattintva találja a termék fotóját, cikkszámát, ismertetőjét, árát.
+              Önnek vásárlás esetén a honlapon szereplő árat kell megfizetnie. A termékeket illusztrált fényképpel
+              jelöltük. A fényképeken látható kiegészítők, dekorációs elemek nem részei a terméknek, kivéve ha az a
+              termékleírásban külön kiemelésre kerül. Felhívjuk figyelmét, hogy az esetleges elírásokért, téves
+              adatokért felelősséget nem vállalunk!
+            </Text>
             <Text fontWeight='bold'>Kosárba helyezés</Text>
+            <Text>
+              A Termék kiválasztása után Ön a „Kosárba teszem” gombra kattintva helyezhet – tetszőleges számú – terméket
+              a kosárba anélkül, hogy ezzel Önnek vásárlási- vagy fizetési kötelezettsége keletkezne, mivel a kosárba
+              helyezés nem minősül ajánlattételnek.
+            </Text>
+            <Text>
+              {' '}
+              Javasoljuk, hogy akkor is helyezze a kosárba a terméket, ha nem biztos abban, hogy az adott terméket meg
+              kívánja vásárolni, mert ezzel az Ön számára egy kattintással áttekinthetővé válik, hogy az adott
+              pillanatban melyek az Ön által kiválasztott termékek, és azokat egy képernyőn megjelenítve tudja
+              megtekinteni és összehasonlítani. A Kosár tartalma a megrendelés véglegesítéséig – a „Rendelés
+              véglegesítése” gomb megnyomásáig – szabadon módosítható, a kosárból tetszés szerinti termékek
+              eltávolíthatóak, a kosárba tetszés szerint újabb termékek helyezhetőek, illetve a kíván termékszám
+              megváltoztatható.
+            </Text>
+            <Text>
+              Amennyiben Ön a kiválasztott terméket a Kosárba helyezi, „Kosárba helyezve” szöveg jelenik meg. Amennyiben
+              Ön nem kíván több terméket kiválasztani, úgy kattintson a „kosár” gombra! Amennyiben újabb terméket
+              szeretne a kosárba helyezni, úgy kattintson bármely termékkategória gombra!
+            </Text>
+            <Text fontWeight='bold'>A Kosár megtekintése</Text>
+            <Text>
+              A weboldal használata során Ön a honlap tetején található „Kosár” ikonra kattintva bármikor ellenőrizheti
+              a kosár tartalmát. Itt lehetősége van a kiválasztott termékeket eltávolítani a kosárból, illetve a termék
+              darabszámát megváltoztatni. A rendszer a „Kosár frissítése” gomb megnyomását követően megjeleníti az Ön
+              által megváltoztatott adatoknak megfelelő információkat, ideértve a kosárba tett termékek árát is.
+            </Text>
+            <Text>
+              Amennyiben Ön nem kíván további termékeket kiválasztani és a kosárba helyezni, úgy a „Tovább a pénztárhoz”
+              gomb lenyomásával folytathatja a vásárlást.
+            </Text>
+            <Text fontWeight='bold'>Vásárlói adatok megadása</Text>
+            <Text>
+              „Tovább a pénztárhoz” gomb lenyomását követően megjelenik a kosár tartalma, illetve az Ön által
+              kiválasztott termékek megvásárlása esetén az Ön által fizetendő teljes vételár. „A rendelés tartalma”
+              dobozban kell bejelölnie az Ön által választott fizetési módot. Kiszállítás esetén a rendszer jelzi a
+              kiszállítás díját, melyet Ön köteles megfizetni megrendelés esetén.
+            </Text>
+            <Text>
+              A „Számlázási adatok” résznél e-mail címét, teljes nevét, címét, telefonszámát tudja megadni. Amennyiben
+              Ön eltérő címre kéri a szállítást, kérjük jelölje meg a „Szállítás másik címre” checkbox-ot és adja meg a
+              címet. A „Rendelés jegyzetek” szövegdobozban” Ön tetszőlegesen adhat meg további információt.
+            </Text>
+            <Text fontWeight='bold'>A rendelés véglegesítése</Text>
+            <Text>
+              Ha mindent rendben talál, a „Megrendelés elküldése” gombra kattintva véglegesítheti rendelését, melyről
+              weboldalunkon és e-mailben is visszaigazolást kap. Abban az esetben, ha a visszaigazoló e-mailben veszi
+              észre, hogy hibás adatot adott meg, kérjük, haladéktalanul, de legkésőbb a rendelés átvételi időpontja
+              előtt 2 órával jelezze felénk.
+            </Text>
+            <Text>
+              A weboldalunkon található tájékoztatás nem minősül Cégünk részéről történő szerződéskötési ajánlatnak. Az
+              ajánlattevő Ön.
+            </Text>
+            <Text>
+              Ön a „Megrendelés elküldése” gombra kattintva tudomásul veszi, hogy ajánlata megtettnek minősül és
+              nyilatkozata fizetési kötelezettséggel jár. Ha ajánlatát Általános szerződési feltételeink szerinti 48
+              órán belül nem igazoljuk vissza, Ön mentesül ajánlati kötöttsége alól.
+            </Text>
+            <Text fontWeight='bold'>Rendelés lemondása</Text>
+            <Text>
+              Rendelés lemondására, módosítására legkésőbb az előzőlegesen kiválasztott átvételi idő előtt két órával
+              van lehetőség.
+            </Text>
           </Stack>
+          <Heading as='h4' size='lg'>
+            Rendelés feldolgozása, a szerződés létrejötte
+          </Heading>
+          <Text>
+            Önnek bármilyen időpontban lehetősége van a megrendelés leadására. Az Eladó legkésőbb az Ön ajánlatának
+            elküldését követő 1 órán belül, e-mail útján visszaigazolja az Ön ajánlatát. A szerződés akkor jön létre,
+            amikor az Eladó által küldött visszaigazoló email az Ön számára a levelezőrendszerében hozzáférhetővé válik.
+          </Text>
+          <Heading as='h4' size='lg'>
+            Fizetési módok
+          </Heading>
+          <Heading as='h4' size='md'>
+            Készpénzes fizetés
+          </Heading>
+          <Text>
+            Amennyiben a rendelés értékét kézhezvételekor kívánja kiegyenlíteni készpénzzel, akkor válassza a „Fizetés
+            készpénzben” fizetési módot.
+          </Text>
+          <Heading as='h4' size='md'>
+            Bankkártyás fizetés
+          </Heading>
+          <Text>
+            Amennyiben a rendelés értékét kézhezvételekor kívánja kiegyenlíteni bankkártyával, akkor válassza a „Fizetés
+            bankkártyával” fizetési módot.
+          </Text>
+          <Text>
+            Bankkártyával történő fizetés a következő, érvényes és hatályos bankkártyák tulajdonosai számára lehetséges:
+            VISA, MasterCard. Az online bankkártyás fizetések a Stripe biztonságos fizetési rendszerén keresztül
+            történnek. A megadott bankkártyaadatok a kereskedőhöz nem jutnak el, azok kizárólag a Stripe titkosított
+            felületén kerülnek feldolgozásra. A Stripe egy nemzetközileg elismert, PCI DSS tanúsítvánnyal rendelkező
+            fizetési szolgáltató, amely biztosítja az Ön adatainak teljes körű védelmét.
+          </Text>
+          <Heading as='h4' size='lg'>
+            Átvételi módok, átvételi díjak
+          </Heading>
+          <Heading as='h4' size='md'>
+            Kiszállítás
+          </Heading>
+          <Text>
+            A vásárolt termékek kiszállítása kizárólag Magyarország területére vonatkozik. A szállítás GLS, DPD és MPL
+            futárszolgálattal történik. 30.000 Ft feletti rendelés esetén ingyenes. A csomag kézbesítése a
+            megrendeléstől számítva: 1-5 munkanap
+          </Text>
+          <Heading as='h4' size='md'>
+            Teljesítési határidő
+          </Heading>
+          <Text>
+            A megrendelésre vonatkozóan az általános teljesítési határidő függ a vásárló által választott kiszállítási
+            vagy személyes átvételi időponttól.
+          </Text>
+          <Text>Tájékoztatjuk, hogy:</Text>
+          <UnorderedList>
+            <ListItem>
+              a veszélyhelyzetben hozott, a Magyar Közlönyben kihirdetett különleges jogrendi intézkedések,
+            </ListItem>
+            <ListItem>
+              a szerződés teljesítése érdekében eljáró személyek (fizetési szolgáltató, valamint a szállítást végző
+              partner) által a veszélyhelyzet miatt hozott intézkedések a szerződés teljesítését vis maior eseményként
+              érintik.
+            </ListItem>
+            <Text>
+              A vis maior helyzet Eladót megakadályozhatja, vagy késleltetheti szerződéses kötelezettségei
+              teljesítésében, amelyért Eladó a Polgári Törvénykönyv alapján nem vonható felelősségre.
+            </Text>
+            <Text>Az akadályoztatás és késleltetés kezelése érdekében Eladó jogosult:</Text>
+            <ListItem>a szerződés teljesítését felfüggeszteni, vagy halasztani,</ListItem>
+            <ListItem>
+              a már megkötött szerződés teljesítését lehetetlenülésre (amennyiben a vis maior helyzet előre láthatóan
+              lehetetlené teszi a teljesítést) hivatkozva visszautasítani.
+            </ListItem>
+          </UnorderedList>
+          <Text>
+            A szerződés teljesítésének felfüggesztése vagy halasztása esetén Eladó a szerződéses kötelezettségeit a vis
+            maior helyzetre tekintettel halasztott időpontban köteles teljesíteni.
+          </Text>
+          <Text>
+            A szerződés teljesítésének lehetetlenülése esetén a Polgári Törvénykönyv alapján a szerződés megszűnik, a
+            már megfizetett vételár visszajár a Vásárlónak. Eladó a vételár visszatérítése esetén a Vásárló által
+            alkalmazott fizetési módot, vagy a Felek által egyedileg megtárgyalt visszafizetési módot alkalmazza.
+          </Text>
+          <Heading as='h4' size='md'>
+            Jogfenntartás, tulajdonjogi kikötés
+          </Heading>
+          <Text>
+            Amennyiben Ön korábban már úgy rendelt terméket, hogy azt a kiszállítás során nem vette át (ide nem értve
+            azt az esetet, amikor elállási jogával élt), vagy a Termék nem kereste jelzéssel érkezett vissza az
+            eladóhoz, az Eladó a megrendelés teljesítését a vételár és a szállítási költségek előre történő
+            megfizetéséhez köti.
+          </Text>
+          <Text>
+            Eladó visszatarthatja a Termék átadását, ameddig nem győződik meg arról, hogy a Termék árának kifizetése
+            sikeresen megtörtént az elektronikus fizetési megoldás használatával (ideértve azt az esetet is, amikor az
+            átutalással fizetett termék esetén Vásárló a tagállama szerinti pénznemben utalja el a vételárat és az
+            átváltás, valamint a banki jutalékok, költségek miatt Eladó nem kapja meg teljes mértékben a vételár és a
+            szállítási díj összegét). Amennyiben a Termék ára nem került teljes mértékben kifizetésre, az Eladó a
+            vételár kiegészítésére hívhatja fel a Vásárlót.
+          </Text>
+          <Heading as='h4' size='md'>
+            Külföldre történő értékesítés
+          </Heading>
+          <Text>Az eladó kizárólag Magyarország területén értékesít.</Text>
         </VStack>
       </Box>
     </Stack>
