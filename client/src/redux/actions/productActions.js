@@ -10,13 +10,13 @@ import {
 	productReviewed,
 	resetError,
 } from '../slices/product';
-import axios from 'axios';
+import axios from '../../axiosInstance';
 
 export const getProducts = (page, category = null) => async (dispatch) => {
   dispatch(setLoading());
 
   try {
-    let url = `${import.meta.env.REACT_APP_API_URL}/api/products/${page}/${10}`; // 10 products per page
+    let url = `/api/products/${page}/${12}`; // 10 products per page
 
     // Add category parameter if specified
     if (category) {
@@ -103,7 +103,7 @@ export const toggleFavorites = (toggle) => async (dispatch, getState) => {
 export const getProduct = (id) => async (dispatch) => {
 	dispatch(setLoading(true));
 	try {
-		const { data } = await axios.get(`${import.meta.env.REACT_APP_API_URL}/api/products/${id}`);
+		const { data } = await axios.get(`/api/products/${id}`);
 		dispatch(setProduct(data));
 	} catch (error) {
 		dispatch(
@@ -125,7 +125,7 @@ export const createProductReview = (productId, userId, comment, rating, title) =
 	try {
 		const config = { headers: { Authorization: `Bearer ${userInfo.token}`, 'Content-Type': 'application/json' } };
 
-		await axios.post(`${import.meta.env.REACT_APP_API_URL}/api/products/reviews/${productId}`, { comment, userId, rating, title }, config);
+		await axios.post(`/api/products/reviews/${productId}`, { comment, userId, rating, title }, config);
 		dispatch(productReviewed(true));
 	} catch (error) {
 		dispatch(
