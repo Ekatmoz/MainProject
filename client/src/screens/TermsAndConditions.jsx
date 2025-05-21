@@ -1116,6 +1116,185 @@ const TermsAndConditions = () => {
           <Heading as='h4' size='md'>
             Kellékszavatosság
           </Heading>
+          <Text fontWeight='bold'>Milyen esetben élhet Ön a kellékszavatossági jogával?</Text>
+          <Text>
+            Ön az Eladó hibás teljesítése esetén az Eladóval szemben kellékszavatossági igényt érvényesíthet a Polgári
+            Törvénykönyv szabályai szerint.
+          </Text>
+          <Text fontWeight='bold'>Milyen jogok illetik meg Önt kellékszavatossági igénye alapján?</Text>
+          <Text>Ön – választása szerint–az alábbi kellékszavatossági igényekkel élhet:</Text>
+          <Text>
+            Kérhet kijavítást vagy kicserélést, kivéve, ha az ezek közül az Ön által választott igény teljesítése
+            lehetetlen vagy az Eladó számára más igénye teljesítéséhez képest aránytalan többletköltséggel járna. Ha a
+            kijavítást vagy a kicserélést nem kérte, illetve nem kérhette, úgy igényelheti az ellenszolgáltatás arányos
+            leszállítását vagy a hibát az Eladó költségére Ön is kijavíthatja, illetve mással kijavíttathatja vagy –
+            végső esetben – a szerződéstől is elállhat.
+          </Text>
+          <Text>
+            Választott kellékszavatossági jogáról egy másikra is áttérhet, az áttérés költségét azonban Ön viseli,
+            kivéve, ha az indokolt volt, vagy arra az Eladó adott okot.
+          </Text>
+          <Text fontWeight='bold'>Milyen határidőben érvényesítheti Ön kellékszavatossági igényét?</Text>
+          <Text>
+            Ön köteles a hibát annak felfedezése után haladéktalanul, de nem később, mint a hiba felfedezésétől
+            számított kettő hónapon belül közölni. Ugyanakkor felhívjuk a figyelmét, hogy a szerződés teljesítésétől
+            számított két éves elévülési határidőn túl kellékszavatossági jogait már nem érvényesítheti. Ha a fogyasztó
+            és a vállalkozás közötti szerződés tárgya használt dolog, a felek rövidebb elévülési időben is
+            megállapodhatnak; egy évnél rövidebb elévülési határidő ebben az esetben sem köthető ki érvényesen.
+          </Text>
+          <Text fontWeight='bold'>Kivel szemben érvényesítheti kellékszavatossági igényét?</Text>
+          <Text>Ön az Eladóval szemben érvényesítheti kellékszavatossági igényét.</Text>
+          <Text fontWeight='bold'>Milyen egyéb feltétele van kellékszavatossági jogai érvényesítésének?</Text>
+          <Text>
+            A teljesítéstől számított hat hónapon belül a kellékszavatossági igénye érvényesítésének a hiba közlésén túl
+            nincs egyéb feltétele, ha Ön igazolja, hogy a terméket, illetve a szolgáltatást az Eladó nyújtotta. A
+            teljesítéstől számított hat hónap eltelte után azonban már Ön köteles bizonyítani, hogy az Ön által
+            felismert hiba már a teljesítés időpontjában is megvolt.
+          </Text>
+          <Text>
+            Használt termékek esetén alapesetben az általános szabályoktól eltérően alakulnak a szavatossági, jótállási
+            jogok. A használt termékek esetében is beszélhetünk hibás teljesítésről, azonban figyelembe kell venni
+            azokat a körülményeket, amelyek alapján a Vásárló bizonyos hibák előfordulására számíthatott. Az avulás
+            folytán ugyanis egyes hibák jelentkezései egyre gyakoribbakká válnak, amelyek következtében azt, hogy egy
+            használt termék ugyanolyan minőséggel rendelkezhet, mint egy újonnan vásárolt, nem lehet feltételezni. Ennek
+            alapján a Vásárló csak az olyan hiányosságok tekintetében érvényesítheti a szavatossági jogait, amelyek a
+            használtságból eredő hibákon felüliek, és azoktól függetlenül keletkeztek. Ha a használt termék hibás és
+            erről a Fogyasztónak minősülő Vásárló a vásárláskor tájékoztatást kapott, az ismert hiba vonatkozásában a
+            Szolgáltatónak nincs felelőssége.
+          </Text>
+          <Heading as='h4' size='md'>
+            Termékszavatosság
+          </Heading>
+          <Text fontWeight='bold'>Milyen esetben élhet Ön a termékszavatossági jogával?</Text>
+          <Text>
+            Ingó dolog (termék) hibája esetén Ön – választása szerint – a kellékszavatossági igényt vagy
+            termékszavatossági igényt érvényesíthet.
+          </Text>
+          <Text fontWeight='bold'>Milyen jogok illetik meg Önt termékszavatossági igénye alapján?</Text>
+          <Text>Termékszavatossági igényként Ön kizárólag a hibás termék kijavítását vagy kicserélését kérheti.</Text>
+          <Text fontWeight='bold'>Milyen esetben minősül a termék hibásnak?</Text>
+          <Text>
+            A termék akkor hibás, ha az nem felel meg a forgalomba hozatalakor hatályos minőségi követelményeknek vagy
+            pedig, ha nem rendelkezik a gyártó által adott leírásban szereplő tulajdonságokkal.
+          </Text>
+          <Text fontWeight='bold'>Milyen határidőben érvényesítheti Ön termékszavatossági igényét?</Text>
+          <Text>
+            Termékszavatossági igényét Ön a termék gyártó általi forgalomba hozatalától számított két éven belül
+            érvényesítheti. E határidő elteltével e jogosultságát elveszti.
+          </Text>
+          <Text fontWeight='bold'>
+            Kivel szemben és milyen egyéb feltétellel érvényesítheti termékszavatossági igényét?
+          </Text>
+          <Text>
+            Termékszavatossági igényét kizárólag az ingó dolog gyártójával vagy forgalmazójával szemben gyakorolhatja. A
+            termék hibáját termékszavatossági igény érvényesítése esetén Önnek kell bizonyítania.
+          </Text>
+          <Text fontWeight='bold'>
+            A gyártó (forgalmazó) milyen esetben mentesül termékszavatossági kötelezettsége alól?
+          </Text>
+          <Text>
+            A gyártó (forgalmazó) kizárólag akkor mentesül termékszavatossági kötelezettsége alól, ha bizonyítani tudja,
+            hogy:
+          </Text>
+          <UnorderedList>
+            <ListItem>a terméket nem üzleti tevékenysége körében gyártotta, illetve hozta forgalomba, vagy</ListItem>
+            <ListItem>
+              a hiba a tudomány és a technika állása szerint a forgalomba hozatal időpontjában nem volt felismerhető
+              vagy
+            </ListItem>
+            <ListItem>a termék hibája jogszabály vagy kötelező hatósági előírás alkalmazásából ered.</ListItem>
+          </UnorderedList>
+          <Text>A gyártónak (forgalmazónak) a mentesüléshez elegendő egy okot bizonyítania.</Text>
+          <Text>
+            Felhívom figyelmét, hogy ugyanazon hiba miatt kellékszavatossági és termékszavatossági igényt egyszerre,
+            egymással párhuzamosan nem érvényesíthet. Termékszavatossági igényének eredményes érvényesítése esetén
+            azonban a kicserélt termékre, illetve kijavított részre vonatkozó kellékszavatossági igényét a gyártóval
+            szemben érvényesítheti.
+          </Text>
+          <Heading as='h4' size='md'>
+            Jótállás
+          </Heading>
+          <Text fontWeight='bold'>Milyen esetben élhet Ön a jótállási jogával?</Text>
+          <Text>
+            Hibás teljesítés esetén az egyes tartós fogyasztási cikkekre vonatkozó kötelező jótállásról szóló 151/2003.
+            (IX. 22.) Korm. rendelet alapján az Eladó jótállásra köteles.
+          </Text>
+          <Text>
+            Jogszabály írja elő a jótállás biztosítását az olyan tartós fogyasztási cikkek (pl.: műszaki cikkek,
+            szerszámok, gépek) és alkatrészeik esetében, amelyek vásárlási értéke a 10 000 Ft-ot meghaladja.
+          </Text>
+          <Text fontWeight='bold'>Önt milyen jogok és milyen határidőn belül illetik meg jótállás alapján?</Text>
+          <Text>
+            Az egyes tartós fogyasztási cikkekre vonatkozó kötelező jótállásról szóló 151/2003. (IX. 22.) Korm. rendelet
+            határozza meg a kötelező jótállás eseteit. Az ezen esetkörbe nem tartozó Termékek esetén az Eladó jótállást
+            nem vállal. A jótállási igény a jótállási határidőben érvényesíthető. Ha a jótállásra kötelezett
+            kötelezettségének a jogosult felhívására – megfelelő határidőben – nem tesz eleget, a jótállási igény a
+            felhívásban tűzött határidő elteltétől számított három hónapon belül akkor is érvényesíthető bíróság előtt,
+            ha a jótállási idő már eltelt. E határidő elmulasztása jogvesztéssel jár. A jótállási igény érvényesítésére
+            egyebekben a kellékszavatossági jogok gyakorlására vonatkozó szabályokat kell megfelelően alkalmazni. A
+            jótállás időtartama egy év. E határidő elmulasztása jogvesztéssel jár. A jótállási határidő a fogyasztási
+            cikk fogyasztó részére történő átadása, vagy ha az üzembe helyezést a vállalkozás vagy annak megbízottja
+            végzi, az üzembe helyezés napjával kezdődik. Az egy éven túli esetleges jótállási igényekkel kapcsolatban
+            szíveskedjen a gyártóhoz fordulni!
+          </Text>
+          <Text fontWeight='bold'>Mi a viszonya a jótállásnak más szavatossági jogokkal?</Text>
+          <Text>
+            A jótállás a szavatossági jogok (termék és kellékszavatosság) mellett érvényesül, alapvető különbség az
+            általános szavatossági jogok és a jótállás között, hogy a jótállás esetén a fogyasztónak kedvezőbb a
+            bizonyítási teher.
+          </Text>
+          <Text>
+            A 151/2003 Korm. Rendelet szerinti kötelező jótállás alá eső rögzített bekötésű, illetve a 10 kg-nál
+            súlyosabb, vagy tömegközlekedési eszközön kézi csomagként nem szállítható fogyasztási cikket – a járművek
+            kivételével – az üzemeltetés helyén kell megjavítani. Ha a kijavítás az üzemeltetés helyén nem végezhető el,
+            a le- és felszerelésről, valamint az el- és visszaszállításról a vállalkozás, vagy – a javítószolgálatnál
+            közvetlenül érvényesített kijavítás iránti igény esetén – a javítószolgálat gondoskodik.
+          </Text>
+          <Text>
+            Az eladó vállalása a kötelező jótállás időtartama alatt nem tartalmazhat a fogyasztóra nézve olyan
+            feltételeket, amelyek hátrányosabbak azoknál a jogoknál, amelyeket a kötelező jótállás szabályai
+            biztosítanak. Ezt követően (1 év után) azonban az önkéntes jótállás feltételei szabadon állapíthatóak meg,
+            azonban a jótállás ebben az esetben sem érintheti a fogyasztó jogszabályból eredő -így köztük a
+            kellékszavatosságon alapuló jogainak fennállását.
+          </Text>
+          <Text fontWeight='bold'>Három munkanapon belüli csereigény</Text>
+          <Text>
+            Webáruházon keresztüli értékesítés esetén is érvényesül a három munkanapon belüli csereigény intézménye.
+            Három munkanapon belüli csereigényt a 151/2003. (IX. 22.) Korm. rendelet alá tartozó tartós fogyasztási
+            cikkek esetében lehet érvényesíteni, amely szerint, ha a 3 munkanapon belül érvényesíti valaki a csereigény
+            intézményét, akkor az eladónak ezt úgy kell értelmeznie, hogy a termék az eladáskor már hibás volt és minden
+            további nélkül a terméket ki kell cserélnie.
+          </Text>
+          <Text fontWeight='bold'>Mikor mentesül az Eladó a jótállási kötelezettsége alól?</Text>
+          <Text>
+            Az Eladó a jótállási kötelezettsége alól csak abban az esetben mentesül, ha bizonyítja, hogy a hiba oka a
+            teljesítés után keletkezett.
+          </Text>
+          <Text>
+            Felhívjuk a figyelmét, hogy ugyanazon hiba miatt kellékszavatossági és jótállási igényt, illetve
+            termékszavatossági és jótállási igényt egyszerre, egymással párhuzamosan nem érvényesíthet, egyébként
+            viszont Önt a jótállásból fakadó jogok a szavatossági jogosultságoktól függetlenül megilletik.
+          </Text>
+          <Text>
+            A jelen ÁSZF-ben írt szavatossági és jótállási jogok gyakorlásának határideje attól a naptól indul, amikor a
+            Vásárló a terméket átveszi.
+          </Text>
+          <Heading as='h4' size='md'>
+            Elállási nyilatkozat minta
+          </Heading>
+          <Text>(csak a szerződéstől való elállási szándék esetén töltse ki és juttassa vissza)</Text>
+          <Text>
+            <Box fontWeight='bold'>Címzett:</Box>Sushi-Bar Hungary Kft, 8600 Siófok Gyöngy utca 11/1,
+            info@sushibarhungary.hu, +36 70 791 6990
+          </Text>
+          <Text fontWeight='bold'>
+            Alulírott kijelentem hogy gyakorlom elállási/felmondási jogomat az alábbi termék/ek adásvételére:
+          </Text>
+          <Text fontWeight='bold'>Megrendelés időpontja /átvétel időpontja:</Text>
+          <Text fontWeight='bold'>Fogyasztó(k) neve:</Text>
+          <Text fontWeight='bold'>Fogyasztó(k) címe:</Text>
+          <Text fontWeight='bold'>A fogyasztó(k) aláírása (kizárólag írásban történő értesítés esetén):</Text>
+          <Text fontWeight='bold'>Dátum:</Text>
         </VStack>
       </Box>
     </Stack>
