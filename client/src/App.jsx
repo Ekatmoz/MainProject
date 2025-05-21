@@ -10,7 +10,7 @@ import LoginScreen from './screens/LoginScreen';
 import RegistrationScreen from './screens/RegistrationScreen';
 import EmailVerificationScreen from './screens/EmailVerificationScreen';
 import PasswordResetScreen from './screens/PasswordResetScreen';
-import axios from 'axios';
+import axios from './axiosInstance';
 import { VStack, Spinner } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { GoogleOAuthProvider } from '@react-oauth/google';
