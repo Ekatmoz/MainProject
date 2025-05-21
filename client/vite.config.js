@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'http://localhost:4000', // Proxy requests starting with /api to your backend
+      '/api': 'https://golden-dragon.onrender.com/', // Proxy requests starting with /api to your backend
     },
   },
   build: {
