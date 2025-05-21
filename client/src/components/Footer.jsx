@@ -9,7 +9,7 @@ import {
   useColorModeValue as mode,
   Box,
   Flex,
-  Image
+  Image,
 } from '@chakra-ui/react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { Link as ReactLink } from 'react-router-dom';
@@ -21,26 +21,42 @@ const Footer = () => (
         spacing='8'
         direction={{ base: 'column', md: 'row' }}
         justify='space-between'
-        py={{ base: '12', md: '16' }}>
+        py={{ base: '12', md: '16' }}
+      >
         <Stack spacing={{ base: '6', md: '8' }} align='start'>
           <Flex alignItems='center'>
-          <Image className="logo" src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1703022330/bdvypfvraoemkf8uvnjd.png' color='grey.400' height='100px'/>
+            <Image
+              className='logo'
+              src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1703022330/bdvypfvraoemkf8uvnjd.png'
+              color='grey.400'
+              height='100px'
+            />
             <Text fontSize='2xl' fontWeight='extrabold'>
               Azsiai Piac
             </Text>
           </Flex>
           <Text color='muted'>Explore Asia On Your Plate.</Text>
         </Stack>
-        <Stack direction={{ base: 'column-reverse', md: 'column', lg: 'row' }} spacing={{ base: '12', md: '8' }} w='60%'>
-          <Stack direction='row' spacing='20'>
+        <Stack
+          direction={{ base: 'column-reverse', md: 'column', lg: 'row' }}
+          spacing={{ base: '12', md: '8' }}
+          w='60%'
+        >
+          <Stack direction='row' spacing='40'>
             <Stack spacing='4' minW='36' flex='2'>
               <Text fontSize='sm' fontWeight='semibold' color='subtle'>
                 Kapcsolat
               </Text>
               <Stack spacing='3' shouldWrapChildren>
-                <Button variant='link'>8600 Siófok, Vitorlás u. 1.-3, 8600 </Button>
-                <Button variant='link'>+ 36 70 791 6990</Button>
-                <Button variant='link'>info@sushibarhungary.com</Button>
+                <Button variant='link' fontSize={{ base: 'sm', md: 'md' }} textAlign='center'>
+                  8600 Siófok, Vitorlás u. 1.-3, 8600
+                </Button>
+                <Button variant='link' fontSize={{ base: 'sm', md: 'md' }} textAlign='center'>
+                  +36 70 791 6990
+                </Button>
+                <Button variant='link' fontSize={{ base: 'sm', md: 'md' }} textAlign='center'>
+                  info@sushibarhungary.com
+                </Button>
               </Stack>
             </Stack>
             <Stack spacing='4' minW='36' flex='2'>
@@ -48,10 +64,18 @@ const Footer = () => (
                 Információk
               </Text>
               <Stack spacing='3' shouldWrapChildren>
-                <Button variant='link'>Rólunk</Button>
-                <Button variant='link'>Vásárlási információk</Button>
-                <Button variant='link'>Adatkezelési tájékoztató</Button>
-                <Button variant='link' as={ReactLink} to='/terms&conditions'>ÁSZF</Button>
+                <Button variant='link' fontSize={{ base: 'sm', md: 'md' }}>
+                  Rólunk
+                </Button>
+                <Button variant='link' fontSize={{ base: 'sm', md: 'md' }}>
+                  Vásárlási információk
+                </Button>
+                <Button variant='link' fontSize={{ base: 'sm', md: 'md' }}>
+                  Adatkezelési tájékoztató
+                </Button>
+                <Button variant='link' as={ReactLink} to='/terms&conditions'>
+                  ÁSZF
+                </Button>
               </Stack>
             </Stack>
           </Stack>

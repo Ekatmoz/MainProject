@@ -24,7 +24,7 @@ import { register, googleLogin } from '../redux/actions/userActions';
 import TextField from '../components/TextField';
 import {FcGoogle} from 'react-icons/fc';
 import { useGoogleLogin } from '@react-oauth/google';
-import axios from 'axios';
+import axios from '../axiosInstance';
 
 
 const RegistrationScreen = () => {

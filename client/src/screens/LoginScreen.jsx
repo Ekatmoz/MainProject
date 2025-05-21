@@ -23,7 +23,7 @@ import PasswordForgottenForm from '../components/PasswordForgottenForm';
 import TextField from '../components/TextField';
 import { login, googleLogin } from '../redux/actions/userActions';
 import { useGoogleLogin } from '@react-oauth/google';
-import axios from 'axios';
+import axios from '../axiosInstance';
 import { FcGoogle } from 'react-icons/fc';
 
 const LoginScreen = () => {
