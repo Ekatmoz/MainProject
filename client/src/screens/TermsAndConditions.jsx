@@ -915,6 +915,207 @@ const TermsAndConditions = () => {
             Külföldre történő értékesítés
           </Heading>
           <Text>Az eladó kizárólag Magyarország területén értékesít.</Text>
+          <Heading as='h4' size='lg'>
+            Fogyasztói tájékoztató a 45/2014. (II. 26.) Korm. rendelet alapján
+          </Heading>
+          <Text fontWeight='bold'>Tartalomjegyzék</Text>
+          <UnorderedList>
+            <ListItem>Fogyasztói tájékoztató</ListItem>
+            <ListItem>Elállási jog</ListItem>
+            <ListItem>Szavatossági jogok</ListItem>
+          </UnorderedList>
+          <Heading as='h4' size='md'>
+            Tájékoztató a fogyasztó vevőt megillető elállási jogról
+          </Heading>
+          <Text>
+            Fogyasztónak a Ptk. 8:1. § 1. bekezdés 3. pontja szerint csak a szakmája, önálló foglalkozása vagy üzleti
+            tevékenysége körén kívül eljáró természetes személy minősül, így
+            <Box fontWeight='bold'>jogi személyek nem élhetnek az indokolás nélküli elállási joggal!</Box>
+          </Text>
+          <Text>
+            A fogyasztót a 45/2014. (II. 26.) Korm. rendelet 20. § szerint megilleti az indokolás nélküli elállás joga.
+            A fogyasztó az elállási jogát:
+          </Text>
+          <UnorderedList styleType='lower-alpha'>
+            <ListItem>termék adásvételére irányuló szerződés esetén</ListItem>
+            <ListItem>a terméknek,</ListItem>
+            <ListItem>
+              több termék adásvételekor, ha az egyes termékek szolgáltatása eltérő időpontban történik, az utoljára
+              szolgáltatott terméknek, a fogyasztó vagy az általa megjelölt, a fuvarozótól eltérő harmadik személy
+              általi átvételének napjától számított határidőn belül gyakorolhatja, mely határidő 14 nap.
+            </ListItem>
+          </UnorderedList>
+          <Text>
+            A jelen pontban foglaltak nem érintik a fogyasztó azon jogát, hogy az e pontban meghatározott elállási jogát
+            a szerződés megkötésének napja és a termék átvételének napja közötti időszakban is gyakorolja.
+          </Text>
+          <Text>
+            Ha a szerződés megkötésére a fogyasztó tett ajánlatot, a fogyasztót a szerződés megkötése előtt megilleti az
+            ajánlat visszavonásának joga, ami a szerződés megkötésére kiterjedő ajánlati kötöttséget megszünteti.
+          </Text>
+          <Heading as='h4' size='md'>
+            Elállási nyilatkozat, a fogyasztót megillető elállási vagy felmondási jog gyakorlása
+          </Heading>
+          <Text>
+            A fogyasztó a 45/2014. (II. 26.) Korm. rendelet 20. §-ban biztosított jogát az erre vonatkozó egyértelmű
+            nyilatkozat útján.
+          </Text>
+          <Heading as='h4' size='md'>
+            A fogyasztó elállási nyilatkozatának érvényessége
+          </Heading>
+          <Text>
+            Az elállási jogot határidőben érvényesítettnek kell tekinteni, ha a fogyasztó nyilatkozatát határidőn belül
+            elküldi. Határidő a kiszállítást vagy személyes átvételt megelőző tárgynap.
+          </Text>
+          <Text>
+            A fogyasztót terheli annak bizonyítása, hogy az elállás jogát e rendelkezéssel összhangban gyakorolta.
+          </Text>
+          <Heading as='h4' size='lg'>
+            Az Eladó kötelezettségei a fogyasztó elállása esetén
+          </Heading>
+          <Heading as='h4' size='md'>
+            Az Eladó visszatérítési kötelezettsége
+          </Heading>
+          <Text>
+            Ha a fogyasztó a 45/2014. (II. 26.) Korm. rendelet 22. §-nak megfelelően eláll a szerződéstől, az Eladó
+            legkésőbb az elállásról való tudomásszerzésétől számított tizennégy napon belül visszatéríti a fogyasztó
+            által ellenszolgáltatásként megfizetett teljes összeget, ideértve a teljesítéssel összefüggésben felmerült
+            költségeket, így a szállítási díjat is. Felhívjuk a figyelmét, hogy ez a rendelkezés nem vonatkozik a
+            legkevésbé költséges szokásos fuvarozási módtól eltérő fuvarozási mód választásával okozott
+            többletköltségekre.
+          </Text>
+          <Heading as='h4' size='md'>
+            Az Eladó visszatérítési kötelezettségének módja
+          </Heading>
+          <Text>
+            A 45/2014. (II. 26.) Korm. rendelet 22. §-nak megfelelő elállás vagy felmondás esetén az Eladó a
+            fogyasztónak visszajáró összeget a fogyasztó által igénybe vett fizetési móddal megegyező módon téríti
+            vissza. A fogyasztó kifejezett beleegyezése alapján az Eladó a visszatérítésre más fizetési módot is
+            alkalmazhat, de a fogyasztót ebből adódóan semmilyen többletdíj nem terhelheti. A Fogyasztó által hibásan
+            és/vagy pontatlanul megadott bankszámlaszám vagy postai cím következtében történő késedelem miatt az Eladó-t
+            felelősség nem terheli.
+          </Text>
+          <Heading as='h4' size='md'>
+            Többletköltségek
+          </Heading>
+          <Text>
+            Ha a fogyasztó kifejezetten a legkevésbé költséges szokásos fuvarozási módtól eltérő fuvarozási módot
+            választ, az Eladó nem köteles visszatéríteni az ebből eredő többletköltségeket. Ilyen esetben a feltüntetett
+            általános szállítási díjtételek erejéig áll fenn visszatérítési kötelezettségünk.
+          </Text>
+          <Heading as='h4' size='md'>
+            Visszatartási jog
+          </Heading>
+          <Text>
+            Az Eladó mindaddig visszatarthatja a fogyasztónak visszajáró összeget, amíg a fogyasztó a terméket vissza
+            nem szolgáltatta, vagy kétséget kizáróan nem igazolta, hogy azt visszaküldte; a kettő közül a korábbi
+            időpontot kell figyelembe venni. Utánvéttel vagy portósan feladott küldeményeket nem áll módunkban
+            elfogadni.
+          </Text>
+          <Heading as='h4' size='lg'>
+            A fogyasztó kötelezettségei elállása vagy felmondása esetén
+          </Heading>
+          <Heading as='h4' size='md'>
+            A termék visszaszolgáltatása
+          </Heading>
+          <Text>
+            Ha a fogyasztó a 45/2014. (II. 26.) Korm. rendelet 22. §-nak megfelelően eláll a szerződéstől, köteles a
+            terméket haladéktalanul, de legkésőbb az elállás közlésétől számított tizennégy napon belül visszaküldeni,
+            illetve az Eladónak vagy az Eladó által a termék átvételére meghatalmazott személynek átadni. A visszaküldés
+            határidőben teljesítettnek minősül, ha a fogyasztó a terméket a határidő lejárta előtt elküldi.
+          </Text>
+          <Heading as='h4' size='md'>
+            A termék visszaszolgáltatásával kapcsolatos költségek viselése
+          </Heading>
+          <Text>
+            A fogyasztó viseli a termék visszaküldésének költségét. A terméket az Eladó címére kell visszaküldeni. Ha a
+            fogyasztó a teljesítés megkezdését követően felmondja az üzlethelyiségen kívül vagy távollévők között kötött
+            – szolgáltatás nyújtásra vonatkozó – szerződést, köteles a felmondás vállalkozással való közlése időpontjáig
+            teljesített szolgáltatással arányos díjat a vállalkozás számára megfizetni. A fogyasztó által arányosan
+            fizetendő összeget a szerződésben megállapított ellenszolgáltatás adóval növelt teljes összege alapján kell
+            megállapítani. Ha a fogyasztó bizonyítja, hogy az ily módon megállapított teljes összeg túlzottan magas, az
+            arányos összeget a szerződés megszűnésének időpontjáig teljesített szolgáltatások piaci értéke alapján kell
+            kiszámítani. Kérjük vegye figyelembe, hogy utánvéttel vagy portósan visszaküldött terméket nem áll módunkban
+            átvenni.
+          </Text>
+          <Heading as='h4' size='md'>
+            Fogyasztó felelőssége az értékcsökkenésért
+          </Heading>
+          <Text>
+            A fogyasztó a termék jellegének, tulajdonságainak és működésének megállapításához szükséges használatot
+            meghaladó használatból eredő értékcsökkenésért felel.
+          </Text>
+          <Heading as='h4' size='md'>
+            Az elállási jog az alábbi esetekben nem gyakorolható
+          </Heading>
+          <Text>
+            Az Eladó kifejezetten felhívja az Ön figyelmét, hogy Ön nem gyakorolhatja elállási jogát a 45/2014 (II.26.)
+            Korm. Rendelet 29. §. (1) bekezdésében foglalt esetekben:
+          </Text>
+          <UnorderedList styleType='lower-alpha'>
+            <ListItem>
+              a szolgáltatás nyújtására irányuló szerződés esetében a szolgáltatás egészének teljesítését követően, ha a
+              vállalkozás a teljesítést a fogyasztó kifejezett, előzetes beleegyezésével kezdte meg, és a fogyasztó
+              tudomásul vette, hogy a szolgáltatás egészének teljesítését követően felmondási jogát elveszíti;
+            </ListItem>
+            <ListItem>
+              olyan termék vagy szolgáltatás tekintetében, amelynek ára, illetve díja a pénzpiac vállalkozás által nem
+              befolyásolható, az elállási jog gyakorlására meghatározott határidő alatt is lehetséges ingadozásától
+              függ;
+            </ListItem>
+            <ListItem>
+              olyan nem előre gyártott termék esetében, amelyet a fogyasztó utasítása alapján vagy kifejezett kérésére
+              állítottak elő, vagy olyan termék esetében, amelyet egyértelműen a fogyasztó személyére szabtak;
+            </ListItem>
+            <ListItem>romlandó vagy minőségét rövid ideig megőrző termék tekintetében;</ListItem>
+            <ListItem>
+              olyan zárt csomagolású termék tekintetében, amely egészségvédelmi vagy higiéniai okokból az átadást követő
+              felbontása után nem küldhető vissza;
+            </ListItem>
+            <ListItem>
+              olyan termék tekintetében, amely jellegénél fogva az átadást követően elválaszthatatlanul vegyül más
+              termékkel;
+            </ListItem>
+            <ListItem>
+              olyan alkoholtartalmú ital tekintetében, amelynek tényleges értéke a vállalkozás által nem befolyásolható
+              módon a piaci ingadozásoktól függ, és amelynek áráról a felek az adásvételi szerződés megkötésekor
+              állapodtak meg, azonban a szerződés teljesítésére csak a megkötéstől számított harmincadik napot követően
+              kerül sor;
+            </ListItem>
+            <ListItem>
+              olyan vállalkozási szerződés esetében, amelynél a vállalkozás a fogyasztó kifejezett kérésére keresi fel a
+              fogyasztót sürgős javítási vagy karbantartási munkálatok elvégzése céljából;
+            </ListItem>
+            <ListItem>
+              lezárt csomagolású hang-, illetve képfelvétel, valamint számítógépes szoftver példányának adásvétele
+              tekintetében, ha az átadást követően a fogyasztó a csomagolást felbontotta;
+            </ListItem>
+            <ListItem>
+              hírlap, folyóirat és időszaki lap tekintetében, az előfizetéses szerződések kivételével;
+            </ListItem>
+            <ListItem>nyilvános árverésen megkötött szerződések esetében;</ListItem>
+            <ListItem>
+              lakáscélú szolgáltatás kivételével szállásnyújtásra irányuló szerződés, fuvarozás,
+              személygépjármű-kölcsönzés, étkeztetés vagy szabadidős tevékenységekhez kapcsolódó szolgáltatásra irányuló
+              szerződés esetében, ha a szerződésben meghatározott teljesítési határnapot vagy határidőt kötöttek ki;
+            </ListItem>
+            <ListItem>
+              a nem tárgyi adathordozón nyújtott digitális adattartalom tekintetében, ha a vállalkozás a fogyasztó
+              kifejezett, előzetes beleegyezésével kezdte meg a teljesítést, és a fogyasztó e beleegyezésével
+              egyidejűleg nyilatkozott annak tudomásul vételéről, hogy a teljesítés megkezdését követően elveszíti az
+              elállási jogát.
+            </ListItem>
+          </UnorderedList>
+          <Heading as='h4' size='md'>
+            Kellékszavatosság, termékszavatosság, jótállás
+          </Heading>
+          <Text>
+            A fogyasztói tájékoztató jelen pontja a 45/2014 (II.26.) Korm. rendelet 9. § (3) bekezdése felhatalmazása
+            alapján a 45/2014 (II.26.) Korm. rendelet 3. számú melléklete alkalmazásával készült.
+          </Text>
+          <Heading as='h4' size='md'>
+            Kellékszavatosság
+          </Heading>
         </VStack>
       </Box>
     </Stack>
