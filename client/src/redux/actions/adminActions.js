@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../../axiosInstance';
 import { setProducts, setProductUpdateFlag, setReviewRemovalFlag } from '../slices/product';
 import {
 	setDeliveredFlag,

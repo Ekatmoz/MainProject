@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../../axiosInstance';
 import { setError, setShippingAddress, setPaymentMethod, clearOrder } from '../slices/order';
 
 export const setAddress = (data) => (dispatch) => {
