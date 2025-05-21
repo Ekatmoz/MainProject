@@ -621,6 +621,7 @@ const TermsAndConditions = () => {
               </UnorderedList>
             </Box>
           </SimpleGrid>
+          <Divider />
           <Heading as='h4' size='md'>
             Online vitarendezési platform
           </Heading>
@@ -732,6 +733,7 @@ const TermsAndConditions = () => {
               hátrányos jogkövetkezmény nélkül lemondja a megrendelést.
             </Text>
           </Stack>
+          <Divider />
           <Heading as='h4' size='lg'>
             A Weboldal használata
           </Heading>
@@ -814,6 +816,7 @@ const TermsAndConditions = () => {
               van lehetőség.
             </Text>
           </Stack>
+          <Divider />
           <Heading as='h4' size='lg'>
             Rendelés feldolgozása, a szerződés létrejötte
           </Heading>
@@ -822,6 +825,7 @@ const TermsAndConditions = () => {
             elküldését követő 1 órán belül, e-mail útján visszaigazolja az Ön ajánlatát. A szerződés akkor jön létre,
             amikor az Eladó által küldött visszaigazoló email az Ön számára a levelezőrendszerében hozzáférhetővé válik.
           </Text>
+          <Divider />
           <Heading as='h4' size='lg'>
             Fizetési módok
           </Heading>
@@ -846,6 +850,7 @@ const TermsAndConditions = () => {
             felületén kerülnek feldolgozásra. A Stripe egy nemzetközileg elismert, PCI DSS tanúsítvánnyal rendelkező
             fizetési szolgáltató, amely biztosítja az Ön adatainak teljes körű védelmét.
           </Text>
+          <Divider />
           <Heading as='h4' size='lg'>
             Átvételi módok, átvételi díjak
           </Heading>
@@ -915,6 +920,7 @@ const TermsAndConditions = () => {
             Külföldre történő értékesítés
           </Heading>
           <Text>Az eladó kizárólag Magyarország területén értékesít.</Text>
+          <Divider />
           <Heading as='h4' size='lg'>
             Fogyasztói tájékoztató a 45/2014. (II. 26.) Korm. rendelet alapján
           </Heading>
@@ -970,6 +976,7 @@ const TermsAndConditions = () => {
           <Text>
             A fogyasztót terheli annak bizonyítása, hogy az elállás jogát e rendelkezéssel összhangban gyakorolta.
           </Text>
+          <Divider />
           <Heading as='h4' size='lg'>
             Az Eladó kötelezettségei a fogyasztó elállása esetén
           </Heading>
@@ -1012,6 +1019,7 @@ const TermsAndConditions = () => {
             időpontot kell figyelembe venni. Utánvéttel vagy portósan feladott küldeményeket nem áll módunkban
             elfogadni.
           </Text>
+          <Divider />
           <Heading as='h4' size='lg'>
             A fogyasztó kötelezettségei elállása vagy felmondása esetén
           </Heading>
@@ -1283,6 +1291,8 @@ const TermsAndConditions = () => {
             Elállási nyilatkozat minta
           </Heading>
           <Text>(csak a szerződéstől való elállási szándék esetén töltse ki és juttassa vissza)</Text>
+        </VStack>
+        <Stack>
           <Text>
             <Box fontWeight='bold'>Címzett:</Box>Sushi-Bar Hungary Kft, 8600 Siófok Gyöngy utca 11/1,
             info@sushibarhungary.hu, +36 70 791 6990
@@ -1295,7 +1305,7 @@ const TermsAndConditions = () => {
           <Text fontWeight='bold'>Fogyasztó(k) címe:</Text>
           <Text fontWeight='bold'>A fogyasztó(k) aláírása (kizárólag írásban történő értesítés esetén):</Text>
           <Text fontWeight='bold'>Dátum:</Text>
-        </VStack>
+        </Stack>
       </Box>
     </Stack>
   );

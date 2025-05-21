@@ -27,7 +27,7 @@ const ProductsScreen = () => {
 		  <CategoryButtons filterByCategory = {filterByCategory}/>
 			{products.length >= 1 && (
 				<Box>
-					<Wrap spacing='30px' justify='center' minHeight='80vh' mx={{ base: '12', md: '20', lg: '32' }}>
+					<Wrap spacing='30px' justify='center' minHeight='80vh' mx={{ base: '6', md: '10', lg: '32' }}>
 						{error ? (
 							<Alert status='error'>
 								<AlertIcon />
@@ -36,8 +36,9 @@ const ProductsScreen = () => {
 							</Alert>
 						) : (
 							products.map((product) => (
-								<WrapItem key={product._id}>
-									<Center w='250px' h='450px'>
+								<WrapItem key={product._id} flexBasis={{ base: '45%', sm: '45%', md: '30%', lg: '22%' }} 
+								maxW={{ base: '45%', sm: '45%', md: '30%', lg: '22%' }}>
+									<Center w="100%" h={{ base: '300px', md: '400px', lg: '450px' }}>
 										<ProductCard product={product} loading={loading} />
 									</Center>
 								</WrapItem>
