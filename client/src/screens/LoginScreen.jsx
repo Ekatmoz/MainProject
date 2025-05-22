@@ -55,7 +55,7 @@ const LoginScreen = () => {
 					navigate(redirect);
 				}
 				// ✅ Force a page reload to fix token availability issue
-				window.location.reload();
+				//window.location.reload();
 			}, 500);
 		}
 
