@@ -1,0 +1,427 @@
+0|            <Text>Székhely: 8600, Siófok, Vitorlás u. 1.-3</Text>
+1|            <Text>Levelezési cím: 8600, Siófok, Gyöngy ut. 11</Text>
+2|            <Text>Adószám: 28731199-2-14</Text>
+3|            <Text>
+4|              45/2014. (II.26.) kormányrendelet a fogyasztó és a vállalkozás közötti szerződések részletes szabályairól
+5|            </Text>
+6|            A jelen ÁSZF hatálya alá tartozó szerződések nem minősülnek írásba foglalt szerződéseknek, azokat az Eladó
+7|            Árak
+8|          </Heading>
+9|          <Stack>
+10|            </Text>
+11|          </Stack>
+12|          <Heading as='h4' size='md'>
+13|            Panaszügyintézés és jogérvényesítési lehetőségek
+14|          </Heading>
+15|          <Stack>
+16|            <Text>
+17|            <UnorderedList>
+18|              <ListItem>Telefon: +36 70 791 6990</ListItem>
+19|            <Text>
+20|              A fogyasztó{' '}
+21|              <Text as='span' fontWeight='bold'>
+22|                harminc napon belül köteles írásban érdemben megválaszolni és intézkedni annak közlése iránt.
+23|              </Box>{' '}
+24|              Ennél rövidebb határidőt jogszabály, hosszabb határidőt törvény állapíthat meg. A panaszt elutasító
+25|              álláspontját a vállalkozás indokolni köteles. A telefonon vagy elektronikus hírközlési szolgáltatás
+26|              felhasználásával közölt szóbeli panaszt a vállalkozás köteles egyedi azonosítószámmal ellátni.
+27|            </Text>
+28|              <ListItem>a fogyasztó neve, lakcíme,</ListItem>
+29|              <ListItem>a panasz előterjesztésének helye, ideje, módja,</ListItem>
+30|                bizonyítékok jegyzéke,
+31|              <ListItem>
+32|                azonnali kivizsgálása lehetséges,
+33|              </ListItem>
+34|              <ListItem>
+35|                a jegyzőkönyvet felvevő személy és – telefonon vagy egyéb elektronikus hírközlési szolgáltatás
+36|              <ListItem>
+37|                a panasz egyedi azonosítószáma.
+38|              </ListItem>
+39|            </OrderedList>
+40|            </Text>
+41|            <Text>
+42|              A panasz elutasítása esetén a vállalkozás köteles a fogyasztót írásban tájékoztatni arról, hogy panaszával
+43|              – annak jellege szerint – mely hatóság vagy békéltető testület eljárását kezdeményezheti. A
+44|              tájékoztatásnak tartalmaznia kell továbbá az illetékes hatóság, illetve a fogyasztó lakóhelye vagy
+45|              tartózkodási helye szerinti békéltető testület székhelyét, telefonos és internetes elérhetőségét, valamint
+46|              rendezése érdekében igénybe veszi-e a békéltető testületi eljárást.
+47|            <Text>
+48|              rendeződik, az alábbi jogérvényesítési lehetőségek állnak nyitva a fogyasztó számára:
+49|            <Text>
+50|              <Box as='span' fontWeight='bold'>
+51|              </Box>{' '}
+52|              fogyasztóvédelmi eljárás lefolytatásáról. A fogyasztóvédelmi elsőfokú hatósági feladatokat a fogyasztó
+53|              lakóhelye szerint illetékes fővárosi és megyei kormányhivatalok látják el, ezek listája itt található:
+54|              https://www.kormanyhivatal.hu/{' '}
+55|                  Bírósági eljárás.{' '}
+56|                </Box>{' '}
+57|                eljárás keretében a Polgári Törvénykönyvről szóló 2013. évi V. törvény, valamint a Polgári
+58|              </Text>
+59|            </Text>
+60|            <Text>
+61|              Testülethez is fordulni: a békéltető testület eljárása megindításának feltétele, hogy a fogyasztó az
+62|              érintett vállalkozással közvetlenül megkísérelje a vitás ügy rendezését. Az eljárásra – a fogyasztó erre
+63|              irányuló kérelme alapján – az illetékes testület helyett a fogyasztó kérelmében megjelölt békéltető
+64|              testület illetékes.
+65|            </Text>
+66|            <Text>A vállalkozást a békéltető testületi eljárásban együttműködési kötelezettség terheli.</Text>
+67|              <Box as='span' fontWeight='bold'>
+68|                válaszirat megküldési kötelezettsége
+69|              </Box>{' '}
+70|              , továbbá kötelezettségként kerül rögzítésre a békéltető testület előtti{' '}
+71|              <Box as='span' fontWeight='bold'>
+72|                megjelenési kötelezettség
+73|            </Text>
+74|            <Text>
+75|              Amennyiben a vállalkozás székhelye vagy telephelye nem a területileg illetékes békéltető testületet
+76|              működtető kamara szerinti megyébe van bejegyezve, a vállalkozás együttműködési kötelezettsége a fogyasztó
+77|              igényének megfelelő írásbeli egyezségkötés lehetőségének felajánlására terjed ki.
+78|            <Text>
+79|              amely alapján a jogszabályváltozás következtében a vállalkozások jogsértő magatartása esetén{' '}
+80|                kötelező bírságkiszabás
+81|              módosításra került a kis- és középvállalkozásokról szóló törvény vonatkozó rendelkezése is, így a kis- és
+82|              középvállalkozások esetén sem mellőzhető majd a bírság kiszabása.
+83|              A bírság mértéke kis- és középvállalkozások esetén 15 ezer forinttól 500 ezer forintig terjedhet, míg a
+84|              legfeljebb 500 millió forintig terjedhet. A kötelező bírság bevezetésével a jogalkotó a békéltető
+85|              testületekkel való együttműködés nyomatékosítását, illetve a vállalkozásoknak a békéltető testületi
+86|            <Text>
+87|              A békéltető testület hatáskörébe tartozik a fogyasztói jogvita bírósági eljáráson kívüli rendezése. A
+88|              békéltető testület feladata, hogy megkísérelje a fogyasztói jogvita rendezése céljából egyezség
+89|              egyszerű, gyors, hatékony és költségkímélő érvényesítésének biztosítása érdekében. A békéltető testület a
+90|              fogyasztó vagy a vállalkozás kérésére tanácsot ad a fogyasztót megillető jogokkal és a fogyasztót terhelő
+91|            <Text>
+92|              A békéltető testület eljárása a fogyasztó kérelmére indul. A kérelmet a békéltető testület elnökéhez kell
+93|              írásban benyújtani: az írásbeliség követelményének levél, távirat, távgépíró vagy telefax útján, továbbá
+94|              bármely egyéb olyan eszközzel is eleget lehet tenni, amely a címzett számára lehetővé teszi a neki címzett
+95|              formában és tartalommal történő megjelenítését.
+96|              <ListItem>a testület döntésére irányuló indítványt,</ListItem>
+97|              A Békéltető Testületekről bővebb információ itt érhető el:{' '}
+98|              <a href='http://www.bekeltetes.hu' style={{ color: 'blue' }}>
+99|            columns={2}
+100|            columnGap={16}
+101|                <ListItem>Fax: 06-72-507-152</ListItem>
+102|                <ListItem>
+103|                <ListItem>Fax: 06-66-324-976</ListItem>
+104|                <ListItem>
+105|                <ListItem>Fax: 06-46-501-099</ListItem>
+106|                <ListItem>
+107|                <ListItem>Fax: 06-1-488-2186</ListItem>
+108|                <ListItem>
+109|                <ListItem>Fax: 06-62-426-149</ListItem>
+110|                <ListItem>
+111|                <ListItem>
+112|                  <a href='mailto:bekeltetotestulet@gymskik.hu' style={{ color: 'blue' }}>
+113|                  E-mail:
+114|                  <a href='mailto:korosi.vanda@hbkik.hu' style={{ color: 'blue' }}>
+115|                  E-mail:
+116|                  <a href='mailto:hkik@hkik.hu' style={{ color: 'blue' }}>
+117|                <ListItem>
+118|                  E-mail:
+119|                <ListItem>
+120|                  E-mail:
+121|                <ListItem>
+122|                <ListItem>
+123|                <ListItem>Fax: 06-42-311-750</ListItem>
+124|                <ListItem>
+125|                <ListItem>
+126|              </UnorderedList>
+127|              <UnorderedList styleType='none' mt={8}>
+128|                <ListItem fontWeight='bold'>Veszprém Megyei Békéltető Testület</ListItem>
+129|                <ListItem>Cím: 8200 Veszprém, Radnóti tér 1. földszint 116.</ListItem>
+130|                <ListItem>
+131|                  E-mail:
+132|                  </a>
+133|                </ListItem>
+134|                <ListItem fontWeight='bold'>Zala Megyei Békéltető Testület</ListItem>
+135|            </Box>
+136|          </SimpleGrid>
+137|          <Divider />
+138|          <Heading as='h4' size='md'>
+139|            Online vitarendezési platform
+140|          </Heading>
+141|          <Stack>
+142|            <Text>
+143|              A portálon Ön és a kereskedő, akivel szemben panasszal élt, közösen kiválaszthatják a panasz kezelésével
+144|              megbízni kívánt vitarendezési testületet.
+145|              Az online vitarendezési platform itt érhető el:{' '}
+146|              <a href='https://webgate.ec.europa.eu/odr/main/?event=main.home.show&lng=HU' style={{ color: 'blue' }}>
+147|          <Stack>
+148|            <Text>
+149|              A szerzői jogról szóló 1999. évi LXXVI. törvény (továbbiakban: Szjt.) 1. § (1) bekezdése értelmében a
+150|              weboldal szerzői műnek minősül, így annak minden része szerzői jogi védelem alatt áll. Az Szjt. 16. § (1)
+151|              </Box>{' '}
+152|            </Text>
+153|              érvényben maradnak és a hatálytalan vagy hibás rész helyett a vonatkozó jogszabályok rendelkezései
+154|              alkalmazandóak.
+155|            </Text>
+156|            <Text>
+157|              Az Eladónak nincs a fogyasztókkal szembeni tisztességtelen kereskedelmi gyakorlat tilalmáról szóló törvény
+158|              szerinti magatartási kódexe.
+159|            </Text>
+160|          </Stack>
+161|          <Heading as='h4' size='md'>
+162|            A digitális adattartalom működése, műszaki védelmi intézkedések
+163|            A termékek lényeges tulajdonságaira vonatkozó tájékoztatás
+164|          </Heading>
+165|              adunk tájékoztatást.
+166|            </Text>
+167|          </Stack>
+168|              kizárja. Felhívjuk a figyelmét arra, hogy a rosszul megadott e-mail cím vagy a postafiókhoz tartozó
+169|              tárhely telítettsége a visszaigazolás kézbesítésének hiányát eredményezheti és meggátolhatja a szerződés
+170|              létrejöttét.
+171|            </Text>
+172|          </Stack>
+173|          <Heading as='h4' size='md'>
+174|            <Text>Nyilvánvalóan hibásan feltüntetett árnak minősül:</Text>
+175|            <UnorderedList>
+176|              <ListItem>0 Ft-os ár,</ListItem>
+177|              </ListItem>
+178|            </UnorderedList>
+179|            <Text>
+180|              Hibás ár feltüntetése esetén Eladó felajánlja a termék valós áron történő megvásárlásának lehetőségét,
+181|              mely információ birtokában a Vásárló eldöntheti, hogy megrendeli valós áron a terméket vagy minden
+182|              hátrányos jogkövetkezmény nélkül lemondja a megrendelést.
+183|            </Text>
+184|          <Heading as='h4' size='lg'>
+185|            A Weboldal használata
+186|          </Heading>
+187|          <Stack>
+188|            <Text fontWeight='bold'>A Termék kiválasztása</Text>
+189|            <Text>
+190|              A Weboldal szereplő termékkategóriákra kattintva választhatja ki a kívánt termékcsaládot, és ezen belül az
+191|              jelöltük. A fényképeken látható kiegészítők, dekorációs elemek nem részei a terméknek, kivéve ha az a
+192|              termékleírásban külön kiemelésre kerül. Felhívjuk figyelmét, hogy az esetleges elírásokért, téves
+193|            <Text>
+194|              A Termék kiválasztása után Ön a „Kosárba teszem” gombra kattintva helyezhet – tetszőleges számú – terméket
+195|              a kosárba anélkül, hogy ezzel Önnek vásárlási- vagy fizetési kötelezettsége keletkezne, mivel a kosárba
+196|              helyezés nem minősül ajánlattételnek.
+197|              {' '}
+198|              Javasoljuk, hogy akkor is helyezze a kosárba a terméket, ha nem biztos abban, hogy az adott terméket meg
+199|              kívánja vásárolni, mert ezzel az Ön számára egy kattintással áttekinthetővé válik, hogy az adott
+200|              eltávolíthatóak, a kosárba tetszés szerint újabb termékek helyezhetőek, illetve a kíván termékszám
+201|              megváltoztatható.
+202|            </Text>
+203|            <Text>
+204|              szeretne a kosárba helyezni, úgy kattintson bármely termékkategória gombra!
+205|            </Text>
+206|              A weboldal használata során Ön a honlap tetején található „Kosár” ikonra kattintva bármikor ellenőrizheti
+207|              a kosár tartalmát. Itt lehetősége van a kiválasztott termékeket eltávolítani a kosárból, illetve a termék
+208|              darabszámát megváltoztatni. A rendszer a „Kosár frissítése” gomb megnyomását követően megjeleníti az Ön
+209|              Amennyiben Ön nem kíván további termékeket kiválasztani és a kosárba helyezni, úgy a „Tovább a pénztárhoz”
+210|              gomb lenyomásával folytathatja a vásárlást.
+211|            </Text>
+212|            <Text>
+213|              A „Számlázási adatok” résznél e-mail címét, teljes nevét, címét, telefonszámát tudja megadni. Amennyiben
+214|            </Text>
+215|            <Text>
+216|              nyilatkozata fizetési kötelezettséggel jár. Ha ajánlatát Általános szerződési feltételeink szerinti 48
+217|              órán belül nem igazoljuk vissza, Ön mentesül ajánlati kötöttsége alól.
+218|            <Text>
+219|              Rendelés lemondására, módosítására legkésőbb az előzőlegesen kiválasztott átvételi idő előtt két órával
+220|              van lehetőség.
+221|            </Text>
+222|          </Stack>
+223|          <Divider />
+224|          <Heading as='h4' size='lg'>
+225|            Fizetési módok
+226|            Amennyiben a rendelés értékét kézhezvételekor kívánja kiegyenlíteni készpénzzel, akkor válassza a „Fizetés
+227|            készpénzben” fizetési módot.
+228|          <Heading as='h4' size='md'>
+229|          <Text>
+230|          </Text>
+231|          <Text>
+232|            Bankkártyával történő fizetés a következő, érvényes és hatályos bankkártyák tulajdonosai számára lehetséges:
+233|            felületén kerülnek feldolgozásra. A Stripe egy nemzetközileg elismert, PCI DSS tanúsítvánnyal rendelkező
+234|            fizetési szolgáltató, amely biztosítja az Ön adatainak teljes körű védelmét.
+235|          <Divider />
+236|          <Heading as='h4' size='lg'>
+237|          </Heading>
+238|          <Heading as='h4' size='md'>
+239|            A vásárolt termékek kiszállítása kizárólag Magyarország területére vonatkozik. A szállítás GLS, DPD és MPL
+240|            futárszolgálattal történik. 30.000 Ft feletti rendelés esetén ingyenes. A csomag kézbesítése a
+241|          <Heading as='h4' size='md'>
+242|            Teljesítési határidő
+243|          </Heading>
+244|          <UnorderedList>
+245|            <ListItem>
+246|              a veszélyhelyzetben hozott, a Magyar Közlönyben kihirdetett különleges jogrendi intézkedések,
+247|            </ListItem>
+248|              partner) által a veszélyhelyzet miatt hozott intézkedések a szerződés teljesítését vis maior eseményként
+249|              érintik.
+250|            </ListItem>
+251|            <Text>
+252|              A vis maior helyzet Eladót megakadályozhatja, vagy késleltetheti szerződéses kötelezettségei
+253|              teljesítésében, amelyért Eladó a Polgári Törvénykönyv alapján nem vonható felelősségre.
+254|              a már megkötött szerződés teljesítését lehetetlenülésre (amennyiben a vis maior helyzet előre láthatóan
+255|          </Heading>
+256|          <Text>
+257|            Amennyiben Ön korábban már úgy rendelt terméket, hogy azt a kiszállítás során nem vette át (ide nem értve
+258|            megfizetéséhez köti.
+259|          </Text>
+260|            sikeresen megtörtént az elektronikus fizetési megoldás használatával (ideértve azt az esetet is, amikor az
+261|            átutalással fizetett termék esetén Vásárló a tagállama szerinti pénznemben utalja el a vételárat és az
+262|            szállítási díj összegét). Amennyiben a Termék ára nem került teljes mértékben kifizetésre, az Eladó a
+263|            vételár kiegészítésére hívhatja fel a Vásárlót.
+264|          </Text>
+265|          <Text>Az eladó kizárólag Magyarország területén értékesít.</Text>
+266|          <Divider />
+267|          </Heading>
+268|          <Text fontWeight='bold'>Tartalomjegyzék</Text>
+269|          <Heading as='h4' size='md'>
+270|            Tájékoztató a fogyasztó vevőt megillető elállási jogról
+271|          </Text>
+272|          <Text>
+273|          </Text>
+274|          <Text>
+275|            A jelen pontban foglaltak nem érintik a fogyasztó azon jogát, hogy az e pontban meghatározott elállási jogát
+276|            a szerződés megkötésének napja és a termék átvételének napja közötti időszakban is gyakorolja.
+277|          </Text>
+278|          <Text>
+279|            Ha a szerződés megkötésére a fogyasztó tett ajánlatot, a fogyasztót a szerződés megkötése előtt megilleti az
+280|          <Text>
+281|            A fogyasztó a 45/2014. (II. 26.) Korm. rendelet 20. §-ban biztosított jogát az erre vonatkozó egyértelmű
+282|            nyilatkozat útján.
+283|          </Text>
+284|          <Heading as='h4' size='md'>
+285|            A fogyasztó elállási nyilatkozatának érvényessége
+286|          <Text>
+287|            A fogyasztót terheli annak bizonyítása, hogy az elállás jogát e rendelkezéssel összhangban gyakorolta.
+288|          </Text>
+289|            Az Eladó visszatérítési kötelezettsége
+290|          </Heading>
+291|          <Text>
+292|          <Text>
+293|            A 45/2014. (II. 26.) Korm. rendelet 22. §-nak megfelelő elállás vagy felmondás esetén az Eladó a
+294|            fogyasztónak visszajáró összeget a fogyasztó által igénybe vett fizetési móddal megegyező módon téríti
+295|            vissza. A fogyasztó kifejezett beleegyezése alapján az Eladó a visszatérítésre más fizetési módot is
+296|            Többletköltségek
+297|          </Heading>
+298|          <Text>
+299|            Ha a fogyasztó kifejezetten a legkevésbé költséges szokásos fuvarozási módtól eltérő fuvarozási módot
+300|            választ, az Eladó nem köteles visszatéríteni az ebből eredő többletköltségeket. Ilyen esetben a feltüntetett
+301|            általános szállítási díjtételek erejéig áll fenn visszatérítési kötelezettségünk.
+302|          </Text>
+303|          <Heading as='h4' size='md'>
+304|            Visszatartási jog
+305|            elfogadni.
+306|          </Text>
+307|            A termék visszaszolgáltatása
+308|          </Heading>
+309|            illetve az Eladónak vagy az Eladó által a termék átvételére meghatalmazott személynek átadni. A visszaküldés
+310|            határidőben teljesítettnek minősül, ha a fogyasztó a terméket a határidő lejárta előtt elküldi.
+311|          </Text>
+312|          </Heading>
+313|          <Text>
+314|            A fogyasztó viseli a termék visszaküldésének költségét. A terméket az Eladó címére kell visszaküldeni. Ha a
+315|            teljesített szolgáltatással arányos díjat a vállalkozás számára megfizetni. A fogyasztó által arányosan
+316|            fizetendő összeget a szerződésben megállapított ellenszolgáltatás adóval növelt teljes összege alapján kell
+317|            arányos összeget a szerződés megszűnésének időpontjáig teljesített szolgáltatások piaci értéke alapján kell
+318|            átvenni.
+319|          </Text>
+320|          </Heading>
+321|          <Text>
+322|          </Text>
+323|          <Heading as='h4' size='md'>
+324|            Az elállási jog az alábbi esetekben nem gyakorolható
+325|          </Heading>
+326|            Korm. Rendelet 29. §. (1) bekezdésében foglalt esetekben:
+327|          </Text>
+328|              a szolgáltatás nyújtására irányuló szerződés esetében a szolgáltatás egészének teljesítését követően, ha a
+329|              vállalkozás a teljesítést a fogyasztó kifejezett, előzetes beleegyezésével kezdte meg, és a fogyasztó
+330|            <ListItem>
+331|              befolyásolható, az elállási jog gyakorlására meghatározott határidő alatt is lehetséges ingadozásától
+332|            </ListItem>
+333|            <ListItem>
+334|              olyan nem előre gyártott termék esetében, amelyet a fogyasztó utasítása alapján vagy kifejezett kérésére
+335|            <ListItem>romlandó vagy minőségét rövid ideig megőrző termék tekintetében;</ListItem>
+336|            <ListItem>
+337|              olyan zárt csomagolású termék tekintetében, amely egészségvédelmi vagy higiéniai okokból az átadást követő
+338|              felbontása után nem küldhető vissza;
+339|              olyan alkoholtartalmú ital tekintetében, amelynek tényleges értéke a vállalkozás által nem befolyásolható
+340|              módon a piaci ingadozásoktól függ, és amelynek áráról a felek az adásvételi szerződés megkötésekor
+341|            </ListItem>
+342|            <ListItem>
+343|            </ListItem>
+344|              hírlap, folyóirat és időszaki lap tekintetében, az előfizetéses szerződések kivételével;
+345|            </ListItem>
+346|            <ListItem>nyilvános árverésen megkötött szerződések esetében;</ListItem>
+347|            <ListItem>
+348|              lakáscélú szolgáltatás kivételével szállásnyújtásra irányuló szerződés, fuvarozás,
+349|            </ListItem>
+350|            <ListItem>
+351|              elállási jogát.
+352|            </ListItem>
+353|          </UnorderedList>
+354|          <Heading as='h4' size='md'>
+355|            Kellékszavatosság, termékszavatosság, jótállás
+356|            A fogyasztói tájékoztató jelen pontja a 45/2014 (II.26.) Korm. rendelet 9. § (3) bekezdése felhatalmazása
+357|          <Heading as='h4' size='md'>
+358|            Kellékszavatosság
+359|          </Heading>
+360|          <Text fontWeight='bold'>Milyen esetben élhet Ön a kellékszavatossági jogával?</Text>
+361|            Törvénykönyv szabályai szerint.
+362|          </Text>
+363|          <Text fontWeight='bold'>Milyen jogok illetik meg Önt kellékszavatossági igénye alapján?</Text>
+364|          <Text>Ön – választása szerint–az alábbi kellékszavatossági igényekkel élhet:</Text>
+365|          <Text>
+366|            Kérhet kijavítást vagy kicserélést, kivéve, ha az ezek közül az Ön által választott igény teljesítése
+367|            lehetetlen vagy az Eladó számára más igénye teljesítéséhez képest aránytalan többletköltséggel járna. Ha a
+368|            kijavítást vagy a kicserélést nem kérte, illetve nem kérhette, úgy igényelheti az ellenszolgáltatás arányos
+369|            leszállítását vagy a hibát az Eladó költségére Ön is kijavíthatja, illetve mással kijavíttathatja vagy –
+370|          <Text fontWeight='bold'>Milyen határidőben érvényesítheti Ön kellékszavatossági igényét?</Text>
+371|          <Text>
+372|            számított két éves elévülési határidőn túl kellékszavatossági jogait már nem érvényesítheti. Ha a fogyasztó
+373|          </Text>
+374|          <Text fontWeight='bold'>Kivel szemben érvényesítheti kellékszavatossági igényét?</Text>
+375|            A teljesítéstől számított hat hónapon belül a kellékszavatossági igénye érvényesítésének a hiba közlésén túl
+376|            nincs egyéb feltétele, ha Ön igazolja, hogy a terméket, illetve a szolgáltatást az Eladó nyújtotta. A
+377|            jogok. A használt termékek esetében is beszélhetünk hibás teljesítésről, azonban figyelembe kell venni
+378|            azokat a körülményeket, amelyek alapján a Vásárló bizonyos hibák előfordulására számíthatott. Az avulás
+379|            Szolgáltatónak nincs felelőssége.
+380|          </Heading>
+381|          <Text>
+382|          </Text>
+383|          <Text>Termékszavatossági igényként Ön kizárólag a hibás termék kijavítását vagy kicserélését kérheti.</Text>
+384|          <Text>
+385|            A termék akkor hibás, ha az nem felel meg a forgalomba hozatalakor hatályos minőségi követelményeknek vagy
+386|            pedig, ha nem rendelkezik a gyártó által adott leírásban szereplő tulajdonságokkal.
+387|          </Text>
+388|            Kivel szemben és milyen egyéb feltétellel érvényesítheti termékszavatossági igényét?
+389|          </Text>
+390|            termék hibáját termékszavatossági igény érvényesítése esetén Önnek kell bizonyítania.
+391|          </Text>
+392|          <Text>
+393|            A gyártó (forgalmazó) kizárólag akkor mentesül termékszavatossági kötelezettsége alól, ha bizonyítani tudja,
+394|            hogy:
+395|          </Text>
+396|          <UnorderedList>
+397|            <ListItem>a terméket nem üzleti tevékenysége körében gyártotta, illetve hozta forgalomba, vagy</ListItem>
+398|            <ListItem>
+399|              a hiba a tudomány és a technika állása szerint a forgalomba hozatal időpontjában nem volt felismerhető
+400|              vagy
+401|            </ListItem>
+402|            <ListItem>a termék hibája jogszabály vagy kötelező hatósági előírás alkalmazásából ered.</ListItem>
+403|            Felhívom figyelmét, hogy ugyanazon hiba miatt kellékszavatossági és termékszavatossági igényt egyszerre,
+404|            egymással párhuzamosan nem érvényesíthet. Termékszavatossági igényének eredményes érvényesítése esetén
+405|            azonban a kicserélt termékre, illetve kijavított részre vonatkozó kellékszavatossági igényét a gyártóval
+406|          <Heading as='h4' size='md'>
+407|            Jótállás
+408|          </Heading>
+409|          <Text fontWeight='bold'>Milyen esetben élhet Ön a jótállási jogával?</Text>
+410|          <Text>
+411|          </Text>
+412|          <Text>
+413|            Jogszabály írja elő a jótállás biztosítását az olyan tartós fogyasztási cikkek (pl.: műszaki cikkek,
+414|            szerszámok, gépek) és alkatrészeik esetében, amelyek vásárlási értéke a 10 000 Ft-ot meghaladja.
+415|          </Text>
+416|            határozza meg a kötelező jótállás eseteit. Az ezen esetkörbe nem tartozó Termékek esetén az Eladó jótállást
+417|            nem vállal. A jótállási igény a jótállási határidőben érvényesíthető. Ha a jótállásra kötelezett
+418|            kötelezettségének a jogosult felhívására – megfelelő határidőben – nem tesz eleget, a jótállási igény a
+419|            felhívásban tűzött határidő elteltétől számított három hónapon belül akkor is érvényesíthető bíróság előtt,
+420|            ha a jótállási idő már eltelt. E határidő elmulasztása jogvesztéssel jár. A jótállási igény érvényesítésére
+421|            végzi, az üzembe helyezés napjával kezdődik. Az egy éven túli esetleges jótállási igényekkel kapcsolatban
+422|            szíveskedjen a gyártóhoz fordulni!
+423|          <Text>
+424|            A jótállás a szavatossági jogok (termék és kellékszavatosság) mellett érvényesül, alapvető különbség az
+425|            általános szavatossági jogok és a jótállás között, hogy a jótállás esetén a fogyasztónak kedvezőbb a
+426|            feltételeket, amelyek hátrányosabbak azoknál a jogoknál, amelyeket a kötelező jótállás szabályai

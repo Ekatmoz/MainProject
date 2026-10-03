@@ -25,8 +25,10 @@ import { login, googleLogin } from '../redux/actions/userActions';
 import { useGoogleLogin } from '@react-oauth/google';
 import axios from '../axiosInstance';
 import { FcGoogle } from 'react-icons/fc';
+import { useTranslation } from 'react-i18next';
 
 const LoginScreen = () => {
+	const { t } = useTranslation();
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const location = useLocation();
@@ -42,7 +44,7 @@ const LoginScreen = () => {
 			console.log("✅ Raw localStorage after login:", localStorage.getItem('userInfo'));
 
 			toast({
-				description: 'Login successful.',
+				description: t('auth.loginSuccess'),
 				status: 'success',
 				isClosable: true,
 			});

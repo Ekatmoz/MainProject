@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "products": "Termékek",
+    "contact": "Kapcsolat",
+    "recipes": "Receptek",
+    "orderHistory": "Rendelési előzmények",
+    "profile": "Profil",
+    "adminConsole": "Admin felület",
+    "logout": "Kijelentkezés",
+    "signIn": "Bejelentkezés",
+    "signUp": "Regisztráció",
+    "loggedOut": "Sikeresen kijelentkezett.",
+    "emailNotVerified": "Az e-mail nincs megerősítve!",
+    "verifyEmail": "Meg kell erősítenie az e-mail címét."
+  },
+  "home": {
+    "title": "Ázsiai Piac",
+    "subtitle": "Kóstolja meg az ázsiai ízeket",
+    "productsLink": "Termékek",
+    "newProducts": "Új Termékek",
+    "whyUs": "Miért érdemes minket választani?",
+    "fairPrices": "Fair árak",
+    "fastShipping": "Gyors szállítás",
+    "securePayment": "Biztonságos fizetés",
+    "alwaysFresh": "Mindig friss"
+  },
+  "footer": {
+    "brand": "Ázsiai Piac",
+    "tagline": "Explore Asia On Your Plate.",
+    "contact": "Kapcsolat",
+    "info": "Információk",
+    "about": "Rólunk",
+    "shoppingInfo": "Vásárlási információk",
+    "privacy": "Adatkezelési tájékoztató",
+    "terms": "ÁSZF",
+    "rights": "Minden jog fenntartva."
+  },
+  "categories": {
+    "all": "Összes",
+    "sauce": "Szószok",
+    "sweets": "Édességek, snackek",
+    "noodles": "Tészták, rizsek",
+    "frozen": "Fagyasztott",
+    "drinks": "Italok"
+  },
+  "products": {
+    "new": "új",
+    "addToCart": "Kosárba",
+    "addedToCart": "A termék kosárba került.",
+    "outOfStock": "Nincs készleten",
+    "inStock": "Készleten",
+    "reviews": "Értékelések",
+    "writeReview": "Értékelés írása",
+    "details": "Részletek",
+    "noProducts": "Nincs találat."
+  },
+  "cart": {
+    "title": "Kosár",
+    "empty": "A kosár üres.",
+    "seeProducts": "Kattintson ide a termékekhez.",
+    "or": "vagy",
+    "continueShopping": "Vásárlás folytatása",
+    "sorry": "Sajnáljuk!",
+    "item": "tétel",
+    "items": "tétel",
+    "orderSummary": "Rendelés összegzése",
+    "subtotal": "Részösszeg",
+    "shipping": "Szállítás",
+    "tax": "Adó",
+    "total": "Összesen",
+    "checkout": "Pénztár",
+    "remove": "Eltávolítás"
+  },
+  "auth": {
+    "loginTitle": "Bejelentkezés",
+    "loginSuccess": "Sikeres bejelentkezés.",
+    "email": "E-mail cím",
+    "password": "Jelszó",
+    "forgotPassword": "Elfelejtett jelszó?",
+    "signIn": "Bejelentkezés",
+    "googleSignIn": "Folytatás Google-lal",
+    "noAccount": "Nincs még fiókja?",
+    "register": "Regisztráció",
+    "registerTitle": "Fiók létrehozása",
+    "name": "Név",
+    "confirmPassword": "Jelszó megerősítése",
+    "alreadyAccount": "Már van fiókja?",
+    "resetPassword": "Jelszó visszaállítása",
+    "sendReset": "Visszaállító e-mail küldése",
+    "verifyEmail": "E-mail megerősítés",
+    "profile": "Profil",
+    "yourOrders": "Rendeléseim"
+  },
+  "checkout": {
+    "title": "Pénztár",
+    "shipping": "Szállítási adatok",
+    "success": "Sikeres fizetés!",
+    "cancel": "Fizetés megszakítva",
+    "backHome": "Vissza a főoldalra",
+    "standardShipping": "Normál szállítás",
+    "pickup": "Személyes átvétel"
+  },
+  "contact": {
+    "title": "Kapcsolat",
+    "name": "Az Ön neve",
+    "email": "E-mail",
+    "message": "Üzenet",
+    "send": "Üzenet küldése",
+    "emailCopied": "E-mail másolva!",
+    "copyEmail": "E-mail másolása"
+  },
+  "recipes": {
+    "title": "Nézze meg receptjeinket",
+    "readMore": "Tovább"
+  },
+  "admin": {
+    "products": "Termékek",
+    "orders": "Rendelések",
+    "users": "Felhasználók",
+    "reviews": "Értékelések",
+    "nameEn": "Név (EN)",
+    "nameHu": "Név (HU)",
+    "subtitleEn": "Alcím (EN)",
+    "subtitleHu": "Alcím (HU)",
+    "descriptionEn": "Leírás (EN)",
+    "descriptionHu": "Leírás (HU)",
+    "brand": "Márka",
+    "category": "Kategória",
+    "stock": "Készlet",
+    "price": "Ár",
+    "newProduct": "Új termék",
+    "save": "Mentés",
+    "delete": "Törlés"
+  },
+  "terms": {
+    "title": "Általános Szerződési Feltételek (ÁSZF)"
+  },
+  "common": {
+    "loading": "Betöltés...",
+    "error": "Hiba történt. Kérjük, próbálja újra.",
+    "ft": "Ft"
+  }
+}

@@ -15,19 +15,24 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { uploadProduct } from '../redux/actions/adminActions';
 
 const AddNewProduct = () => {
+	const { t } = useTranslation();
 	const dispatch = useDispatch();
 	const [brand, setBrand] = useState('');
-	const [name, setName] = useState('');
+	const [nameEn, setNameEn] = useState('');
+	const [nameHu, setNameHu] = useState('');
 	const [category, setCategory] = useState('');
 	const [stock, setStock] = useState('');
 	const [price, setPrice] = useState('');
-	const [productIsNew, setProductIsNew] = useState('');
-	const [description, setDescription] = useState('');
+	const [productIsNew, setProductIsNew] = useState(false);
+	const [descriptionEn, setDescriptionEn] = useState('');
+	const [descriptionHu, setDescriptionHu] = useState('');
 	const [imageOne, setImageOne] = useState('');
-	const [subtitle, setSubtitle] = useState('');
+	const [subtitleEn, setSubtitleEn] = useState('');
+	const [subtitleHu, setSubtitleHu] = useState('');
 	const [stripeId, setStripeId] = useState('');
 	const [imageTwo, setImageTwo] = useState('');
 
@@ -35,15 +40,15 @@ const AddNewProduct = () => {
 		dispatch(
 			uploadProduct({
 				brand,
-				name,
+				name: { en: nameEn, hu: nameHu },
 				category,
 				stock,
 				price,
 				stripeId,
-				subtitle,
+				subtitle: { en: subtitleEn, hu: subtitleHu },
 				images: [`/images/${imageOne}`, `/images/${imageTwo}`],
 				productIsNew,
-				description,
+				description: { en: descriptionEn, hu: descriptionHu },
 			})
 		);
 	};
@@ -62,46 +67,54 @@ const AddNewProduct = () => {
 				</Tooltip>
 			</Td>
 			<Td>
-				<Text fontSize='sm'>Description</Text>
+				<Text fontSize='sm'>{t('admin.descriptionEn')}</Text>
 				<Textarea
-					value={description}
+					value={descriptionEn}
 					w='270px'
-					h='120px'
-					onChange={(e) => setDescription(e.target.value)}
-					placeholder='Description'
+					h='80px'
+					onChange={(e) => setDescriptionEn(e.target.value)}
+					placeholder='EN'
+					size='sm'
+				/>
+				<Text fontSize='sm' mt='2'>{t('admin.descriptionHu')}</Text>
+				<Textarea
+					value={descriptionHu}
+					w='270px'
+					h='80px'
+					onChange={(e) => setDescriptionHu(e.target.value)}
+					placeholder='HU'
 					size='sm'
 				/>
 			</Td>
 			<Td>
-				<Text fontSize='sm'>Brand</Text>
-				<Input size='sm' value={brand} onChange={(e) => setBrand(e.target.value)} placeholder='Kikkoman or Royal Thai' />
-				<Text fontSize='sm'>Name</Text>
-				<Input size='sm' value={name} onChange={(e) => setName(e.target.value)} placeholder='Samsung S23' />
+				<Text fontSize='sm'>{t('admin.brand')}</Text>
+				<Input size='sm' value={brand} onChange={(e) => setBrand(e.target.value)} placeholder='Kikkoman' />
+				<Text fontSize='sm'>{t('admin.nameEn')}</Text>
+				<Input size='sm' value={nameEn} onChange={(e) => setNameEn(e.target.value)} />
+				<Text fontSize='sm'>{t('admin.nameHu')}</Text>
+				<Input size='sm' value={nameHu} onChange={(e) => setNameHu(e.target.value)} />
 			</Td>
 			<Td>
 				<Text fontSize='sm'>StripeId</Text>
 				<Input size='sm' value={stripeId} onChange={(e) => setStripeId(e.target.value)} />
-				<Text fontSize='sm'>Subtitle</Text>
-				<Input size='sm' value={subtitle} onChange={(e) => setSubtitle(e.target.value)} placeholder='Rice or Pocky' />
+				<Text fontSize='sm'>{t('admin.subtitleEn')}</Text>
+				<Input size='sm' value={subtitleEn} onChange={(e) => setSubtitleEn(e.target.value)} />
+				<Text fontSize='sm'>{t('admin.subtitleHu')}</Text>
+				<Input size='sm' value={subtitleHu} onChange={(e) => setSubtitleHu(e.target.value)} />
 			</Td>
 			<Td>
-				<Text fontSize='sm'>Category</Text>
+				<Text fontSize='sm'>{t('admin.category')}</Text>
 				<Input size='sm' value={category} onChange={(e) => setCategory(e.target.value)} placeholder='Sauce' />
-				<Text fontSize='sm'>Price</Text>
-				<Input size='sm' value={price} onChange={(e) => setPrice(e.target.value)} placeholder='1290 Ft' />
+				<Text fontSize='sm'>{t('admin.price')}</Text>
+				<Input size='sm' value={price} onChange={(e) => setPrice(e.target.value)} placeholder='1290' />
 			</Td>
 
 			<Td>
-				<Text fontSize='sm'>Stock</Text>
+				<Text fontSize='sm'>{t('admin.stock')}</Text>
 				<Input size='sm' value={stock} onChange={(e) => setStock(e.target.value)} />
-				<Text fontSize='sm'>New badge shown on product card</Text>
-				<FormControl display='flex' alignItems='center'>
+				<FormControl display='flex' alignItems='center' mt='2'>
 					<FormLabel htmlFor='productIsNewFlag' mb='0' fontSize='sm'>
-						Enable
-						<Badge rounded='full' px='1' mx='1' fontSize='0.8em' colorScheme='green'>
-							new
-						</Badge>
-						badge?
+						{t('admin.newProduct')}
 					</FormLabel>
 					<Switch id='productIsNewFlag' onChange={() => setProductIsNew(!productIsNew)} isChecked={productIsNew} />
 				</FormControl>
@@ -109,7 +122,7 @@ const AddNewProduct = () => {
 			<Td>
 				<VStack>
 					<Button variant='outline' w='160px' colorScheme='cyan' onClick={createNewProduct}>
-						<Text ml='2'>Save Product</Text>
+						<Text ml='2'>{t('admin.save')}</Text>
 					</Button>
 				</VStack>
 			</Td>

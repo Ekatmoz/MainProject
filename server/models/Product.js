@@ -1,5 +1,13 @@
 import mongoose from 'mongoose';
 
+const bilingualSchema = new mongoose.Schema(
+	{
+		en: { type: String, default: '' },
+		hu: { type: String, default: '' },
+	},
+	{ _id: false }
+);
+
 const reviewSchema = new mongoose.Schema(
 	{
 		name: { type: String, required: true },
@@ -14,7 +22,7 @@ const reviewSchema = new mongoose.Schema(
 const productSchema = new mongoose.Schema(
 	{
 		name: {
-			type: String,
+			type: bilingualSchema,
 			required: true,
 		},
 		images: {
@@ -41,10 +49,12 @@ const productSchema = new mongoose.Schema(
 			default: 0,
 		},
 		subtitle: {
-			type: String,
+			type: bilingualSchema,
+			default: () => ({ en: '', hu: '' }),
 		},
 		description: {
-			type: String,
+			type: bilingualSchema,
+			default: () => ({ en: '', hu: '' }),
 		},
 		price: {
 			type: Number,
@@ -69,3 +79,15 @@ const productSchema = new mongoose.Schema(
 const Product = mongoose.model('Product', productSchema);
 
 export default Product;
+
+/** Normalize string or {en,hu} into bilingual object. */
+export const toBilingual = (value, fallback = '') => {
+	if (value && typeof value === 'object' && ('en' in value || 'hu' in value)) {
+		return {
+			en: value.en || value.hu || fallback,
+			hu: value.hu || value.en || fallback,
+		};
+	}
+	const str = value != null && value !== '' ? String(value) : fallback;
+	return { en: str, hu: str };
+};

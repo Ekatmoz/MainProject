@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "products": "Products",
+    "contact": "Contact",
+    "recipes": "Recipes",
+    "orderHistory": "Order History",
+    "profile": "Profile",
+    "adminConsole": "Admin Console",
+    "logout": "Logout",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "loggedOut": "You have been logged out.",
+    "emailNotVerified": "Email not verified!",
+    "verifyEmail": "You must verify your email address."
+  },
+  "home": {
+    "title": "Asian Market",
+    "subtitle": "Taste the flavors of Asia",
+    "productsLink": "Products",
+    "newProducts": "New Products",
+    "whyUs": "Why choose us?",
+    "fairPrices": "Fair prices",
+    "fastShipping": "Fast shipping",
+    "securePayment": "Secure payment",
+    "alwaysFresh": "Always fresh"
+  },
+  "footer": {
+    "brand": "Asian Market",
+    "tagline": "Explore Asia On Your Plate.",
+    "contact": "Contact",
+    "info": "Information",
+    "about": "About us",
+    "shoppingInfo": "Shopping information",
+    "privacy": "Privacy policy",
+    "terms": "Terms & Conditions",
+    "rights": "All rights reserved."
+  },
+  "categories": {
+    "all": "All",
+    "sauce": "Sauces",
+    "sweets": "Sweets & snacks",
+    "noodles": "Noodles & rice",
+    "frozen": "Frozen",
+    "drinks": "Drinks"
+  },
+  "products": {
+    "new": "New",
+    "addToCart": "Add to cart",
+    "addedToCart": "Item has been added.",
+    "outOfStock": "Out of stock",
+    "inStock": "In stock",
+    "reviews": "Reviews",
+    "writeReview": "Write a review",
+    "details": "Details",
+    "noProducts": "No products found."
+  },
+  "cart": {
+    "title": "Cart",
+    "empty": "Your cart is empty.",
+    "seeProducts": "Click here to see our products.",
+    "or": "or",
+    "continueShopping": "Continue shopping",
+    "sorry": "We are sorry!",
+    "item": "Item",
+    "items": "Items",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "tax": "Tax",
+    "total": "Total",
+    "checkout": "Checkout",
+    "remove": "Remove"
+  },
+  "auth": {
+    "loginTitle": "Sign in to your account",
+    "loginSuccess": "Login successful.",
+    "email": "Email address",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "signIn": "Sign in",
+    "googleSignIn": "Continue with Google",
+    "noAccount": "Don't have an account?",
+    "register": "Register",
+    "registerTitle": "Create an account",
+    "name": "Name",
+    "confirmPassword": "Confirm password",
+    "alreadyAccount": "Already have an account?",
+    "resetPassword": "Reset password",
+    "sendReset": "Send reset email",
+    "verifyEmail": "Email verification",
+    "profile": "Profile",
+    "yourOrders": "Your Orders"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "shipping": "Shipping information",
+    "success": "Payment successful!",
+    "cancel": "Payment cancelled",
+    "backHome": "Back to home",
+    "standardShipping": "Standard shipping",
+    "pickup": "Pickup"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "name": "Your Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "emailCopied": "Email Copied!",
+    "copyEmail": "Copy Email"
+  },
+  "recipes": {
+    "title": "Check out our recipes",
+    "readMore": "Read more"
+  },
+  "admin": {
+    "products": "Products",
+    "orders": "Orders",
+    "users": "Users",
+    "reviews": "Reviews",
+    "nameEn": "Name (EN)",
+    "nameHu": "Name (HU)",
+    "subtitleEn": "Subtitle (EN)",
+    "subtitleHu": "Subtitle (HU)",
+    "descriptionEn": "Description (EN)",
+    "descriptionHu": "Description (HU)",
+    "brand": "Brand",
+    "category": "Category",
+    "stock": "Stock",
+    "price": "Price",
+    "newProduct": "New product",
+    "save": "Save",
+    "delete": "Delete"
+  },
+  "terms": {
+    "title": "Terms and Conditions"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred. Please try again.",
+    "ft": "Ft"
+  }
+}

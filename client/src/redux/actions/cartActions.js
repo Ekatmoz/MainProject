@@ -1,5 +1,6 @@
 import axios from '../../axiosInstance';
 import { setError, setLoading, setShippingCosts, cartItemAdd, cartItemRemoval, clearCart } from '../slices/cart';
+import { toBilingual } from '../../utils/localized';
 
 export const addCartItem = (id, qty) => async (dispatch) => {
 	dispatch(setLoading(true));
@@ -7,8 +8,8 @@ export const addCartItem = (id, qty) => async (dispatch) => {
 		const { data } = await axios.get(`/api/products/${id}`);
 		const itemToAdd = {
 			id: data._id,
-			name: data.name,
-			subtitle: data.subtitle,
+			name: toBilingual(data.name),
+			subtitle: toBilingual(data.subtitle),
 			image: data.images[0],
 			price: data.price,
 			stock: data.stock,

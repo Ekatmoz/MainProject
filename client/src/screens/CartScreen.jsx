@@ -15,13 +15,13 @@ import {
 } from '@chakra-ui/react';
 import { Link as ReactLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import CartItem from '../components/CartItem';
 import OrderSummary from '../components/OrderSummary';
 
 const CartScreen = () => {
+	const { t } = useTranslation();
 	const { loading, error, cartItems } = useSelector((state) => state.cart);
-
-	const getHeadingContent = () => (cartItems.length === 1 ? '(1 Item)' : `(${cartItems.length} Items)`);
 
 	return (
 		<Wrap spacing='30px' justify='center' minHeight='100vh'>
@@ -32,16 +32,16 @@ const CartScreen = () => {
 			) : error ? (
 				<Alert status='error'>
 					<AlertIcon />
-					<AlertTitle>We are sorry!</AlertTitle>
+					<AlertTitle>{t('cart.sorry')}</AlertTitle>
 					<AlertDescription>{error}</AlertDescription>
 				</Alert>
 			) : cartItems.length <= 0 ? (
 				<Alert status='warning'>
 					<AlertIcon />
-					<AlertTitle>Your cart is empty.</AlertTitle>
+					<AlertTitle>{t('cart.empty')}</AlertTitle>
 					<AlertDescription>
 						<Link as={ReactLink} to='/products'>
-							Click here to see your products.
+							{t('cart.seeProducts')}
 						</Link>
 					</AlertDescription>
 				</Alert>
@@ -53,9 +53,8 @@ const CartScreen = () => {
 						spacing={{ base: '8', md: '16' }}>
 						<Stack spacing={{ base: '8', md: '10' }} flex='2'>
 							<Heading fontSize='2xl' fontWeight='extrabold'>
-							  Kosár 
+								{t('cart.title')}
 							</Heading>
-							{/* {getHeadingContent()} */}
 
 							<Stack spacing='6'>
 								{cartItems.map((cartItem) => (
@@ -67,9 +66,9 @@ const CartScreen = () => {
 							<OrderSummary />
 
 							<HStack mt='6' fontWeight='semibold'>
-								<p>vagy</p>
+								<p>{t('cart.or')}</p>
 								<Link as={ReactLink} to='/products' color={mode('red.500', 'red.200')}>
-									Vásárlás folytatása
+									{t('cart.continueShopping')}
 								</Link>
 							</HStack>
 						</Flex>

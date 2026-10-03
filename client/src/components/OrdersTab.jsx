@@ -22,6 +22,8 @@ import {
 	useToast,
 } from '@chakra-ui/react';
 import { CheckCircleIcon, DeleteIcon } from '@chakra-ui/icons';
+import { useTranslation } from 'react-i18next';
+import { getLocalized } from '../utils/localized';
 import { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllOrders, deleteOrder, resetErrorAndRemoval, setDelivered, updatePaymentStatus } from '../redux/actions/adminActions'; // Import updatePaymentStatus action
@@ -29,6 +31,7 @@ import ConfirmRemovalAlert from './ConfirmRemovalAlert';
 import { TbTruckDelivery } from 'react-icons/tb';
 
 const OrdersTab = () => {
+	const { t, i18n } = useTranslation();
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const cancelRef = useRef();
 	const [orderToDelete, setOrderToDelete] = useState('');
@@ -126,7 +129,7 @@ const OrdersTab = () => {
 											<Td>
 												{order.orderItems.map((item) => (
 													<Text key={item._id}>
-														{item.qty} x {item.name}
+														{item.qty} x {getLocalized(item.name, i18n.language)}
 													</Text>
 												))}
 											</Td>

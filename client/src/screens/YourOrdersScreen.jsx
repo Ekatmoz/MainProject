@@ -21,8 +21,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getUserOrders } from '../redux/actions/userActions';
 import { useEffect } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { getLocalized } from '../utils/localized';
 
 const YourOrdersScreen = () => {
+	const { t, i18n } = useTranslation();
 	const dispatch = useDispatch();
 	const { loading, error, orders, userInfo } = useSelector((state) => state.user);
 	const location = useLocation();
@@ -70,7 +73,7 @@ const YourOrdersScreen = () => {
 											{order.orderItems.map((item) => (
 												<UnorderedList key={item._id}>
 													<ListItem>
-														{item.qty} x {item.name} ({item.price}Ft each)
+														{item.qty} x {getLocalized(item.name, i18n.language)} ({item.price}{t('common.ft')} each)
 													</ListItem>
 												</UnorderedList>
 											))}

@@ -1,5 +1,5 @@
 import express from 'express';
-import Product from '../models/Product.js';
+import Product, { toBilingual } from '../models/Product.js';
 import { admin, protectRoute } from '../middleware/authMiddleware.js';
 import asyncHandler from 'express-async-handler';
 import User from '../models/User.js';
@@ -7,32 +7,32 @@ import User from '../models/User.js';
 const productRoutes = express.Router();
 
 const getProducts = async (req, res) => {
-	const page = parseInt(req.params.page); // 1, 2 or 3
-	const perPage = parseInt(req.params.perPage); // 10
+	const page = parseInt(req.params.page);
+	const perPage = parseInt(req.params.perPage);
 	const category = req.query.category;
 
 	try {
-    let query = {};
+		let query = {};
 
-    if (category) {
-      query.category = category;
-    }
+		if (category) {
+			query.category = category;
+		}
 
-    const products = await Product.find(query);
+		const products = await Product.find(query);
 
-    if (page && perPage) {
-      const totalPages = Math.ceil(products.length / perPage);
-      const startIndex = (page - 1) * perPage;
-      const endIndex = startIndex + perPage;
-      const paginatedProducts = products.slice(startIndex, endIndex);
+		if (page && perPage) {
+			const totalPages = Math.ceil(products.length / perPage);
+			const startIndex = (page - 1) * perPage;
+			const endIndex = startIndex + perPage;
+			const paginatedProducts = products.slice(startIndex, endIndex);
 
-      res.json({ products: paginatedProducts, pagination: { currentPage: page, totalPages } });
-    } else {
-      res.json({ products, pagination: {} });
-    }
-  } catch (error) {
-    res.status(500).json({ error: 'Internal Server Error' });
-  }
+			res.json({ products: paginatedProducts, pagination: { currentPage: page, totalPages } });
+		} else {
+			res.json({ products, pagination: {} });
+		}
+	} catch (error) {
+		res.status(500).json({ error: 'Internal Server Error' });
+	}
 };
 
 const getProduct = async (req, res) => {
@@ -85,14 +85,14 @@ const createNewProduct = asyncHandler(async (req, res) => {
 
 	const newProduct = await Product.create({
 		brand,
-		name,
+		name: toBilingual(name),
 		category,
-		subtitle,
+		subtitle: toBilingual(subtitle),
 		stock,
 		price,
 		images: images,
 		productIsNew,
-		description,
+		description: toBilingual(description),
 		stripeId,
 	});
 	await newProduct.save();
@@ -113,10 +113,10 @@ const updateProduct = asyncHandler(async (req, res) => {
 	const product = await Product.findById(id);
 
 	if (product) {
-		product.name = name;
+		product.name = toBilingual(name);
 		product.price = price;
-		product.subtitle = subtitle;
-		product.description = description;
+		product.subtitle = toBilingual(subtitle);
+		product.description = toBilingual(description);
 		product.brand = brand;
 		product.category = category;
 		product.stock = stock;

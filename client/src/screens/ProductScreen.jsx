@@ -29,8 +29,11 @@ import { useEffect, useState } from 'react';
 import { addCartItem } from '../redux/actions/cartActions';
 import Star from '../components/Star';
 import { createProductReview } from '../redux/actions/productActions';
+import { useTranslation } from 'react-i18next';
+import { getLocalized } from '../utils/localized';
 
 const ProductScreen = () => {
+  const { t, i18n } = useTranslation();
   const [amount, setAmount] = useState(1);
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -75,7 +78,7 @@ const ProductScreen = () => {
       dispatch(addCartItem(id, amount));
     }
     toast({
-      description: 'Item has been added.',
+      description: t('products.addedToCart'),
       status: 'success',
       isClosable: true,
     });
@@ -86,6 +89,10 @@ const ProductScreen = () => {
     setButtonLoading(true);
     dispatch(createProductReview(product._id, userInfo._id, comment, rating, title));
   };
+
+  const productName = product ? getLocalized(product.name, i18n.language) : '';
+  const productSubtitle = product ? getLocalized(product.subtitle, i18n.language) : '';
+  const productDescription = product ? getLocalized(product.description, i18n.language) : '';
 
   return (
     <Wrap spacing='30px' justify='center' minHeight='100vh'>
@@ -111,16 +118,16 @@ const ProductScreen = () => {
               <Stack pr={{ base: '0', md: 'row' }} flex='1.5' mb={{ base: '12', md: 'none' }}>
                 {product.productIsNew && (
                   <Badge p='2' rounded='md' w='50px' fontSize='0.8em' colorScheme='green'>
-                    Új
+                    {t('products.new')}
                   </Badge>
                 )}
                 {product.stock === 0 && (
                   <Badge rounded='full' w='70px' fontSize='0.8em' colorScheme='red'>
-                    Nincs raktáron
+                    {t('products.outOfStock')}
                   </Badge>
                 )}
                 <Heading fontSize='2xl' fontWeight='extrabold'>
-                  {product.brand} {product.name}
+                  {product.brand} {productName}
                 </Heading>
                 <Stack spacing='5'>
                   <Box>
@@ -134,12 +141,12 @@ const ProductScreen = () => {
                         <Star rating={product.rating} star={5} />
                       </HStack>
                       <Text fontSize='md' fontWeight='bold' ml='4px'>
-                        {product.numberOfReviews} Értékelés
+                        {product.numberOfReviews} {t('products.reviews')}
                       </Text>
                     </Flex>
                   </Box>
-                  <Text>{product.subtitle}</Text>
-                  <Text>{product.description}</Text>
+                  <Text>{productSubtitle}</Text>
+                  <Text>{productDescription}</Text>
                   <Text fontWeight='bold'>db</Text>
                   <Flex w='170px' p='5px' border='1px' borderColor='gray.200' alignItems='center'>
                     <Button isDisabled={amount <= 1} onClick={() => changeAmount('minus')}>
@@ -151,7 +158,7 @@ const ProductScreen = () => {
                     </Button>
                   </Flex>
                   <Badge fontSize='sm' width='170px' textAlign='center' colorScheme='gray'>
-                    Raktáron: {product.stock}
+                    {t('products.inStock')}: {product.stock}
                   </Badge>
                   <Button
                     variant='outline'
@@ -160,7 +167,7 @@ const ProductScreen = () => {
                     colorScheme='red'
                     onClick={() => addItem()}
                   >
-                    Kosárba
+                    {t('products.addToCart')}
                   </Button>
                   <Stack width='270px'>
                     <Flex alignItems='center'>
@@ -188,13 +195,13 @@ const ProductScreen = () => {
                 <Image
                   mb='30px'
                   src={product.images[0]}
-                  alt={product.name}
+                  alt={productName}
                   fallbackSrc='https://via.placeholder.com/250'
                 />
                 <Image
                   mb='30px'
                   src={product.images[1]}
-                  alt={product.name}
+                  alt={productName}
                   fallbackSrc='https://via.placeholder.com/250'
                 />
               </Flex>
@@ -244,7 +251,7 @@ const ProductScreen = () => {
                       onChange={(e) => {
                         setComment(e.target.value);
                       }}
-                      placeholder={`The ${product.brand} ${product.name} is...`}
+                      placeholder={`The ${product.brand} ${productName} is...`}
                     />
                     <Button
                       isLoading={buttonLoading}

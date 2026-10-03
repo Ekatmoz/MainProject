@@ -13,8 +13,12 @@ import {
 } from '@chakra-ui/react';
 import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { Link as ReactLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-const Footer = () => (
+const Footer = () => {
+  const { t } = useTranslation();
+
+  return (
   <Box w='100%' bg={mode('gray.100', 'gray.900')}>
     <Container as='footer' role='contentinfo' maxW='7xl'>
       <Stack
@@ -27,15 +31,15 @@ const Footer = () => (
           <Flex alignItems='center'>
             <Image
               className='logo'
-              src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1703022330/bdvypfvraoemkf8uvnjd.png'
+              src='https://res.cloudinary.com/dtj7rhgwl/image/upload/v1790948660/NEW_LOGO_iljmsd.png'
               color='grey.400'
               height='100px'
             />
             <Text fontSize='2xl' fontWeight='extrabold'>
-              Azsiai Piac
+              {t('footer.brand')}
             </Text>
           </Flex>
-          <Text color='muted'>Explore Asia On Your Plate.</Text>
+          <Text color='muted'>{t('footer.tagline')}</Text>
         </Stack>
         <Stack
           direction={{ base: 'column-reverse', md: 'column', lg: 'row' }}
@@ -45,7 +49,7 @@ const Footer = () => (
           <Stack direction='row' spacing='40'>
             <Stack spacing='4' minW='36' flex='2'>
               <Text fontSize='sm' fontWeight='semibold' color='subtle'>
-                Kapcsolat
+                {t('footer.contact')}
               </Text>
               <Stack spacing='3' shouldWrapChildren>
                 <Button variant='link' fontSize={{ base: 'sm', md: 'md' }} textAlign='center'>
@@ -61,41 +65,30 @@ const Footer = () => (
             </Stack>
             <Stack spacing='4' minW='36' flex='2'>
               <Text fontSize='sm' fontWeight='semibold' color='subtle'>
-                Információk
+                {t('footer.info')}
               </Text>
               <Stack spacing='3' shouldWrapChildren>
                 <Button variant='link' fontSize={{ base: 'sm', md: 'md' }}>
-                  Rólunk
+                  {t('footer.about')}
                 </Button>
                 <Button variant='link' fontSize={{ base: 'sm', md: 'md' }}>
-                  Vásárlási információk
+                  {t('footer.shoppingInfo')}
                 </Button>
                 <Button variant='link' fontSize={{ base: 'sm', md: 'md' }}>
-                  Adatkezelési tájékoztató
+                  {t('footer.privacy')}
                 </Button>
                 <Button variant='link' as={ReactLink} to='/terms&conditions'>
-                  ÁSZF
+                  {t('footer.terms')}
                 </Button>
               </Stack>
             </Stack>
           </Stack>
-          {/* <Stack spacing='4'>
-            <Text fontSize='sm' fontWeight='semibold' color='subtle'>
-              Stay up to date
-            </Text>
-            <Stack spacing='4' direction={{ base: 'column', sm: 'row' }} maxW={{ lg: '360px' }}>
-              <Input placeholder='Enter your email' type='email' required />
-              <Button variant='primary' type='submit' flexShrink={0}>
-                Subscribe
-              </Button>
-            </Stack>
-          </Stack> */}
         </Stack>
       </Stack>
       <Divider />
       <Stack pt='8' pb='12' justify='space-between' direction={{ base: 'column-reverse', md: 'row' }} align='center'>
         <Text fontSize='sm' color='subtle'>
-          &copy; {new Date().getFullYear()} SUSHI-BAR Hungary KFT, Inc. All rights reserved.
+          &copy; {new Date().getFullYear()} SUSHI-BAR Hungary KFT, Inc. {t('footer.rights')}
         </Text>
         <ButtonGroup variant='ghost'>
           <IconButton as='a' href='#' aria-label='LinkedIn' icon={<FaLinkedin fontSize='1.25rem' />} />
@@ -105,6 +98,7 @@ const Footer = () => (
       </Stack>
     </Container>
   </Box>
-);
+  );
+};
 
 export default Footer;

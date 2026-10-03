@@ -6,11 +6,15 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://golden-dragon.onrender.com/', // Proxy requests starting with /api to your backend
+      // Local Express backend (CRA-style proxy). Do not point at production during dev.
+      '/api': {
+        target: 'http://localhost:4000',
+        changeOrigin: true,
+      },
     },
   },
   build: {
-    outDir: 'dist', // Ensure the build output goes to the 'dist' folder
-    sourcemap: true, // Optional: Generates sourcemaps for better debugging in production
+    outDir: 'dist',
+    sourcemap: true,
   },
 })

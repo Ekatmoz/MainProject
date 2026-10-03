@@ -9,6 +9,7 @@ import {
   useColorModeValue,
   Container,
 } from '@chakra-ui/react'
+import { useTranslation } from 'react-i18next';
 
 const BlogTags = (props) => {
   const { marginTop = 0, tags } = props
@@ -27,9 +28,11 @@ const BlogTags = (props) => {
 }
 
 const Recepies = () => {
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language?.startsWith('en');
   return (
     <Container maxW={'7xl'} p="12">
-    <Heading as="h1">Check out our recepies</Heading>
+    <Heading as="h1">{t('recipes.title')}</Heading>
     <Box
       marginTop={{ base: '1', sm: '5' }}
       display="flex"
@@ -86,7 +89,9 @@ const Recepies = () => {
           marginTop="2"
           color={useColorModeValue('gray.700', 'gray.200')}
           fontSize="lg">
-            Az alapból készült pad thai nem éppen egy gyors étkezés – SOK hozzávalót kell elkészíteni. De hogyan készítik el az éttermek a frissen készült pad thai-t 5 perc alatt? Jó hír: nem csinálnak olyat, amit otthon ne tudna megcsinálni. De a legfontosabb, hogy a szószt ömlesztve, előre elkészítsék.
+            {isEn
+              ? 'Restaurant-style pad thai in minutes starts with making the sauce in bulk ahead of time. Prep the ingredients, then bring it together quickly when you cook.'
+              : 'Az alapból készült pad thai nem éppen egy gyors étkezés – SOK hozzávalót kell elkészíteni. De hogyan készítik el az éttermek a frissen készült pad thai-t 5 perc alatt? Jó hír: nem csinálnak olyat, amit otthon ne tudna megcsinálni. De a legfontosabb, hogy a szószt ömlesztve, előre elkészítsék.'}
         </Text>
       </Box>
     </Box>

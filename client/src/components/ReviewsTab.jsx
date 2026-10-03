@@ -28,10 +28,13 @@ import {
 
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+import { getLocalized } from '../utils/localized';
 import { getProducts } from '../redux/actions/productActions';
 import { removeReview } from '../redux/actions/adminActions';
 
 const ReviewsTab = () => {
+	const { i18n } = useTranslation();
 	const dispatch = useDispatch();
 	const { error, loading } = useSelector((state) => state.admin);
 	const { products, reviewRemoval } = useSelector((state) => state.product);
@@ -80,7 +83,7 @@ const ReviewsTab = () => {
 												<Box flex='1'>
 													<Flex>
 														<Text mr='8px' fontWeight='bold'>
-															{product.name}
+															{getLocalized(product.name, i18n.language)}
 														</Text>
 														<Spacer />
 														<Text mr='8px' fontWeight='bold'>

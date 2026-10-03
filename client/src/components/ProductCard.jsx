@@ -7,14 +7,18 @@ import { Link as ReactLink } from 'react-router-dom';
 import { addCartItem } from '../redux/actions/cartActions';
 import { useEffect } from 'react';
 import { TbShoppingCartPlus } from 'react-icons/tb';
+import { useTranslation } from 'react-i18next';
+import { getLocalized } from '../utils/localized';
 
 const ProductCard = ({ product, loading }) => {
+  const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
   const { favorites } = useSelector((state) => state.product);
   const [isShown, setIsShown] = useState(false);
   const { cartItems } = useSelector((state) => state.cart);
   const toast = useToast();
   const [cartPlusDisabled, setCartPlusDisabled] = useState(false);
+  const productName = getLocalized(product.name, i18n.language);
 
   useEffect(() => {
     const item = cartItems.find((cartItem) => cartItem.id === product._id);
@@ -31,7 +35,7 @@ const ProductCard = ({ product, loading }) => {
       dispatch(addCartItem(id, 1));
     }
     toast({
-      description: 'Item has been added.',
+      description: t('products.addedToCart'),
       status: 'success',
       isClosable: true,
     });
@@ -48,7 +52,7 @@ const ProductCard = ({ product, loading }) => {
       >
         {product.productIsNew && (
           <Badge ml='2' colorScheme='purple' fontSize='2l'>
-            új
+            {t('products.new')}
           </Badge>
         )}
         <Image
@@ -56,27 +60,22 @@ const ProductCard = ({ product, loading }) => {
           onMouseLeave={() => setIsShown(false)}
           src={product.images[isShown && product.images.length === 2 ? 1 : 0]}
           fallbackSrc='https://via.placeholder.com/150'
-          alt={product.name}
+          alt={productName}
           objectFit='cover'
           w='100%'
           maxH={{ base: '150px', md: '200px', lg: '250px' }}
         />
-        {product.stock < 5 ? (
-          <Badge colorScheme='yellow'>csak {product.stock} db</Badge>
-        ) : product.stock < 1 ? (
-          <Badge colorScheme='red'>Előrendelhető</Badge>
+        {product.stock < 1 ? (
+          <Badge colorScheme='red'>{t('products.outOfStock')}</Badge>
         ) : (
           <Badge colorScheme='green' fontSize='2xs'>
-            Raktáron
+            {t('products.inStock')}
           </Badge>
         )}
 
         <Text noOfLines={1} fontSize={{ base: 'sm', md: 'md' }} fontWeight='semibold' mt='2'>
-          {product.name}
+          {productName}
         </Text>
-        {/* <Text noOfLines={1} fontSize='md' color='gray.600'>
-					{product.description}
-				</Text> */}
         <Flex justify='space-between' alignItems='center' mt='2'>
           <Button
             as={ReactLink}
@@ -85,11 +84,10 @@ const ProductCard = ({ product, loading }) => {
             h={{ base: '28px', md: '32px' }}
             px={{ base: 2, md: 4 }}
           >
-            Részletek
+            {t('products.details')}
           </Button>
-          {/* <Badge colorScheme='red'>{product.category}</Badge> */}
           <Text fontSize={{ base: 'md', md: 'lg' }} fontWeight='semibold'>
-            {product.price}Ft
+            {product.price}{t('common.ft')}
           </Text>
         </Flex>
         <Flex justify='space-between' mt='2'>
@@ -111,24 +109,11 @@ const ProductCard = ({ product, loading }) => {
               onClick={() => dispatch(addToFavorites(product._id))}
             />
           )}
-          {/* <IconButton
-						//icon={<BiExpand size='20' />}
-						as={ReactLink}
-						to={`/product/${product._id}`}
-						colorScheme='yellow'
-						size='sm'
-					/> */}
 
           <Tooltip
             isDisabled={!cartPlusDisabled}
             hasArrow
-            label={
-              !cartPlusDisabled
-                ? 'You reached the maximum quantity jof the product. '
-                : product.stock <= 0
-                ? 'Out of stock'
-                : ''
-            }
+            label={product.stock <= 0 ? t('products.outOfStock') : ''}
           >
             <IconButton
               isDisabled={product.stock <= 0 || cartPlusDisabled}
