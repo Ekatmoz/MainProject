@@ -27,19 +27,10 @@ function App() {
   const [googleClient, setGoogleClient] = useState(null);
 	useEffect(() => {
 		const googleKey = async () => {
-			// #region agent log
-			fetch('http://127.0.0.1:7496/ingest/9f92fad2-514b-4fba-a5b9-78c337f6a1dc',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'36dee2'},body:JSON.stringify({sessionId:'36dee2',runId:'post-fix',hypothesisId:'B',location:'App.jsx:googleKey',message:'google config request start',data:{viteApiUrl:import.meta.env.VITE_API_URL||null,origin:window.location.origin},timestamp:Date.now()})}).catch(()=>{});
-			// #endregion
 			try {
 				const { data: googleId } = await axios.get('/api/config/google');
-				// #region agent log
-				fetch('http://127.0.0.1:7496/ingest/9f92fad2-514b-4fba-a5b9-78c337f6a1dc',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'36dee2'},body:JSON.stringify({sessionId:'36dee2',runId:'post-fix',hypothesisId:'A',location:'App.jsx:googleKey:success',message:'google config success',data:{hasGoogleId:Boolean(googleId),googleIdType:typeof googleId,googleIdLength:typeof googleId==='string'?googleId.length:null},timestamp:Date.now()})}).catch(()=>{});
-				// #endregion
 				setGoogleClient(googleId);
 			} catch (err) {
-				// #region agent log
-				fetch('http://127.0.0.1:7496/ingest/9f92fad2-514b-4fba-a5b9-78c337f6a1dc',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'36dee2'},body:JSON.stringify({sessionId:'36dee2',runId:'post-fix',hypothesisId:'A',location:'App.jsx:googleKey:error',message:'google config failed',data:{status:err?.response?.status||null,message:err?.message||String(err)},timestamp:Date.now()})}).catch(()=>{});
-				// #endregion
 				console.error('Failed to load Google client ID', err);
 			}
 		};

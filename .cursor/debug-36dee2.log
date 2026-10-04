@@ -1,0 +1,12 @@
+{"sessionId":"36dee2","runId":"post-fix","hypothesisId":"E","location":"server/index.js:google","message":"google config served","data":{"hasGoogleClientId":true,"googleClientIdLength":72},"timestamp":1791143708029}
+{"sessionId":"36dee2","runId":"post-fix","hypothesisId":"E","location":"server/index.js:google","message":"google config served","data":{"hasGoogleClientId":true,"googleClientIdLength":72},"timestamp":1791143708923}
+{"sessionId":"36dee2","hypothesisId":"A","location":"ShippingInformation.jsx:click","message":"order button clicked","data":{"isValid":true,"errorKeys":[],"paymentMethod":"cash","terms":true},"timestamp":1791143714171}
+{"sessionId":"36dee2","hypothesisId":"A","location":"ShippingInformation.jsx:onSubmit","message":"checkout form submitted","data":{"paymentMethod":"cash","terms":true},"timestamp":1791143714192}
+{"sessionId":"36dee2","hypothesisId":"B","location":"orderActions.js:setPayment","message":"posting checkout","data":{"paymentMethod":"cash","hasToken":true,"itemCount":1,"shipping":0},"timestamp":1791143714198}
+{"sessionId":"36dee2","hypothesisId":"B","location":"orderActions.js:setPayment:catch","message":"checkout failed","data":{"status":500,"message":"Request failed with status code 500"},"timestamp":1791143715125}
+{"sessionId":"36dee2","hypothesisId":"A","location":"ShippingInformation.jsx:click","message":"order button clicked","data":{"isValid":true,"errorKeys":[],"paymentMethod":"cash","terms":true},"timestamp":1791143718320}
+{"sessionId":"36dee2","hypothesisId":"A","location":"ShippingInformation.jsx:onSubmit","message":"checkout form submitted","data":{"paymentMethod":"cash","terms":true},"timestamp":1791143718336}
+{"sessionId":"36dee2","hypothesisId":"B","location":"orderActions.js:setPayment","message":"posting checkout","data":{"paymentMethod":"cash","hasToken":true,"itemCount":1,"shipping":0},"timestamp":1791143718337}
+{"sessionId":"36dee2","hypothesisId":"B","location":"orderActions.js:setPayment:catch","message":"checkout failed","data":{"status":500,"message":"Request failed with status code 500"},"timestamp":1791143718600}
+{"sessionId":"36dee2","runId":"post-fix","hypothesisId":"E","location":"server/index.js:google","message":"google config served","data":{"hasGoogleClientId":true,"googleClientIdLength":72},"timestamp":1791143758492}
+{"sessionId":"36dee2","runId":"post-fix","hypothesisId":"E","location":"server/index.js:google","message":"google config served","data":{"hasGoogleClientId":true,"googleClientIdLength":72},"timestamp":1791143785580}
